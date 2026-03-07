@@ -4,3 +4,4 @@ sparse.db
 lancedb
 __pycache__/
 *.pyc
+docs
