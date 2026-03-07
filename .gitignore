@@ -2,6 +2,6 @@
 .env
 sparse.db
 lancedb
-__pycache__/
 docs
+__pycache__/
 *.pyc
