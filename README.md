@@ -69,52 +69,52 @@ Generate final response
 Current Project Structure
 
 '
-📦src
- ┣ 📂api
- ┃ ┣ 📂__pycache__
- ┃ ┃ ┣ 📜routes.cpython-311.pyc
- ┃ ┃ ┗ 📜services.cpython-311.pyc
- ┃ ┣ 📜routes.py
- ┃ ┗ 📜services.py
- ┣ 📂dataIngestionPipelines
- ┃ ┣ 📂__pycache__
- ┃ ┃ ┣ 📜chroma.cpython-311.pyc
- ┃ ┃ ┣ 📜dataIngestion.cpython-311.pyc
- ┃ ┃ ┣ 📜Images_Ingestion.cpython-311.pyc
- ┃ ┃ ┣ 📜Rank_BM25.cpython-311.pyc
- ┃ ┃ ┣ 📜refine_data.cpython-311.pyc
- ┃ ┃ ┣ 📜SparseIngestion.cpython-311.pyc
- ┃ ┃ ┣ 📜TextIngestion.cpython-311.pyc
- ┃ ┃ ┗ 📜VectorIngestion.cpython-311.pyc
- ┃ ┣ 📜Images_Ingestion.py
- ┃ ┣ 📜Rank_BM25.py
- ┃ ┣ 📜refine_data.py
- ┃ ┣ 📜SparseIngestion.py
- ┃ ┗ 📜VectorIngestion.py
- ┣ 📂DB
- ┃ ┣ 📂__pycache__
- ┃ ┃ ┣ 📜SparseDataBase.cpython-311.pyc
- ┃ ┃ ┗ 📜VectorDataBase.cpython-311.pyc
- ┃ ┣ 📜SparseDataBase.py
- ┃ ┗ 📜VectorDataBase.py
- ┣ 📂RetrivalPipelines
- ┃ ┣ 📂__pycache__
- ┃ ┃ ┣ 📜ImageRetriver.cpython-311.pyc
- ┃ ┃ ┣ 📜Model.cpython-311.pyc
- ┃ ┃ ┣ 📜Prompt.cpython-311.pyc
- ┃ ┃ ┣ 📜Retirval.cpython-311.pyc
- ┃ ┃ ┣ 📜RRF.cpython-311.pyc
- ┃ ┃ ┣ 📜SparseRetrival.cpython-311.pyc
- ┃ ┃ ┗ 📜vectorRetrival.cpython-311.pyc
- ┃ ┣ 📜ImageRetriver.py
- ┃ ┣ 📜Prompt.py
- ┃ ┣ 📜Retirval.py
- ┃ ┣ 📜RRF.py
- ┃ ┣ 📜SparseRetrival.py
- ┃ ┗ 📜vectorRetrival.py
- ┣ 📂__pycache__
- ┃ ┣ 📜config.cpython-311.pyc
- ┃ ┗ 📜__init__.cpython-311.pyc
- ┣ 📜config.py
- ┗ 📜__init__.py
+src
+ ┣ api
+ ┃ ┣ __pycache__
+ ┃ ┃ ┣ routes.cpython-311.pyc
+ ┃ ┃ ┗ services.cpython-311.pyc
+ ┃ ┣ routes.py
+ ┃ ┗ services.py
+ ┣ dataIngestionPipelines
+ ┃ ┣ __pycache__
+ ┃ ┃ ┣ chroma.cpython-311.pyc
+ ┃ ┃ ┣ dataIngestion.cpython-311.pyc
+ ┃ ┃ ┣ Images_Ingestion.cpython-311.pyc
+ ┃ ┃ ┣ Rank_BM25.cpython-311.pyc
+ ┃ ┃ ┣ refine_data.cpython-311.pyc
+ ┃ ┃ ┣ SparseIngestion.cpython-311.pyc
+ ┃ ┃ ┣ TextIngestion.cpython-311.pyc
+ ┃ ┃ ┗ VectorIngestion.cpython-311.pyc
+ ┃ ┣ Images_Ingestion.py
+ ┃ ┣ Rank_BM25.py
+ ┃ ┣ refine_data.py
+ ┃ ┣ SparseIngestion.py
+ ┃ ┗ VectorIngestion.py
+ ┣ DB
+ ┃ ┣ __pycache__
+ ┃ ┃ ┣ SparseDataBase.cpython-311.pyc
+ ┃ ┃ ┗ VectorDataBase.cpython-311.pyc
+ ┃ ┣ SparseDataBase.py
+ ┃ ┗ VectorDataBase.py
+ ┣ RetrivalPipelines
+ ┃ ┣ __pycache__
+ ┃ ┃ ┣ ImageRetriver.cpython-311.pyc
+ ┃ ┃ ┣ Model.cpython-311.pyc
+ ┃ ┃ ┣ Prompt.cpython-311.pyc
+ ┃ ┃ ┣ Retirval.cpython-311.pyc
+ ┃ ┃ ┣ RRF.cpython-311.pyc
+ ┃ ┃ ┣ SparseRetrival.cpython-311.pyc
+ ┃ ┃ ┗ vectorRetrival.cpython-311.pyc
+ ┃ ┣ ImageRetriver.py
+ ┃ ┣ Prompt.py
+ ┃ ┣ Retirval.py
+ ┃ ┣ RRF.py
+ ┃ ┣ SparseRetrival.py
+ ┃ ┗ vectorRetrival.py
+ ┣ __pycache__
+ ┃ ┣ config.cpython-311.pyc
+ ┃ ┗ __init__.cpython-311.pyc
+ ┣ config.py
+ ┗ __init__.py
  '
