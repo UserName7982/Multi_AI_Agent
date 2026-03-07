@@ -68,7 +68,7 @@ Generate final response
 
 Current Project Structure
 
-'''
+'
 📦src
  ┣ 📂api
  ┃ ┣ 📂__pycache__
@@ -117,4 +117,4 @@ Current Project Structure
  ┃ ┗ 📜__init__.cpython-311.pyc
  ┣ 📜config.py
  ┗ 📜__init__.py
- '''
+ '
