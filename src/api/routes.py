@@ -1,6 +1,6 @@
 from typing import List
 from fastapi import File, UploadFile,APIRouter,HTTPException
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse,HTMLResponse
 from src.api.services import Services
 from src.dataIngestionPipelines.VectorIngestion import add_to_db
 
@@ -23,5 +23,12 @@ async def upload_file(files: List[UploadFile] = File(...)):
 
 @api.post("/Query/{query}")
 async def User_query(query:str):
-    query_= await service.Answer(query)
-    return JSONResponse({"message":"query_executed_sucessfully","result":f"{query_}","status":200})
+    try:
+        query_= await service.Answer(query)
+        return JSONResponse({"message":"query_executed_sucessfully","Image_result":f"{query_['image_result']}","Text_result":f"{query_['text_result']}","status":200})
+    except Exception as e:
+        raise HTTPException(status_code=500, detail={"message": "Error in processing query", "error": str(e)})  
+    
+# @api.get("/image")
+# def get_image():
+#     return HTMLResponse(f'<img src="data:image/jpeg;base64,{results["base_64_images"][0]}" alt="Image"/>')

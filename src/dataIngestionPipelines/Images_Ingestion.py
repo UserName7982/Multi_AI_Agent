@@ -63,7 +63,12 @@ def get_image(images:list[dict]):
         base=docs.extract_image(xref)
         img_bytes=base["image"]
         pil_image=Image.open(io.BytesIO(img_bytes)).convert("RGB")
-        pil_images.append(pil_image)
+        pil_images.append({
+            "image_id": item["image_id"],
+            "doc": item["doc"],
+            "page_no": item["page"],
+            "pil_image": pil_image
+        })
         pil_image.show()  # Display the image for verification
     return pil_images
 

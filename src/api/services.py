@@ -1,11 +1,12 @@
 from typing import List
-from fastapi import UploadFile
+from fastapi import HTTPException, UploadFile
 import os
-from src.RetrivalPipelines.Retirval import Answer_generation
+from src.RetrivalPipelines.Retrival import Answer_generation
 from ..config import config
 FILE_PATH = config.BASE_PATH+"/docs"
 
 class Services:
+    result={}
     async def upload_file(self, files: List[UploadFile]):
         os.makedirs(FILE_PATH, exist_ok=True)
 
@@ -23,8 +24,8 @@ class Services:
     
     async def Answer(self,query):
         try:
-            qu = await Answer_generation(query)
-            return qu
+            self.result = await Answer_generation(query)
+            return self.result
         except Exception as e:
-            return {"message": "Error in Generating answer","result":f"{e}","status":404}
-        
+            raise HTTPException(status_code=404, detail={"message": "Error in Generating answer","result":f"{e}","status":404})
+   

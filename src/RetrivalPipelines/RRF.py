@@ -1,25 +1,17 @@
 import asyncio
 from ..RetrivalPipelines.vectorRetrival import query_result
 from collections import defaultdict
-from ..RetrivalPipelines.Prompt import System_query
+from .System_Prompt_Generation import System_query
 from ..dataIngestionPipelines.SparseIngestion import search_text,get_chunks
 
 
 class RRF:
 
-    def __init__(self,query:str):
-        self.system_query=System_query(query)
+    def __init__(self,semantic_query:str,sentactic_query:str):
         self.dic:defaultdict[str,float]=defaultdict(float)
-        self.query=query
-        self.Semantic_query: str = ""
-        self.Sentactic_query: str = ""
-    
-    def set_system_querys(self):
-        result= self.system_query.get_system_query()
-        self.Semantic_query=result["Semantic_prompt"]
-        self.Sentactic_query=result["Sentactic_prompt"] 
-
-        
+        self.Semantic_query: str = semantic_query
+        self.Sentactic_query: str = sentactic_query
+ 
     def get_semantic_result(self,query):
         return query_result(query)
 
@@ -27,7 +19,6 @@ class RRF:
         return search_text(query, k=7)
     
     def rrf(self, k: int=60):
-        self.set_system_querys()
         vector_chunks=self.get_semantic_result(self.Semantic_query)
         sparse_chunks=self.get_sentatic_result(self.Sentactic_query)
         for i,chunk in enumerate(vector_chunks):

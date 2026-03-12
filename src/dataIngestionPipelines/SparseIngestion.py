@@ -47,6 +47,6 @@ if __name__ == "__main__":
     # chunk = "hybrid search combines the strengths of both vector and sparse search methods, providing a more comprehensive and effective search experience."
     # ingest_chunk_into_db(chunk_id, chunk_index, chunk, "test_source")
     # print("Chunk ingested successfully.")
-    results = search_text("Langchain", k=5)
+    results = search_text("langchain OR lang_chain OR llm_framework OR ai_workflow_toolkit AND (python OR python_library) AND (automation OR orchestration OR agent OR workflow) AND (openai OR huggingface OR vector_db OR api_integration)", k=5)
     chunks = get_chunks([result[0] for result in results])
     print("Search results:", chunks)
