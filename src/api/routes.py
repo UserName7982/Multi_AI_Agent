@@ -25,7 +25,7 @@ async def upload_file(files: List[UploadFile] = File(...)):
 async def User_query(query:str):
     try:
         query_= await service.Answer(query)
-        return JSONResponse({"message":"query_executed_sucessfully","Image_result":f"{query_['image_result']}","Text_result":f"{query_['text_result']}","status":200})
+        return JSONResponse({"message":"query_executed_sucessfully","result":query_,"status":200})
     except Exception as e:
         raise HTTPException(status_code=500, detail={"message": "Error in processing query", "error": str(e)})  
     
