@@ -1,6 +1,6 @@
 import sqlite3
 
-db=sqlite3.connect("sparse.db")
+db=sqlite3.connect("sparse.db",check_same_thread=False)
 
 table=db.execute('''CREATE TABLE IF NOT EXISTS CHUNKS
              (chunk_id TEXt NOT NULL PRIMARY KEY,

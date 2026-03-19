@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate
 
-model = ChatOllama(model="ministral-3:8b", base_url="http://localhost:11434", verbose=True)
+model = ChatOllama(model="llama3:8b", verbose=True)
 
 class Prompt(BaseModel):
     Sentactic_prompt: str = Field(..., description="Store Syntactic Query for BM25")
@@ -69,6 +69,7 @@ class System_query:
     def set_Image_query(self, q: str):
         self.Image_query = q
 
+    
     def set_system_query(self):
         chain = self.generate_prompt() | model | parser
         result = chain.invoke({"Query": self.Query})
@@ -80,7 +81,8 @@ class System_query:
         self.set_system_query()
         return {"Sentactic_prompt": self.Sentactic_query, "Semantic_prompt": self.Semantic_query, "Image_prompt": self.Image_query}
 
-sq = System_query("What is Langchain?")
-if __name__ == "__main__":
-    ans = sq.get_system_query()
-    print(ans["Semantic_prompt"], ans["Sentactic_prompt"], ans["Image_prompt"])
+
+# sq = System_query("What is Langchain?")
+# if __name__ == "__main__":
+#     ans = sq.get_system_query()
+#     print(ans["Semantic_prompt"], ans["Sentactic_prompt"], ans["Image_prompt"])

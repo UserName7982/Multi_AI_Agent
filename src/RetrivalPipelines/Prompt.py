@@ -1,18 +1,42 @@
+from src.Agentic.Retrival_State import RetrivalState
+
 from ..RetrivalPipelines.System_Prompt_Generation import System_query
 
-class Prompt:
-    def __init__(self,query:str):
-        self.prompt=System_query(Query=query)
-        self.prompt()
-        
-    def get_semantic_query(self):
-        return self.prompt.Semantic_query
-    
-    def get_sentactic_query(self):
-        return self.prompt.Sentactic_query
-    
-    def get_image_query(self):
-        return self.prompt.Image_query
+#System_Query NODE
+def System_Query(state: RetrivalState):
+    """System Query Node Function
+
+    This function is responsible for generating optimized queries for
+    the hybrid retrieval pipeline. It takes in a RetrivalState object,
+    which contains the user query, and returns a dictionary containing
+    the optimized semantic, sentactic, and image queries.
+
+    Parameters
+    ----------
+    state : RetrivalState
+        The RetrivalState object containing the user query
+
+    Returns
+    -------
+    dict
+        A dictionary containing the optimized semantic, sentactic, and
+        image queries
+    """
+    try:
+        query=state["USER_QUERY"]
+        sq = System_query(query)
+        sq.get_system_query()
+        state["SEMANTIC_QUERY"] = sq.Semantic_query
+        state["SENTACTIC_QUERY"] = sq.Sentactic_query
+        state["IMAGE_QUERY"] = sq.Image_query
+        return {
+            "SEMANTIC_QUERY": sq.Semantic_query,
+            "SENTACTIC_QUERY": sq.Sentactic_query,
+            "IMAGE_QUERY": sq.Image_query
+        }
+    except Exception as e:
+        state["error"] = str(e)
+        return {"error": str(e)}
 
 # if __name__ == "__main__":
 #     p=Prompt("What is Langchain?")

@@ -1,9 +1,9 @@
 from typing import List
 from fastapi import File, UploadFile,APIRouter,HTTPException
-from fastapi.responses import JSONResponse,HTMLResponse
+from fastapi.responses import JSONResponse
 from src.api.services import Services
 from src.dataIngestionPipelines.VectorIngestion import add_to_db
-
+from ..api.schema import ChatRequest,ChatResponse
 api=APIRouter(prefix="/Files",tags=["Files"])
 
 service=Services()
@@ -21,11 +21,11 @@ async def upload_file(files: List[UploadFile] = File(...)):
         raise HTTPException(status_code=500, detail={"message": "File upload failed", "error": str(e)})   
     return JSONResponse({"message": "File uploaded successfully", "files": path})
 
-@api.post("/Query/{query}")
-async def User_query(query:str):
+@api.post("/chat",response_model=ChatResponse)
+async def User_query(query_data:ChatRequest):
     try:
-        query_= await service.Answer(query)
-        return JSONResponse({"message":"query_executed_sucessfully","result":query_,"status":200})
+        query_= await service.Answer(query_data)
+        return {"query":query_data.query,"Answer":query_.get("LLM_RESPONSE")}
     except Exception as e:
         raise HTTPException(status_code=500, detail={"message": "Error in processing query", "error": str(e)})  
     
