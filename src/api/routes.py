@@ -4,7 +4,9 @@ from fastapi.responses import JSONResponse
 from src.api.services import Services
 from src.dataIngestionPipelines.VectorIngestion import add_to_db
 from ..api.schema import ChatRequest,ChatResponse
-api=APIRouter(prefix="/Files",tags=["Files"])
+
+
+api=APIRouter(prefix="/app",tags=["Files"])
 
 service=Services()
 @api.post("/upload")
@@ -23,7 +25,10 @@ async def upload_file(files: List[UploadFile] = File(...)):
 
 @api.post("/chat",response_model=ChatResponse)
 async def User_query(query_data:ChatRequest):
+    if query_data is None:
+        raise HTTPException(status_code=400, detail={"message": "No query to process"})
     try:
+        print(query_data,type(query_data))
         query_= await service.Answer(query_data)
         return {"query":query_data.query,"Answer":query_.get("LLM_RESPONSE")}
     except Exception as e:
