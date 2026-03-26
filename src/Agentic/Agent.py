@@ -10,11 +10,12 @@ from langgraph.graph import START,END,StateGraph,MessagesState
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver 
 from psycopg import AsyncConnection
 from psycopg.rows import DictRow, dict_row
+from ..config import config
 
 llm=ChatOllama(model="qwen3.5:397b-cloud",base_url="http://localhost:11434",verbose=False)
 retrival_tools=[rag_retrival]
 llm_with_tools=llm.bind_tools(retrival_tools)
-DB_URI = f"postgresql://postgres:admin@localhost:5432/chatsummary"
+DB_URI = config.DB_URI
 
 SYSTEM = SystemMessage(content="""You are an intelligent, autonomous AI agent designed to solve user queries by reasoning, planning, and using tools when necessary.
 
