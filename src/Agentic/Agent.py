@@ -89,7 +89,7 @@ async def get_checkpointer():
     conn = cast(
         AsyncConnection[DictRow],
         await AsyncConnection.connect(
-            "postgresql://postgres:admin@localhost:5432/chatsummary",
+            DB_URI,
             row_factory=dict_row # type: ignore
             ,autocommit=True
         )

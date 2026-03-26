@@ -6,7 +6,7 @@ from ..RetrivalPipelines.Retrival import Answer_Query
 
 graph=StateGraph(RetrivalState)
 
-def error(state: RetrivalState):
+async def error(state: RetrivalState):
     if state.get("error"):
         raise HTTPException(status_code=500, detail=state.get("error"))
     return END
