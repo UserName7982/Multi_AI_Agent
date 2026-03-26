@@ -6,5 +6,5 @@ class Settings(BaseSettings):
     model_config=SettingsConfigDict(env_file=".env")
     BASE_PATH: str=os.getcwd()
     Gemini_API_KEY: SecretStr
-
+    DB_password: str
 config=Settings() # type: ignore

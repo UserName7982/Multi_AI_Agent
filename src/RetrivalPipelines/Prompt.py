@@ -3,7 +3,7 @@ from src.Agentic.Retrival_State import RetrivalState
 from ..RetrivalPipelines.System_Prompt_Generation import System_query
 
 #System_Query NODE
-def System_Query(state: RetrivalState):
+async def System_Query(state: RetrivalState):
     """System Query Node Function
 
     This function is responsible for generating optimized queries for
@@ -25,7 +25,7 @@ def System_Query(state: RetrivalState):
     try:
         query=state["USER_QUERY"]
         sq = System_query(query)
-        sq.get_system_query()
+        await sq.get_system_query()
         return {
             "SEMANTIC_QUERY": sq.Semantic_query,
             "SENTACTIC_QUERY": sq.Sentactic_query,

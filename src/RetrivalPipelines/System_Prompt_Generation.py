@@ -19,8 +19,8 @@ class System_query:
         self.Sentactic_query: str = ""
         self.Image_query: str = ""
     
-    def __call__(self, *args: Any, **kwds: Any):
-        self.get_system_query()
+    async def __call__(self, *args: Any, **kwds: Any):
+        await self.get_system_query()
         
     def generate_prompt(self):
         System_prompt = """You are a query optimization engine for a hybrid retrieval system (sqlite fts5 + bm25 + vector semantic search).
@@ -70,15 +70,15 @@ class System_query:
         self.Image_query = q
 
     
-    def set_system_query(self):
+    async def set_system_query(self):
         chain = self.generate_prompt() | model | parser
-        result = chain.invoke({"Query": self.Query})
+        result =await chain.ainvoke({"Query": self.Query})
         self.set_Image_query(result.Image_prompt)
         self.set_Semantic_query(result.Semantic_prompt)
         self.set_Sentactic_query(result.Sentactic_prompt)
 
-    def get_system_query(self):
-        self.set_system_query()
+    async def get_system_query(self):
+        await self.set_system_query()
         return {"Sentactic_prompt": self.Sentactic_query, "Semantic_prompt": self.Semantic_query, "Image_prompt": self.Image_query}
 
 

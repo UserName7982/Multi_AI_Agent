@@ -36,11 +36,7 @@ Context:
 """)
 parser=StrOutputParser()
 
-def strip_noise(text: str) -> str:
-    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
-    text = re.sub(r"```json.*?```", "", text, flags=re.DOTALL)
-    return text.strip()
-def Answer_Query(state: RetrivalState):
+async def Answer_Query(state: RetrivalState):
     """
     This function/NODE takes in a RetrivalState object and uses the semantic and syntactic queries
     to generate an answer using the hybrid retrieval pipeline.
@@ -69,9 +65,8 @@ def Answer_Query(state: RetrivalState):
         # Get the chunks from the RRF instance
         chunks = rrf.Hybrid_search()
         # Invoke the chain with the user query and chunks
-        result = chain1.invoke({"query": User_Query, "context": chunks})
+        result =await chain1.ainvoke({"query": User_Query, "context": chunks})
         # Return the generated answer
-        state["LLM_RESPONSE"] = result
         return {"LLM_RESPONSE": (result)}
     except Exception as e:
         # If an exception occurs, set the error in the state object and return it

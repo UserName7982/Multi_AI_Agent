@@ -4,7 +4,7 @@ from ..Agentic.Graph import workflow
 from langchain_core.tools import tool
 
 @tool
-def rag_retrival(query: str,Thread: int = 1):
+async def rag_retrival(query: str,Thread: int = 1):
     """
     This tool performs hybrid retrieval (semantic + BM25) over indexed content and generates answers using LLMs.
 
@@ -21,7 +21,7 @@ def rag_retrival(query: str,Thread: int = 1):
     try:
         config={"configurable": {"thread_id": Thread}}
         initial_state={"USER_QUERY":query}
-        result=workflow.invoke(initial_state,config=config) # type: ignore
+        result=await workflow.ainvoke(initial_state,config=config) # type: ignore
     except Exception as e:
         raise HTTPException(status_code=500, detail={"message": "Error in processing query", "error": str(e)})
     return result.get('LLM_RESPONSE','')
