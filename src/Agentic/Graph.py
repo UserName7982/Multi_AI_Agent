@@ -1,3 +1,4 @@
+from fastapi import HTTPException
 from langgraph.graph import StateGraph,START,END
 from ..Agentic.Retrival_State import RetrivalState
 from ..RetrivalPipelines.Prompt import System_Query
@@ -7,7 +8,7 @@ graph=StateGraph(RetrivalState)
 
 def error(state: RetrivalState):
     if state.get("error"):
-        raise Exception(state["error"])
+        raise HTTPException(status_code=500, detail=state.get("error"))
     return END
 
 graph.add_node("System_Query",System_Query)

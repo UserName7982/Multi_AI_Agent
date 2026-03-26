@@ -26,16 +26,12 @@ def System_Query(state: RetrivalState):
         query=state["USER_QUERY"]
         sq = System_query(query)
         sq.get_system_query()
-        state["SEMANTIC_QUERY"] = sq.Semantic_query
-        state["SENTACTIC_QUERY"] = sq.Sentactic_query
-        state["IMAGE_QUERY"] = sq.Image_query
         return {
             "SEMANTIC_QUERY": sq.Semantic_query,
             "SENTACTIC_QUERY": sq.Sentactic_query,
             "IMAGE_QUERY": sq.Image_query
         }
     except Exception as e:
-        state["error"] = str(e)
         return {"error": str(e)}
 
 # if __name__ == "__main__":

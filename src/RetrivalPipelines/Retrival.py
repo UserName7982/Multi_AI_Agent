@@ -1,3 +1,5 @@
+import re
+
 from ..Help.refine_data import refine_data
 # from langchain_core.output_parsers import JsonOutputParser
 # from fastapi import HTTPException
@@ -13,53 +15,31 @@ from ..Agentic.Retrival_State import RetrivalState
 # parser2 = JsonOutputParser()
 
 # model1=GoogleGenerativeAI(model="gemini-3-flash-preview",temperature=0.7,api_key=config.Gemini_API_KEY,verbose=True)
-model=ChatOllama(model="qwen3.5:397b-cloud",base_url="http://localhost:11434",verbose=True)
-text_prompt=PromptTemplate.from_template("You are a helpful assistant. Answer the given query only from the given context./n *******Query******/n {query} /n******{context}******")
+model=ChatOllama(model="ministral-3:8b",base_url="http://localhost:11434",verbose=False)
+text_prompt = PromptTemplate.from_template("""
+You are a retrieval QA assistant.
+
+Answer the question using ONLY the provided context.
+
+Rules:
+- Do NOT generate queries
+- Do NOT explain reasoning
+- Do NOT repeat information
+- Return ONLY the final answer
+- If answer not found, say "Not found"
+
+Question:
+{query}
+
+Context:
+{context}
+""")
 parser=StrOutputParser()
-# image_prompt="""You are a multimodal assistant.
 
-#         You will receive:
-#         1. A user query
-#         2. An Array of images in base64 format with some metadata (image_id, doc name, page number)
-
-#         Your task is to determine how relevant the image is to the user query.
-
-#         Steps:
-#         1. Understand the user query.
-#         2. Analyze the image and identify objects, diagrams, text, or visual concepts.
-#         3. Compare the image with the query and context.
-#         4. Determine how relevant the image is.
-
-#         Return ONLY valid JSON in the following format:
-
-#         {{
-#         "image_id": "<exact image_id provided in input>",
-#         "doc": "<exact document name>",
-#         "page": <exact page number>,
-#         "query": "<user query>",
-#         "image_description": "<short description of the image>",
-#         "relevance": "high | medium | low | not_relevant",
-#         "relevance_score": 0-1,
-#         "confidence": 0-1,
-#         "reason": "<short explanation>"
-#         }}
-
-#         {format_instructions}
-
-#         Rules:
-#         - relevance_score measures how related the image is to the query.
-#         - confidence measures how confident you are in the judgment.
-#         - If the image has no relation to the query, return relevance = "not_relevant".
-#         - Output must be valid JSON only.
-#         *********Query********
-#         {image_query}
-#         ************************
-#         *********Context********
-#         {image_context}
-#         """
-# image_prompt_template=PromptTemplate.from_template(image_prompt,partial_variables={"format_instructions": parser2.get_format_instructions()})
-
-# Answer Node
+def strip_noise(text: str) -> str:
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    text = re.sub(r"```json.*?```", "", text, flags=re.DOTALL)
+    return text.strip()
 def Answer_Query(state: RetrivalState):
     """
     This function/NODE takes in a RetrivalState object and uses the semantic and syntactic queries
@@ -90,12 +70,11 @@ def Answer_Query(state: RetrivalState):
         chunks = rrf.Hybrid_search()
         # Invoke the chain with the user query and chunks
         result = chain1.invoke({"query": User_Query, "context": chunks})
-        state["LLM_RESPONSE"]=result
         # Return the generated answer
-        return {"LLM_RESPONSE": result}
+        state["LLM_RESPONSE"] = result
+        return {"LLM_RESPONSE": (result)}
     except Exception as e:
         # If an exception occurs, set the error in the state object and return it
-        state["error"] = str(e)
         return {"error": str(e)}
     
 

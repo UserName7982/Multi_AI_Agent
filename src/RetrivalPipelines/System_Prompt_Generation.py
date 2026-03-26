@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate
 
-model = ChatOllama(model="llama3:8b", verbose=True)
+model = ChatOllama(model="ministral-3:8b",verbose=False)
 
 class Prompt(BaseModel):
     Sentactic_prompt: str = Field(..., description="Store Syntactic Query for BM25")
