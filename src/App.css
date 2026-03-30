@@ -1,0 +1,48 @@
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #2a3444;  
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #525b6a;   
+  border-radius: 9999px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #0d1116;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#Message_id::-webkit-scrollbar {
+  width: 12px;
+}
+
+#Message_id::-webkit-scrollbar-track {
+  background: #2a3444;  
+}
+
+#Message_id::-webkit-scrollbar-thumb {
+  background: #525b6a;   
+  border-radius: 9999px;
+  height: max-content;
+}
+
+#Message_id::-webkit-scrollbar-thumb:hover {
+  background: #132339;
+}
