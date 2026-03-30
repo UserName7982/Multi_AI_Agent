@@ -3,7 +3,7 @@ from fastapi import HTTPException
 from ..Agentic.Graph import workflow
 from langchain_core.tools import tool
 
-@tool(description="""This tool get user documents and performs hybrid retrieval (semantic + BM25) over indexed content and generates answers using LLMs.""")
+@tool()
 async def rag_retrival(query: str,Thread: int = 1):
     """
     This tool performs hybrid retrieval (semantic + BM25) over indexed content and generates answers using LLMs.

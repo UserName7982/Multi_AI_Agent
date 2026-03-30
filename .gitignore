@@ -5,3 +5,4 @@ lancedb
 docs
 __pycache__/
 *.pyc
+docker-compose.yml

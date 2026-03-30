@@ -1,23 +1,35 @@
-import asyncio
-from typing import Annotated, cast
-
-from langchain_ollama import ChatOllama
-import psycopg
+from typing import List
+import uuid
+from langchain_ollama import ChatOllama, OllamaEmbeddings
+from psycopg_pool import AsyncConnectionPool
+from pydantic import BaseModel, Field
 from ..Agentic.Tools import rag_retrival
 from langchain_core.messages import HumanMessage, SystemMessage,RemoveMessage,ToolMessage
-from langgraph.prebuilt import ToolNode, tools_condition
+from langgraph.prebuilt import InjectedStore, ToolNode
 from langgraph.graph import START,END,StateGraph,MessagesState
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver 
-from psycopg import AsyncConnection
-from psycopg.rows import DictRow, dict_row
+from psycopg.rows import  dict_row
 from ..config import config
+from langgraph.store.base import BaseStore 
+from langgraph.store.postgres.aio import AsyncPostgresStore
+from langchain_core.runnables import RunnableConfig
 
+checkpointer = None
+workflow = None
+short_term_pool=None
+long_term_pool=None
+store=None
+
+
+model = ChatOllama(model="ministral-3:8b",verbose=False)
 llm=ChatOllama(model="qwen3.5:397b-cloud",base_url="http://localhost:11434",verbose=False)
 retrival_tools=[rag_retrival]
 llm_with_tools=llm.bind_tools(retrival_tools)
 DB_URI = config.DB_URI
+DB_URI1=config.DB_URI1
+embedding_function = OllamaEmbeddings(model="embeddinggemma:latest") 
 
-SYSTEM = SystemMessage(content="""You are an intelligent, autonomous AI agent designed to solve user queries by reasoning, planning, and using tools when necessary.
+SYSTEM = ("""You are a helpful assistant with memory capabilities and access to tools which contains user knowledge. You are designed to solve user queries by reasoning, planning, and using tools when necessary.
 
 ## Objectives
 - Understand the user’s intent deeply.
@@ -67,7 +79,7 @@ SYSTEM = SystemMessage(content="""You are an intelligent, autonomous AI agent de
 - Do not expose internal reasoning unless required
 - Respect user privacy and data boundaries
 
-## Memory (if available)
+## Memory Management
 - Use past interactions if relevant
 - Do not assume memory if not explicitly provided
 
@@ -78,27 +90,60 @@ You operate in a loop:
 3. Act (tool or reasoning)
 4. Observe
 5. Respond
-
+    
+******User_memeory******
+## User Details
+{user_details_content}
 Always aim to minimize steps while maximizing correctness.""")
+MEMORY_PROMPT = """You are responsible for updating and maintaining accurate user memory.
 
+CURRENT USER DETAILS (existing memories):
+{user_details_content}
+
+TASK:
+- Review the user's latest message.
+- Extract user-specific info worth storing long-term (identity, stable preferences, ongoing projects/goals).
+- For each extracted item, set is_new=true ONLY if it adds NEW information compared to CURRENT USER DETAILS.
+- If it is basically the same meaning as something already present, set is_new=false.
+- Keep each memory as a short atomic sentence.
+- No speculation; only facts stated by the user.
+- If there is nothing memory-worthy, return should_write=false and an empty list.
+"""
 class chatmessage(MessagesState):
     summary:str
 
-
-async def get_checkpointer():
-    conn = cast(
-        AsyncConnection[DictRow],
-        await AsyncConnection.connect(
-            DB_URI,
-            row_factory=dict_row # type: ignore
-            ,autocommit=True
-        )
+async def get_pool(uri:str,MiN_SIZE:int=2,MAX_SIZE:int=10)->AsyncConnectionPool:
+    pool=AsyncConnectionPool(
+        conninfo=uri,
+        kwargs={"autocommit": True, "row_factory": dict_row},
+        min_size=MiN_SIZE,
+        max_size=MAX_SIZE,
+        timeout=60,
+        open=False
     )
-    checkpointer = AsyncPostgresSaver(conn)
+    await pool.open()
+    return pool # type: ignore
+async def get_checkpointer(pool:AsyncConnectionPool):
+    checkpointer = AsyncPostgresSaver(conn=pool) # type: ignore
     await checkpointer.setup()
     return checkpointer
 
+async def get_store(pool:AsyncConnectionPool):
+    store = AsyncPostgresStore(conn=pool,index={"embed":embedding_function,"dims":768}) # type: ignore
+    print('store setup successfully')
+    await store.setup()
+    print("=== store setup complete ===")
+    return store
+
 async def summarized_conversation(state: chatmessage):
+    """
+    Summarize the conversation above.
+
+    If there is an existing summary, prompt the model to extend it.
+    Otherwise, prompt the model to summarize the conversation from scratch.
+
+    Returns a state update with the new summary and the messages to be deleted.
+    """
     existing_summary = state.get("summary","")
     if existing_summary:
         prompt = (
@@ -117,28 +162,67 @@ async def do_summarize(state: chatmessage):
 
 graph=StateGraph(chatmessage)
 
-async def chat_node(state:chatmessage):
+async def chat_node(state:chatmessage,config:RunnableConfig,*,store: BaseStore):
     """
-    This function takes in a chatmessage state and uses the LLM to generate a response based on the messages in the state.
-
-    Parameters
-    ----------
-    state : chatmessage
-        The chatmessage state containing the messages to be processed.
-
-    Returns
-    -------
-    dict
-        A dictionary containing the response from the LLM.
-
+    The chat node is the main entry point for the user to interact with the AI.
+    
+    It takes the last message from the user, searches for relevant memories from the user's memory,
+    and then passes the concatenated messages to the LLM to generate a response.
+    
+    The chat node returns the new message from the LLM in the "messages" key of the state.
     """
-    messages=[SYSTEM]+state["messages"]
+    user_id=(config["configurable"]["user_id"]) # type: ignore
+    ns=("user",user_id,"details")
+
+    last_message=state["messages"][-1].content
+    memories = await store.asearch( # type: ignore
+        ns,
+        query=last_message, # type: ignore
+        limit=3
+    )
+    existing_memories="\n".join(it.value.get("data", "") for it in memories) if memories else "(empty)"
+    messages=[SystemMessage(content=SYSTEM.format(user_details_content=existing_memories))]+state["messages"]
     response=await llm_with_tools.ainvoke(messages)
-    print(state["messages"])
     return {"messages":[response]}
 
-tools=ToolNode(tools=retrival_tools)
+class MemoryItem(BaseModel):
+    text: str = Field(description="Atomic user memory")
+    is_new: bool = Field(description="True if new, false if duplicate")
 
+class MemoryDecision(BaseModel):
+    should_write: bool = Field(description="True if message should be written to memory")
+    memories: List[MemoryItem] = Field(default_factory=list)
+
+memory_extractor = model.with_structured_output(MemoryDecision)
+
+
+async def remember_node(state: chatmessage,config:RunnableConfig,*,store: BaseStore):
+    user_id=(config["configurable"]["user_id"]) # type: ignore
+    ns=("user",user_id,"details")
+
+    last_message=state["messages"][-1].content
+    memories = await store.asearch( # type: ignore
+        ns,
+        query=last_message, # type: ignore
+        limit=3
+    )
+    existing_memories="\n".join(it.value.get("data", "") for it in memories) if memories else "(empty)"
+    decision: MemoryDecision = await memory_extractor.ainvoke([
+            SystemMessage(content=MEMORY_PROMPT.format(user_details_content=existing_memories)),
+            {"role": "user", "content": last_message},
+        ]) # type: ignore
+    print("existing_memories:",existing_memories)
+    key=str(uuid.uuid4())
+    if decision.should_write:
+        for msg in decision.memories:
+            if msg.is_new:
+                await store.aput( # type: ignore
+                    ns,
+                    key,
+                    {"data": msg.text},
+                )
+    return {}
+        
 async def tool_node(state: chatmessage):
     last_message=state["messages"][-1]
     tool_results=[]
@@ -147,6 +231,7 @@ async def tool_node(state: chatmessage):
             if tools.name == tool_call["name"]:
                 result=await tools.ainvoke(tool_call["args"])
                 tool_results.append(ToolMessage(content=result,tool_call_id=tool_call["id"]))
+                print("tool_results",tool_results)
     return {"messages":tool_results}
 
 async def route_after_chat(state: chatmessage):
@@ -158,9 +243,11 @@ async def route_after_chat(state: chatmessage):
     return END
 
 graph.add_node("chat_node",chat_node)
+graph.add_node("remember",remember_node)
 graph.add_node("tools",tool_node)
 graph.add_node("summarize",summarized_conversation)
-graph.add_edge(START,"chat_node")
+graph.add_edge(START,"remember")
+graph.add_edge("remember","chat_node")
 graph.add_edge("tools","chat_node")
 graph.add_conditional_edges("chat_node",route_after_chat,{
     "tools": "tools",
@@ -170,12 +257,12 @@ graph.add_conditional_edges("chat_node",route_after_chat,{
 graph.add_edge("summarize",END)
 
 
-checkpointer = None
-workflow = None
-
 async def get_graph():
-    global checkpointer, workflow
+    global checkpointer, workflow, short_term_pool, long_term_pool, store
     if workflow is None:
-        checkpointer = await get_checkpointer()
-        workflow = graph.compile(checkpointer=checkpointer)
+        short_term_pool = await get_pool(DB_URI)
+        long_term_pool = await get_pool(DB_URI1)
+        checkpointer = await get_checkpointer(pool=short_term_pool)
+        store = await get_store(pool=long_term_pool)
+        workflow = graph.compile(checkpointer=checkpointer, store=store)
     return workflow
