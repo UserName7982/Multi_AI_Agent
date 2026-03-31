@@ -1,2 +1,20 @@
 2026-03-30 21:14:49,500 | INFO | app | Query Answered:
 2026-03-30 21:15:13,327 | INFO | app | Answer completed
+2026-03-31 13:38:39,500 | INFO | app | Query Answered:
+2026-03-31 17:26:09,185 | ERROR | app | status_code:500 Error in create_thread in DataBase:
+
+2026-03-31 17:28:55,411 | INFO | app | Start Creating thread
+2026-03-31 17:28:55,414 | ERROR | app | status_code:500 Error in create_thread in DataBase:
+
+2026-03-31 17:31:05,093 | INFO | app | Start Creating thread
+2026-03-31 17:31:05,111 | ERROR | app | status_code:500 Error in create_thread in DataBase:
+
+2026-03-31 17:47:28,362 | INFO | app | Start Creating thread
+2026-03-31 17:47:28,367 | ERROR | app | status_code:500 Error in create_thread in DataBase:
+
+2026-03-31 17:49:18,914 | INFO | app | Start Creating thread
+2026-03-31 18:06:22,313 | INFO | app | Start Creating message
+2026-03-31 18:06:22,315 | ERROR | app | status_code:500 Error in create_message in DataBase:
+
+2026-03-31 18:08:11,880 | INFO | app | Start Creating message
+2026-03-31 18:08:11,940 | INFO | app | Message created Successfully

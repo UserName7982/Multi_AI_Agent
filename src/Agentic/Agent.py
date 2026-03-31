@@ -1,14 +1,14 @@
+import asyncio
 from typing import List
 import uuid
+from fastapi import Depends
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from psycopg_pool import AsyncConnectionPool
 from pydantic import BaseModel, Field
 from ..Agentic.Tools import rag_retrival
 from langchain_core.messages import HumanMessage, SystemMessage,RemoveMessage,ToolMessage
-from langgraph.prebuilt import InjectedStore, ToolNode
 from langgraph.graph import START,END,StateGraph,MessagesState
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver 
-from psycopg.rows import  dict_row
 from ..config import config
 from langgraph.store.base import BaseStore 
 from langgraph.store.postgres.aio import AsyncPostgresStore
@@ -23,11 +23,14 @@ store=None
 
 model = ChatOllama(model="ministral-3:8b",verbose=False)
 llm=ChatOllama(model="qwen3.5:397b-cloud",base_url="http://localhost:11434",verbose=False)
+embedding_function = OllamaEmbeddings(model="embeddinggemma:latest") 
+
+
 retrival_tools=[rag_retrival]
 llm_with_tools=llm.bind_tools(retrival_tools)
 DB_URI = config.DB_URI
 DB_URI1=config.DB_URI1
-embedding_function = OllamaEmbeddings(model="embeddinggemma:latest") 
+
 
 SYSTEM = ("""You are a helpful assistant with memory capabilities and access to tools which contains user knowledge. You are designed to solve user queries by reasoning, planning, and using tools when necessary.
 
@@ -112,17 +115,6 @@ TASK:
 class chatmessage(MessagesState):
     summary:str
 
-async def get_pool(uri:str,MiN_SIZE:int=2,MAX_SIZE:int=10)->AsyncConnectionPool:
-    pool=AsyncConnectionPool(
-        conninfo=uri,
-        kwargs={"autocommit": True, "row_factory": dict_row},
-        min_size=MiN_SIZE,
-        max_size=MAX_SIZE,
-        timeout=60,
-        open=False
-    )
-    await pool.open()
-    return pool # type: ignore
 async def get_checkpointer(pool:AsyncConnectionPool):
     checkpointer = AsyncPostgresSaver(conn=pool) # type: ignore
     await checkpointer.setup()
@@ -256,13 +248,14 @@ graph.add_conditional_edges("chat_node",route_after_chat,{
 })
 graph.add_edge("summarize",END)
 
-
-async def get_graph():
+lock = asyncio.Lock()
+async def get_graph(pool):
     global checkpointer, workflow, short_term_pool, long_term_pool, store
     if workflow is None:
-        short_term_pool = await get_pool(DB_URI)
-        long_term_pool = await get_pool(DB_URI1)
-        checkpointer = await get_checkpointer(pool=short_term_pool)
-        store = await get_store(pool=long_term_pool)
-        workflow = graph.compile(checkpointer=checkpointer, store=store)
+        async with lock:
+            short_term_pool = pool[DB_URI]
+            long_term_pool = pool[DB_URI1]
+            checkpointer = await get_checkpointer(pool=short_term_pool)
+            store = await get_store(pool=long_term_pool)
+            workflow = graph.compile(checkpointer=checkpointer, store=store)
     return workflow

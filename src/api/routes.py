@@ -5,7 +5,7 @@ from typing import AsyncGenerator, List
 from fastapi import File, Request, UploadFile,APIRouter,HTTPException,status
 from fastapi.responses import JSONResponse, StreamingResponse
 from src.dataIngestionPipelines.VectorIngestion import add_to_db
-from ..api.schema import ChatRequest,ChatResponse
+from ..api.schema import ChatRequest,ChatResponse, Thread,Messages, thread_Response,message_Response
 from Logger import logger
 import json
 import traceback
@@ -56,7 +56,7 @@ async def User_query(request: Request,query_data: ChatRequest):
             yield f"Error: {str(e)}"
 
     try:
-        logger.info("Query Answered:",extra={"query":query_data})
+        logger.info("Query Answered:",extra={"thread_id":query_data.Thread})
         return StreamingResponse(content=generator(), media_type="text/plain",headers={
         "Cache-Control": "no-cache",
         "Connection": "keep-alive",
@@ -70,3 +70,27 @@ async def User_query(request: Request,query_data: ChatRequest):
             "error": str(e),
             "traceback": traceback.format_exc()
         })
+
+@api.get("/get-threads",response_model=List[Thread])
+async def all_get_Thread(request: Request):
+    result=await request.app.state.services.all_get_Threads(request)
+    return result
+@api.get("/get-title/{thread_id}",response_model=Thread)
+async def get_title(request: Request,thread_id:str):
+    result= await request.app.state.services.get_title(request,thread_id)
+    return result
+
+@api.get("/get-messages/{thread_id}",response_model=List[Messages])
+async def get_thread_messages(request: Request,thread_id:str):
+    result=await request.app.state.services.get_thread_messages(request,thread_id)
+    return result
+
+@api.post("/new-chat",response_model=thread_Response)
+async def create_thread(request: Request,thread: Thread):
+    result=await request.app.state.services.create_thread(request,thread)
+    return JSONResponse({"message": "success","thread_id": result,})
+
+@api.post("/new-message",response_model=List[message_Response])
+async def create_message(request: Request,message:List[Messages]):
+    result=await request.app.state.services.create_message(request,message)
+    return JSONResponse({"message": "success","message_id": result})

@@ -1,29 +1,29 @@
 from fastapi import FastAPI
+from psycopg_pool import AsyncConnectionPool
 import uvicorn
 from src.api.routes import api
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
-from src.Agentic.Agent import get_graph
 from src.api.services import Services
-
+from src.DB.postgres import get_pool
+from src.config import config
 services = Services()
 
 
 version = "0.1.0"
-graph_app=None
 @asynccontextmanager # type: ignore
 async def lifespan(app: FastAPI):
+    app.state.pools={}
     print("Connection pool opened")
-    global graph_app
-    await services.initialize()
     app.state.services = services
+    app.state.pools[config.DB_URI]=await get_pool(config.DB_URI)
+    app.state.pools[config.DB_URI1]=await get_pool(config.DB_URI1)
+    app.state.pools[config.URI]=await get_pool(config.URI)
+    await services.initialize(app.state.pools)
     yield
-    from src.Agentic import Agent
-    if Agent.short_term_pool:
-        await Agent.short_term_pool.close()
-    if Agent.long_term_pool:
-        await Agent.long_term_pool.close()
-    print("Agent closed","Connection closed")
+    for pool in app.state.pools.values():
+        await pool.close()
+    print("Agent closed:","Connection closed")
 
 app = FastAPI(version=version,title="AI API", description="AI API for various AI services",lifespan=lifespan)
 app.add_middleware(

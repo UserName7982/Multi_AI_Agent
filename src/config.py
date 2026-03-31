@@ -8,4 +8,5 @@ class Settings(BaseSettings):
     DB_URI :str
     DB_URI1 :str
     BetterStack:str
+    URI: str
 config=Settings() # type: ignore
