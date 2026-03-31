@@ -1,4 +1,5 @@
 from typing import Optional
+from uuid import UUID
 
 from pydantic import BaseModel
 
@@ -11,20 +12,20 @@ class ChatRequest(BaseModel):
     Thread:int = 1
 
 class Messages(BaseModel):
-    message_id: Optional[str]
-    thread_id: str
+    message_id: Optional[UUID]=None
+    thread_id: UUID
     role:str
     content:str
 
 class Thread(BaseModel):
-    thread_id: Optional[str]
+    thread_id: Optional[UUID]=None
     user_id:str
     title:str
 
 class thread_Response(BaseModel):
-    thread_id: str
+    thread_id: UUID
     message:str
 
 class message_Response(BaseModel):
-    message_id: str
+    message_id: UUID
     message:str

@@ -18,3 +18,24 @@
 
 2026-03-31 18:08:11,880 | INFO | app | Start Creating message
 2026-03-31 18:08:11,940 | INFO | app | Message created Successfully
+2026-03-31 20:47:27,191 | INFO | app | Start Getting Threads
+2026-03-31 20:49:11,042 | INFO | app | Start Getting Threads
+2026-03-31 20:54:27,755 | INFO | app | Start Getting Threads
+2026-03-31 20:54:27,758 | ERROR | app | status_code:500 Error in getting Threads in DataBase:
+
+2026-03-31 20:56:09,134 | INFO | app | Start Getting Threads
+2026-03-31 20:56:09,134 | ERROR | app | status_code:500 Error in getting Threads in DataBase:
+
+2026-03-31 20:57:35,830 | INFO | app | Start Getting Threads
+2026-03-31 21:00:32,322 | INFO | app | Start Getting Threads
+2026-03-31 21:02:00,435 | INFO | app | Start Creating thread
+2026-03-31 21:02:00,444 | INFO | app | Thread created Successfully
+2026-03-31 21:02:12,149 | INFO | app | Start Getting title
+2026-03-31 21:10:39,477 | INFO | app | Start Creating thread
+2026-03-31 21:10:39,484 | INFO | app | Thread created Successfully
+2026-03-31 21:11:39,482 | INFO | app | Start Getting Threads
+2026-03-31 21:11:50,864 | INFO | app | Start Getting title
+2026-03-31 21:12:55,141 | INFO | app | Start Getting title
+2026-03-31 21:14:35,964 | INFO | app | Start Getting title
+2026-03-31 21:15:58,209 | INFO | app | Start Getting title
+2026-03-31 21:17:06,030 | INFO | app | Start Getting title

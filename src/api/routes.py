@@ -75,7 +75,7 @@ async def User_query(request: Request,query_data: ChatRequest):
 async def all_get_Thread(request: Request):
     result=await request.app.state.services.all_get_Threads(request)
     return result
-@api.get("/get-title/{thread_id}",response_model=Thread)
+@api.get("/get-title/{thread_id}",response_model=List[dict])
 async def get_title(request: Request,thread_id:str):
     result= await request.app.state.services.get_title(request,thread_id)
     return result

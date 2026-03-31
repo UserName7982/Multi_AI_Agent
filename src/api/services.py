@@ -72,17 +72,17 @@ class Services:
             raise HTTPException(status_code=400, detail={"message": "No pool to create"})
         try:
             async with pool.connection() as conn:
-                async with conn.transaction():
+                async with conn.cursor() as cur:
                     logger.info("Start Getting Threads")
-                    rows=await conn.execute("SELECT thread_id FROM threads")
-                    result=await rows.fetchall()
-                return [row["thread_id"] for row in result] # type: ignore
+                    await cur.execute("SELECT thread_id, user_id, title FROM threads")
+                    rows = await cur.fetchall()
+                return rows
         except Exception as e:
             logger.error(f"status_code:500 Error in getting Threads in DataBase:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in all_get_Threads", "error": str(e)})
     
     
-    async def get_title(self,request: Request,thread_id:str):
+    async def get_title(self,request: Request,thread_id:uuid.UUID):
         pool=request.app.state.pools[config.URI]
         if pool is None or pool.closed:
             logger.critical("No pool is open",)
@@ -122,7 +122,7 @@ class Services:
         if pool is None or pool.closed:
             logger.critical("No pool is open",)
             raise HTTPException(status_code=400, detail={"message": "No pool to create"})
-        thread_id=str(uuid.uuid4())
+        thread_id=uuid.uuid4()
         title=thread.title
         user_id=thread.user_id
         try:
@@ -144,7 +144,7 @@ class Services:
         
         try:
             for msg in message:
-                msg.message_id=str(uuid.uuid4())
+                msg.message_id=uuid.uuid4()
             result=[msg.message_id for msg in message]
             async with pool.connection() as conn:
                 async with conn.cursor() as cur:
