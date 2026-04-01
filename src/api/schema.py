@@ -1,7 +1,8 @@
-from typing import Optional
+from datetime import datetime
+from typing import List, Optional
 from uuid import UUID
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class ChatResponse(BaseModel):
     Answer:str
@@ -12,20 +13,23 @@ class ChatRequest(BaseModel):
     Thread:int = 1
 
 class Messages(BaseModel):
-    message_id: Optional[UUID]=None
-    thread_id: UUID
+    thread_id: UUID = Field(description="Enter Your Thread_ID")
     role:str
     content:str
 
+class Message_Response(BaseModel):
+    thread_id: UUID
+    role:str
+    content:str
+    created_at:Optional[datetime]=None
+    message_id:UUID
+
 class Thread(BaseModel):
-    thread_id: Optional[UUID]=None
     user_id:str
     title:str
 
-class thread_Response(BaseModel):
-    thread_id: UUID
-    message:str
-
-class message_Response(BaseModel):
-    message_id: UUID
-    message:str
+class Thread_Response(BaseModel):
+    user_id:str
+    title:str
+    thread_id:UUID
+    created_at:Optional[datetime]=None

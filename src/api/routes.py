@@ -5,7 +5,7 @@ from typing import AsyncGenerator, List
 from fastapi import File, Request, UploadFile,APIRouter,HTTPException,status
 from fastapi.responses import JSONResponse, StreamingResponse
 from src.dataIngestionPipelines.VectorIngestion import add_to_db
-from ..api.schema import ChatRequest,ChatResponse, Thread,Messages, thread_Response,message_Response
+from ..api.schema import ChatRequest,ChatResponse, Thread,Messages,Message_Response, Thread_Response
 from Logger import logger
 import json
 import traceback
@@ -52,11 +52,11 @@ async def User_query(request: Request,query_data: ChatRequest):
                     yield str(result)
         except Exception as e:
             # Log the full traceback to see real error
-            logger.error(f"Error in generator:",extra={"error":traceback.format_exc()})
+            logger.error("status Code_500 Error in generator:",extra={"error":traceback.format_exc()})
             yield f"Error: {str(e)}"
 
     try:
-        logger.info("Query Answered:",extra={"thread_id":query_data.Thread})
+        logger.info("Query Answered Successfully:",extra={"thread_id":query_data.Thread})
         return StreamingResponse(content=generator(), media_type="text/plain",headers={
         "Cache-Control": "no-cache",
         "Connection": "keep-alive",
@@ -64,14 +64,14 @@ async def User_query(request: Request,query_data: ChatRequest):
         "X-Accel-Buffering": "no",
     },)
     except Exception as e:
-        logger.error(msg=f"status Code_500 Error in processing query:{traceback.format_exc()}",exc_info=True)
+        logger.error(msg="status Code_500 Error in processing query:{traceback.format_exc()}",exc_info=True)
         raise HTTPException(status_code=500, detail={
             "message": "Error in processing query",
             "error": str(e),
             "traceback": traceback.format_exc()
         })
 
-@api.get("/get-threads",response_model=List[Thread])
+@api.get("/get-threads",response_model=List[Thread_Response])
 async def all_get_Thread(request: Request):
     result=await request.app.state.services.all_get_Threads(request)
     return result
@@ -80,17 +80,17 @@ async def get_title(request: Request,thread_id:str):
     result= await request.app.state.services.get_title(request,thread_id)
     return result
 
-@api.get("/get-messages/{thread_id}",response_model=List[Messages])
+@api.get("/get-messages/{thread_id}",response_model=List[Message_Response])
 async def get_thread_messages(request: Request,thread_id:str):
     result=await request.app.state.services.get_thread_messages(request,thread_id)
     return result
 
-@api.post("/new-chat",response_model=thread_Response)
+@api.post("/new-chat")
 async def create_thread(request: Request,thread: Thread):
     result=await request.app.state.services.create_thread(request,thread)
-    return JSONResponse({"message": "success","thread_id": result,})
+    return JSONResponse({"message": "success","thread_id": result})
 
-@api.post("/new-message",response_model=List[message_Response])
+@api.post("/new-message")
 async def create_message(request: Request,message:List[Messages]):
     result=await request.app.state.services.create_message(request,message)
     return JSONResponse({"message": "success","message_id": result})

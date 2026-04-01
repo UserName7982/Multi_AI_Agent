@@ -8,7 +8,6 @@ from ..config import config
 from ..Agentic.Agent import get_graph
 from langchain_core.messages import AIMessageChunk, HumanMessage
 from Logger import logger
-from ..DB.postgres import get_pool
 
 FILE_PATH = config.BASE_PATH + "/docs"
 
@@ -50,9 +49,9 @@ class Services:
                         and  not event.tool_calls):
                         yield event.content
             yield "[END]"
-            logger.info("Answer completed",extra={"thread_id": query.Thread})
+            logger.info("Answer Generated Successfully",extra={"thread_id": query.Thread})
         except Exception as e:
-            logger.error(f"status_code:500 Error in Answer:\n",extra={"error":traceback.format_exc()})
+            logger.error("status_code:500 Error in Answer:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in Answer", "error": str(e)})
 
     async def show_state(self,config):
@@ -74,8 +73,9 @@ class Services:
             async with pool.connection() as conn:
                 async with conn.cursor() as cur:
                     logger.info("Start Getting Threads")
-                    await cur.execute("SELECT thread_id, user_id, title FROM threads")
+                    await cur.execute("SELECT thread_id, user_id, title,created_at FROM threads")
                     rows = await cur.fetchall()
+                logger.info("Threads Fetched Successfully")
                 return rows
         except Exception as e:
             logger.error(f"status_code:500 Error in getting Threads in DataBase:\n",extra={"error":traceback.format_exc()})
@@ -83,6 +83,8 @@ class Services:
     
     
     async def get_title(self,request: Request,thread_id:uuid.UUID):
+        if(await self.check_thread_id_exits(request,thread_id)) is False:
+            raise HTTPException(status_code=404, detail={"message": "Thread not found"})
         pool=request.app.state.pools[config.URI]
         if pool is None or pool.closed:
             logger.critical("No pool is open",)
@@ -98,7 +100,9 @@ class Services:
             logger.error(f"status_code:500 Error in getting title in DataBase:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in get_title", "error": str(e)})
     
-    async def get_thread_messages(self,request: Request,thread_id:str):
+    async def get_thread_messages(self,request: Request,thread_id:uuid.UUID):
+        if(await self.check_thread_id_exits(request,thread_id)) is False:
+            raise HTTPException(status_code=404, detail={"message": "Thread not found"})
         pool=request.app.state.pools[config.URI]
         if pool is None or pool.closed:
             logger.critical("No pool is open",)
@@ -107,8 +111,9 @@ class Services:
             async with pool.connection() as conn:
                 async with conn.transaction():
                     logger.info("Start Getting messages",extra={"thread_id": thread_id})
-                    rows=await conn.execute("SELECT content FROM messages WHERE thread_id=%s",(thread_id,))
+                    rows=await conn.execute("SELECT thread_id,role,content,created_at,message_id FROM messages WHERE thread_id=%s",(thread_id,))
                     result=await rows.fetchall()
+                    logger.info("Messages Fetched Successfully",extra={"thread_id": thread_id})
                     return result
         except Exception as e:
             logger.error(f"status_code:500 Error in getting messages in DataBase:\n",extra={"error":traceback.format_exc()})
@@ -131,7 +136,7 @@ class Services:
                     logger.info("Start Creating thread",extra={"thread_id": thread_id})
                     await conn.execute("INSERT INTO threads (thread_id,title,user_id) VALUES (%s,%s,%s)",(thread_id,title,user_id))
                     logger.info("Thread created Successfully",extra={"thread_id": thread_id})
-                    return thread_id
+                    return str(thread_id)
         except Exception as e:
             logger.error(f"status_code:500 Error in create_thread in DataBase:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in create_thread", "error": str(e)})
@@ -141,22 +146,27 @@ class Services:
         if message is None:
             logger.critical("No message to create",)
             raise HTTPException(status_code=400, detail={"message": "No message to create"})
-        
         try:
+            messages=[]
             for msg in message:
-                msg.message_id=uuid.uuid4()
-            result=[msg.message_id for msg in message]
+                messages.append({
+                    "message_id":uuid.uuid4(),
+                    "thread_id":msg.thread_id,
+                    "role":msg.role,
+                    "content":msg.content
+                })
+            result=[str(msg["message_id"]) for msg in messages]
             async with pool.connection() as conn:
                 async with conn.cursor() as cur:
-                    logger.info("Start Creating message",extra={"message_id": message[0].message_id})
-                    await cur.executemany("INSERT INTO messages (thread_id,role,content,message_id) VALUES (%s,%s,%s,%s)",((msg.thread_id,msg.role ,msg.content,msg.message_id) for msg in message))
+                    logger.info("Start Creating message",extra={"thread_id":message[0].thread_id})
+                    await cur.executemany("INSERT INTO messages (thread_id,role,content,message_id) VALUES (%s,%s,%s,%s)",((msg["thread_id"],msg["role"] ,msg["content"],msg["message_id"]) for msg in messages))
                     logger.info("Message created Successfully",extra={"thread_id":message[0].thread_id})
                     return result
         except Exception as e:
             logger.error(f"status_code:500 Error in create_message in DataBase:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in create_message", "error": str(e)})
     
-    async def delete_chat(self,request: Request,thread_id:str):
+    async def delete_chat(self,request: Request,thread_id:uuid.UUID):
         pool=request.app.state.pools[config.URI]
         if pool is None or pool.closed:
             logger.critical("No pool is open",)
@@ -170,4 +180,12 @@ class Services:
         except Exception as e:
             logger.error(f"status_code:500 Error in delete_thread in DataBase:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in delete_thread", "error": str(e)})
-        
+    
+    async def check_thread_id_exits(self,request: Request,thread_id:uuid.UUID)->bool:
+        query="SELECT EXISTS(SELECT 1 FROM threads WHERE thread_id = %s)"
+        pool=request.app.state.pools[config.URI]
+        async with pool.connection() as conn:
+            async with conn.cursor() as cur:
+                await cur.execute(query,(thread_id,))
+                result=(await cur.fetchone())[0]
+        return result
