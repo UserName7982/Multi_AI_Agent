@@ -1,6 +1,5 @@
 import asyncio
 import json
-import logging
 from typing import AsyncGenerator, List
 from fastapi import File, Request, UploadFile,APIRouter,HTTPException,status
 from fastapi.responses import JSONResponse, StreamingResponse
@@ -10,6 +9,7 @@ from Logger import logger
 import json
 import traceback
 from typing import AsyncGenerator
+from ..DB.redis import addmessage,getmessages
 
 
 api=APIRouter(prefix="/app",tags=["Files"])
@@ -36,10 +36,12 @@ async def User_query(request: Request,query_data: ChatRequest):
     if query_data is None:
         logger.error("No query to process")
         raise HTTPException(status_code=400, detail={"message": "No query to process"})
+    
     async def generator() -> AsyncGenerator[str, None]:
         try:
-            async for result in request.app.state.services.Answer(query_data):
+            async for result in request.app.state.services.Answer(request,query_data):
                 if isinstance(result, str):
+                   
                     yield result
                 elif isinstance(result, list):
                     yield "".join(
@@ -49,6 +51,7 @@ async def User_query(request: Request,query_data: ChatRequest):
                 elif isinstance(result, dict):
                     yield json.dumps(result)
                 else:
+                   
                     yield str(result)
         except Exception as e:
             # Log the full traceback to see real error
@@ -82,13 +85,19 @@ async def get_title(request: Request,thread_id:str):
 
 @api.get("/get-messages/{thread_id}",response_model=List[Message_Response])
 async def get_thread_messages(request: Request,thread_id:str):
-    result=await request.app.state.services.get_thread_messages(request,thread_id)
-    return result
+    try:
+        result=await getmessages(thread_id)
+        if not result:    
+            result=await request.app.state.services.get_thread_messages(request,thread_id)
+        return result
+    except Exception as e:
+        logger.error("Error occurred while fetching thread messages", extra={"error": str(e)})
+        raise HTTPException(status_code=500, detail={"message": "Error occurred while fetching thread messages", "error": str(e)})
 
 @api.post("/new-chat")
 async def create_thread(request: Request,thread: Thread):
     result=await request.app.state.services.create_thread(request,thread)
-    return JSONResponse({"message": "success","thread_id": result})
+    return JSONResponse({"message": "success","thread_id": str(result["thread_id"]),"title": result["title"]})
 
 @api.post("/new-message")
 async def create_message(request: Request,message:List[Messages]):

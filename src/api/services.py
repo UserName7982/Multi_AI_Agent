@@ -1,9 +1,11 @@
+import asyncio
 import traceback
 from typing import List
 import uuid
 from fastapi import HTTPException, Request, UploadFile,status
 import os
-from src.api.schema import Messages, Thread
+from src.DB.redis import addmessage
+from src.api.schema import ChatRequest, Message_Response, Messages, Thread, Thread_Response
 from ..config import config
 from ..Agentic.Agent import get_graph
 from langchain_core.messages import AIMessageChunk, HumanMessage
@@ -29,10 +31,11 @@ class Services:
             saved.append({"filename": f.filename, "path": file_location})
         return saved
 
-    async def Answer(self, query):
-        cfg = {"configurable": {"thread_id": query.Thread,"user_id":"user1"}}
+    async def Answer(self, request: Request, query:ChatRequest):
+        cfg = {"configurable": {"thread_id": query.Thread,"user_id":"user"}}
         initial_state = {"messages": [HumanMessage(content=query.query)]}
         # await self.show_state(cfg)
+        redis_result=[]
         if self.workflow is None:
             yield "Workflow is not initialized"
             return 
@@ -47,8 +50,12 @@ class Services:
                 if (isinstance(event, AIMessageChunk)
                         and event.content and (metadata.get("langgraph_node","") == "chat_node") # type: ignore
                         and  not event.tool_calls):
+                        redis_result.append(event.content)
                         yield event.content
             yield "[END]"
+            ai_response="".join(redis_result)
+            Message=[Messages(thread_id=query.Thread,role="user",content=query.query),Messages(thread_id=query.Thread,role="ai",content=ai_response)]
+            await self.create_message(request,Message)
             logger.info("Answer Generated Successfully",extra={"thread_id": query.Thread})
         except Exception as e:
             logger.error("status_code:500 Error in Answer:\n",extra={"error":traceback.format_exc()})
@@ -76,7 +83,16 @@ class Services:
                     await cur.execute("SELECT thread_id, user_id, title,created_at FROM threads")
                     rows = await cur.fetchall()
                 logger.info("Threads Fetched Successfully")
-                return rows
+                formatted = [
+                    Thread_Response(
+                        user_id=row["user_id"],
+                        title=row["title"],
+                        thread_id=str(row["thread_id"]),
+                        created_at=row["created_at"]
+                    )
+                    for row in rows
+                ]
+                return formatted
         except Exception as e:
             logger.error(f"status_code:500 Error in getting Threads in DataBase:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in all_get_Threads", "error": str(e)})
@@ -114,9 +130,20 @@ class Services:
                     rows=await conn.execute("SELECT thread_id,role,content,created_at,message_id FROM messages WHERE thread_id=%s",(thread_id,))
                     result=await rows.fetchall()
                     logger.info("Messages Fetched Successfully",extra={"thread_id": thread_id})
-                    return result
+                    formatted = [
+                        Message_Response(
+                            thread_id=str(row["thread_id"]),
+                            role=row["role"],
+                            content=row["content"],
+                            created_at=row["created_at"],
+                            message_id=str(row["message_id"])
+                        )
+                        for row in result
+                    ]
+
+            return formatted
         except Exception as e:
-            logger.error(f"status_code:500 Error in getting messages in DataBase:\n",extra={"error":traceback.format_exc()})
+            logger.error(f"status_code:500 Error in getting messages in DataBase: {traceback.format_exc()}\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in get_thread_messages", "error": str(e)})
     
     async def create_thread(self,request: Request,thread: Thread):
@@ -136,7 +163,7 @@ class Services:
                     logger.info("Start Creating thread",extra={"thread_id": thread_id})
                     await conn.execute("INSERT INTO threads (thread_id,title,user_id) VALUES (%s,%s,%s)",(thread_id,title,user_id))
                     logger.info("Thread created Successfully",extra={"thread_id": thread_id})
-                    return str(thread_id)
+                    return {"thread_id":thread_id,"title":title}
         except Exception as e:
             logger.error(f"status_code:500 Error in create_thread in DataBase:\n",extra={"error":traceback.format_exc()})
             raise HTTPException(status_code=500, detail={"message": "Error in processing query in create_thread", "error": str(e)})
@@ -147,14 +174,17 @@ class Services:
             logger.critical("No message to create",)
             raise HTTPException(status_code=400, detail={"message": "No message to create"})
         try:
+            task=[]
             messages=[]
             for msg in message:
                 messages.append({
-                    "message_id":uuid.uuid4(),
+                    "message_id":(uuid.uuid4()),
                     "thread_id":msg.thread_id,
                     "role":msg.role,
                     "content":msg.content
                 })
+                task.append(addmessage(msg.thread_id,msg.role,msg.content,(messages[-1]["message_id"])))
+            await asyncio.gather(*task)
             result=[str(msg["message_id"]) for msg in messages]
             async with pool.connection() as conn:
                 async with conn.cursor() as cur:
@@ -187,5 +217,5 @@ class Services:
         async with pool.connection() as conn:
             async with conn.cursor() as cur:
                 await cur.execute(query,(thread_id,))
-                result=(await cur.fetchone())[0]
+                result=(await cur.fetchone())["exists"]
         return result

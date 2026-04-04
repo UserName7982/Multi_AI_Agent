@@ -1,95 +1,285 @@
-2026-03-30 21:14:49,500 | INFO | app | Query Answered:
-2026-03-30 21:15:13,327 | INFO | app | Answer completed
-2026-03-31 13:38:39,500 | INFO | app | Query Answered:
-2026-03-31 17:26:09,185 | ERROR | app | status_code:500 Error in create_thread in DataBase:
 
-2026-03-31 17:28:55,411 | INFO | app | Start Creating thread
-2026-03-31 17:28:55,414 | ERROR | app | status_code:500 Error in create_thread in DataBase:
+2026-04-03 13:02:12,888 | INFO | app | Start Getting Threads
+2026-04-03 13:02:12,936 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:02:12,945 | INFO | app | Start Getting Threads
+2026-04-03 13:02:12,951 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:02:19,948 | INFO | app | Start Getting messages
+2026-04-03 13:02:19,953 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:02:20,196 | INFO | app | Start Getting messages
+2026-04-03 13:02:20,196 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:02:21,350 | INFO | app | Start Getting messages
+2026-04-03 13:02:21,351 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:02:22,540 | INFO | app | Start Getting messages
+2026-04-03 13:02:22,543 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:02:23,499 | INFO | app | Start Getting messages
+2026-04-03 13:02:23,502 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:02:24,248 | INFO | app | Start Getting messages
+2026-04-03 13:02:24,248 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:02:25,006 | INFO | app | Start Getting messages
+2026-04-03 13:02:25,010 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:02:39,392 | INFO | app | Start Getting messages
+2026-04-03 13:02:39,395 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:04:31,117 | INFO | app | Start Getting messages
+2026-04-03 13:04:31,124 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:04:31,908 | INFO | app | Start Getting messages
+2026-04-03 13:04:31,911 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:04:33,195 | INFO | app | Start Getting messages
+2026-04-03 13:04:33,199 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:05:44,506 | INFO | app | Start Getting Threads
+2026-04-03 13:05:44,516 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:05:44,521 | INFO | app | Start Getting Threads
+2026-04-03 13:05:44,529 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:05:57,756 | INFO | app | Start Creating thread
+2026-04-03 13:05:57,761 | INFO | app | Thread created Successfully
+2026-04-03 13:05:57,850 | INFO | app | Start Getting messages
+2026-04-03 13:05:57,852 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:05:57,860 | INFO | app | Start Getting messages
+2026-04-03 13:05:57,862 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:06:07,965 | INFO | app | Query Answered Successfully:
+2026-04-03 13:06:24,010 | ERROR | app | status_code:500 Error in create_message in DataBase:
 
-2026-03-31 17:31:05,093 | INFO | app | Start Creating thread
-2026-03-31 17:31:05,111 | ERROR | app | status_code:500 Error in create_thread in DataBase:
+2026-04-03 13:06:24,010 | ERROR | app | status_code:500 Error in Answer:
 
-2026-03-31 17:47:28,362 | INFO | app | Start Creating thread
-2026-03-31 17:47:28,367 | ERROR | app | status_code:500 Error in create_thread in DataBase:
+2026-04-03 13:06:24,010 | ERROR | app | status Code_500 Error in generator:
+2026-04-03 13:14:17,997 | INFO | app | Start Getting Threads
+2026-04-03 13:14:18,010 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:14:18,018 | INFO | app | Start Getting Threads
+2026-04-03 13:14:18,023 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:14:19,041 | INFO | app | Start Getting messages
+2026-04-03 13:14:19,044 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:14:19,059 | INFO | app | Start Getting messages
+2026-04-03 13:14:19,059 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:14:52,976 | INFO | app | Query Answered Successfully:
+2026-04-03 13:15:19,895 | ERROR | app | status_code:500 Error in create_message in DataBase:
 
-2026-03-31 17:49:18,914 | INFO | app | Start Creating thread
-2026-03-31 18:06:22,313 | INFO | app | Start Creating message
-2026-03-31 18:06:22,315 | ERROR | app | status_code:500 Error in create_message in DataBase:
+2026-04-03 13:15:19,895 | ERROR | app | status_code:500 Error in Answer:
 
-2026-03-31 18:08:11,880 | INFO | app | Start Creating message
-2026-03-31 18:08:11,940 | INFO | app | Message created Successfully
-2026-03-31 20:47:27,191 | INFO | app | Start Getting Threads
-2026-03-31 20:49:11,042 | INFO | app | Start Getting Threads
-2026-03-31 20:54:27,755 | INFO | app | Start Getting Threads
-2026-03-31 20:54:27,758 | ERROR | app | status_code:500 Error in getting Threads in DataBase:
+2026-04-03 13:15:19,904 | ERROR | app | status Code_500 Error in generator:
+2026-04-03 13:16:36,643 | INFO | app | Start Getting Threads
+2026-04-03 13:16:36,649 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:16:36,654 | INFO | app | Start Getting Threads
+2026-04-03 13:16:36,658 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:21:36,703 | INFO | app | Query Answered Successfully:
+2026-04-03 13:21:57,662 | ERROR | app | status_code:500 Error in create_message in DataBase:
 
-2026-03-31 20:56:09,134 | INFO | app | Start Getting Threads
-2026-03-31 20:56:09,134 | ERROR | app | status_code:500 Error in getting Threads in DataBase:
+2026-04-03 13:21:57,665 | ERROR | app | status_code:500 Error in Answer:
 
-2026-03-31 20:57:35,830 | INFO | app | Start Getting Threads
-2026-03-31 21:00:32,322 | INFO | app | Start Getting Threads
-2026-03-31 21:02:00,435 | INFO | app | Start Creating thread
-2026-03-31 21:02:00,444 | INFO | app | Thread created Successfully
-2026-03-31 21:02:12,149 | INFO | app | Start Getting title
-2026-03-31 21:10:39,477 | INFO | app | Start Creating thread
-2026-03-31 21:10:39,484 | INFO | app | Thread created Successfully
-2026-03-31 21:11:39,482 | INFO | app | Start Getting Threads
-2026-03-31 21:11:50,864 | INFO | app | Start Getting title
-2026-03-31 21:12:55,141 | INFO | app | Start Getting title
-2026-03-31 21:14:35,964 | INFO | app | Start Getting title
-2026-03-31 21:15:58,209 | INFO | app | Start Getting title
-2026-03-31 21:17:06,030 | INFO | app | Start Getting title
-2026-03-31 21:18:29,854 | INFO | app | Query Answered:
-2026-03-31 21:20:43,782 | INFO | app | Answer completed
-2026-03-31 21:21:13,101 | INFO | app | Query Answered:
-2026-03-31 21:22:17,759 | INFO | app | Answer completed
-2026-04-01 12:29:12,191 | INFO | app | Start Creating thread
-2026-04-01 12:29:12,197 | INFO | app | Thread created Successfully
-2026-04-01 12:31:41,746 | INFO | app | Start Creating thread
-2026-04-01 12:31:41,753 | INFO | app | Thread created Successfully
-2026-04-01 12:35:29,962 | ERROR | app | status_code:500 Error in create_message in DataBase:
+2026-04-03 13:21:57,670 | ERROR | app | status Code_500 Error in generator:
+2026-04-03 13:23:27,169 | INFO | app | Query Answered Successfully:
+2026-04-03 13:23:55,838 | INFO | app | Start Creating message
+2026-04-03 13:23:55,900 | INFO | app | Message created Successfully
+2026-04-03 13:23:55,901 | INFO | app | Answer Generated Successfully
+2026-04-03 13:26:08,977 | INFO | app | Start Getting Threads
+2026-04-03 13:26:08,987 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:26:08,996 | INFO | app | Start Getting Threads
+2026-04-03 13:26:09,000 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:26:09,656 | INFO | app | Start Getting messages
+2026-04-03 13:26:09,661 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:26:09,697 | INFO | app | Start Getting messages
+2026-04-03 13:26:09,697 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:29:03,283 | INFO | app | Start Getting Threads
+2026-04-03 13:29:03,286 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:29:03,288 | INFO | app | Start Getting Threads
+2026-04-03 13:29:03,290 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:29:14,820 | INFO | app | Start Creating thread
+2026-04-03 13:29:14,824 | INFO | app | Thread created Successfully
+2026-04-03 13:29:14,900 | INFO | app | Start Getting messages
+2026-04-03 13:29:14,903 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:29:14,920 | INFO | app | Start Getting messages
+2026-04-03 13:29:14,924 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:29:28,604 | INFO | app | Query Answered Successfully:
+2026-04-03 13:29:43,982 | INFO | app | Start Creating message
+2026-04-03 13:29:44,038 | INFO | app | Message created Successfully
+2026-04-03 13:29:44,039 | INFO | app | Answer Generated Successfully
+2026-04-03 13:30:52,522 | INFO | app | Start Getting Threads
+2026-04-03 13:30:52,529 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:30:52,537 | INFO | app | Start Getting Threads
+2026-04-03 13:30:52,541 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:31:12,575 | INFO | app | Start Getting messages
+2026-04-03 13:31:12,583 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:31:12,931 | INFO | app | Start Getting messages
+2026-04-03 13:31:12,933 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:36:25,829 | INFO | app | Start Getting Threads
+2026-04-03 13:36:25,833 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:36:25,844 | INFO | app | Start Getting Threads
+2026-04-03 13:36:25,847 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:36:33,777 | INFO | app | Start Getting Threads
+2026-04-03 13:36:33,778 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:36:34,087 | INFO | app | Start Getting Threads
+2026-04-03 13:36:34,091 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:38:34,171 | INFO | app | Start Getting Threads
+2026-04-03 13:38:34,182 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:38:34,188 | INFO | app | Start Getting Threads
+2026-04-03 13:38:34,194 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:38:35,460 | INFO | app | Start Getting messages
+2026-04-03 13:38:35,463 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:38:35,508 | INFO | app | Start Getting messages
+2026-04-03 13:38:35,513 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:41:48,897 | INFO | app | Start Getting Threads
+2026-04-03 13:41:48,908 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:41:48,914 | INFO | app | Start Getting Threads
+2026-04-03 13:41:48,921 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:41:49,604 | INFO | app | Start Getting messages
+2026-04-03 13:41:49,614 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:41:49,621 | ERROR | app | status_code:500 Error in getting messages in DataBase:
 
-2026-04-01 12:39:53,694 | INFO | app | Start Creating message
-2026-04-01 12:39:53,752 | ERROR | app | status_code:500 Error in create_message in DataBase:
+2026-04-03 13:41:49,621 | ERROR | app | Error occurred while fetching thread messages
+2026-04-03 13:41:49,634 | INFO | app | Start Getting messages
+2026-04-03 13:41:49,638 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:41:49,643 | ERROR | app | status_code:500 Error in getting messages in DataBase:
 
-2026-04-01 12:44:21,673 | ERROR | app | status_code:500 Error in create_message in DataBase:
+2026-04-03 13:41:49,644 | ERROR | app | Error occurred while fetching thread messages
+2026-04-03 13:48:28,053 | INFO | app | Start Getting Threads
+2026-04-03 13:48:28,066 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:48:28,073 | INFO | app | Start Getting Threads
+2026-04-03 13:48:28,081 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:48:28,840 | INFO | app | Start Getting messages
+2026-04-03 13:48:28,840 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:48:28,881 | ERROR | app | status_code:500 Error in getting messages in DataBase:
 
-2026-04-01 12:45:14,701 | INFO | app | Start Creating message
-2026-04-01 12:45:14,716 | ERROR | app | status_code:500 Error in create_message in DataBase:
+2026-04-03 13:48:28,881 | ERROR | app | Error occurred while fetching thread messages
+2026-04-03 13:48:28,895 | INFO | app | Start Getting messages
+2026-04-03 13:48:28,898 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:48:28,903 | ERROR | app | status_code:500 Error in getting messages in DataBase:
 
-2026-04-01 12:49:34,156 | INFO | app | Start Creating message
-2026-04-01 12:49:34,207 | INFO | app | Message created Successfully
-2026-04-01 12:50:03,649 | INFO | app | Start Getting Threads
-2026-04-01 12:56:33,974 | INFO | app | Start Getting Threads
-2026-04-01 12:56:33,983 | INFO | app | Threads Fetched Successfully
-2026-04-01 12:58:38,483 | INFO | app | Start Getting Threads
-2026-04-01 12:58:38,483 | INFO | app | Threads Fetched Successfully
-2026-04-01 13:01:12,442 | INFO | app | Start Getting Threads
-2026-04-01 13:01:12,449 | INFO | app | Threads Fetched Successfully
-2026-04-01 13:05:11,347 | INFO | app | Start Getting Threads
-2026-04-01 13:05:11,355 | INFO | app | Threads Fetched Successfully
-2026-04-01 13:06:03,776 | INFO | app | Start Getting Threads
-2026-04-01 13:06:03,783 | INFO | app | Threads Fetched Successfully
-2026-04-01 13:06:39,434 | INFO | app | Start Getting messages
-2026-04-01 13:06:59,290 | INFO | app | Start Getting messages
-2026-04-01 13:09:05,392 | INFO | app | Start Getting title
-2026-04-01 13:10:20,891 | INFO | app | Start Getting title
-2026-04-01 13:10:32,590 | INFO | app | Start Getting messages
-2026-04-01 13:18:01,573 | INFO | app | Start Getting messages
-2026-04-01 13:18:01,580 | INFO | app | Messages Fetched Successfully
-2026-04-01 13:20:30,880 | INFO | app | Start Getting messages
-2026-04-01 13:20:30,893 | INFO | app | Messages Fetched Successfully
-2026-04-01 13:21:16,427 | INFO | app | Start Getting Threads
-2026-04-01 13:21:16,430 | INFO | app | Threads Fetched Successfully
-2026-04-01 13:21:23,630 | INFO | app | Start Getting title
-2026-04-01 13:21:44,724 | INFO | app | Start Getting title
-2026-04-01 13:21:53,111 | INFO | app | Start Getting messages
-2026-04-01 13:21:53,112 | INFO | app | Messages Fetched Successfully
-2026-04-01 13:21:55,724 | INFO | app | Start Getting messages
-2026-04-01 13:21:55,725 | INFO | app | Messages Fetched Successfully
-2026-04-01 13:22:27,842 | INFO | app | Start Creating thread
-2026-04-01 13:22:27,844 | INFO | app | Thread created Successfully
-2026-04-01 13:28:00,071 | INFO | app | Start Getting Threads
-2026-04-01 13:28:00,081 | INFO | app | Threads Fetched Successfully
-2026-04-01 13:28:43,126 | INFO | app | Start Creating message
-2026-04-01 13:28:43,181 | INFO | app | Message created Successfully
+2026-04-03 13:48:28,903 | ERROR | app | Error occurred while fetching thread messages
+2026-04-03 13:53:03,549 | INFO | app | Start Getting Threads
+2026-04-03 13:53:03,561 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:53:03,566 | INFO | app | Start Getting Threads
+2026-04-03 13:53:03,574 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:53:04,434 | INFO | app | Start Getting messages
+2026-04-03 13:53:04,440 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:53:04,447 | ERROR | app | status_code:500 Error in getting messages in DataBase: Traceback (most recent call last):
+  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 124, in get_thread_messages
+    formatted = [
+                ^
+  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 126, in <listcomp>
+    "thread_id": str(row[0]),
+                  ~~~^^^
+KeyError: 0
+
+
+2026-04-03 13:53:04,448 | ERROR | app | Error occurred while fetching thread messages
+2026-04-03 13:53:04,463 | INFO | app | Start Getting messages
+2026-04-03 13:53:04,467 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:53:04,470 | ERROR | app | status_code:500 Error in getting messages in DataBase: Traceback (most recent call last):
+  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 124, in get_thread_messages
+    formatted = [
+                ^
+  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 126, in <listcomp>
+    "thread_id": str(row[0]),
+                  ~~~^^^
+KeyError: 0
+
+
+2026-04-03 13:53:04,471 | ERROR | app | Error occurred while fetching thread messages
+2026-04-03 13:55:17,397 | INFO | app | Start Getting Threads
+2026-04-03 13:55:17,405 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:55:17,407 | INFO | app | Start Getting Threads
+2026-04-03 13:55:17,420 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:55:18,150 | INFO | app | Start Getting messages
+2026-04-03 13:55:18,155 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:55:18,173 | INFO | app | Start Getting messages
+2026-04-03 13:55:18,176 | INFO | app | Messages Fetched Successfully
+2026-04-03 13:57:08,304 | INFO | app | Query Answered Successfully:
+2026-04-03 13:57:26,263 | INFO | app | Start Creating message
+2026-04-03 13:57:26,325 | INFO | app | Message created Successfully
+2026-04-03 13:57:26,325 | INFO | app | Answer Generated Successfully
+2026-04-03 13:58:11,357 | INFO | app | Start Getting Threads
+2026-04-03 13:58:11,370 | INFO | app | Threads Fetched Successfully
+2026-04-03 13:58:11,610 | INFO | app | Start Getting Threads
+2026-04-03 13:58:11,614 | INFO | app | Threads Fetched Successfully
+2026-04-03 14:01:07,276 | INFO | app | Start Getting Threads
+2026-04-03 14:01:07,286 | INFO | app | Threads Fetched Successfully
+2026-04-03 14:01:07,294 | INFO | app | Start Getting Threads
+2026-04-03 14:01:07,300 | INFO | app | Threads Fetched Successfully
+2026-04-03 14:01:08,065 | INFO | app | Start Getting messages
+2026-04-03 14:01:08,067 | INFO | app | Messages Fetched Successfully
+2026-04-03 14:01:08,080 | INFO | app | Start Getting messages
+2026-04-03 14:01:08,084 | INFO | app | Messages Fetched Successfully
+2026-04-03 14:06:42,002 | INFO | app | Query Answered Successfully:
+2026-04-03 14:07:01,964 | INFO | app | Start Creating message
+2026-04-03 14:07:02,021 | INFO | app | Message created Successfully
+2026-04-03 14:07:02,022 | INFO | app | Answer Generated Successfully
+2026-04-03 14:07:27,440 | INFO | app | Start Getting Threads
+2026-04-03 14:07:27,450 | INFO | app | Threads Fetched Successfully
+2026-04-03 14:07:27,456 | INFO | app | Start Getting Threads
+2026-04-03 14:07:27,460 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:40:09,855 | INFO | app | Start Getting Threads
+2026-04-03 17:40:09,895 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:40:09,904 | INFO | app | Start Getting Threads
+2026-04-03 17:40:09,910 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:40:46,097 | INFO | app | Start Creating thread
+2026-04-03 17:40:46,107 | INFO | app | Thread created Successfully
+2026-04-03 17:40:46,214 | INFO | app | Start Getting messages
+2026-04-03 17:40:46,217 | INFO | app | Messages Fetched Successfully
+2026-04-03 17:41:01,184 | INFO | app | Query Answered Successfully:
+2026-04-03 17:41:20,743 | INFO | app | Start Creating message
+2026-04-03 17:41:20,790 | INFO | app | Message created Successfully
+2026-04-03 17:41:20,791 | INFO | app | Answer Generated Successfully
+2026-04-03 17:57:12,108 | INFO | app | Start Getting Threads
+2026-04-03 17:57:12,119 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:57:12,126 | INFO | app | Start Getting Threads
+2026-04-03 17:57:12,133 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:57:19,656 | INFO | app | Start Getting Threads
+2026-04-03 17:57:19,657 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:57:19,659 | INFO | app | Start Getting Threads
+2026-04-03 17:57:19,660 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:58:12,742 | INFO | app | Start Getting Threads
+2026-04-03 17:58:12,747 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:58:12,754 | INFO | app | Start Getting Threads
+2026-04-03 17:58:12,759 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:58:56,121 | INFO | app | Start Getting Threads
+2026-04-03 17:58:56,123 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:58:56,124 | INFO | app | Start Getting Threads
+2026-04-03 17:58:56,125 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:59:34,583 | INFO | app | Start Getting Threads
+2026-04-03 17:59:34,589 | INFO | app | Threads Fetched Successfully
+2026-04-03 17:59:34,593 | INFO | app | Start Getting Threads
+2026-04-03 17:59:34,600 | INFO | app | Threads Fetched Successfully
+2026-04-03 18:01:21,623 | INFO | app | Start Getting Threads
+2026-04-03 18:01:21,626 | INFO | app | Threads Fetched Successfully
+2026-04-03 18:01:21,632 | INFO | app | Start Getting Threads
+2026-04-03 18:01:21,637 | INFO | app | Threads Fetched Successfully
+2026-04-03 18:07:16,596 | INFO | app | Start Getting Threads
+2026-04-03 18:07:16,600 | INFO | app | Threads Fetched Successfully
+2026-04-03 18:07:16,606 | INFO | app | Start Getting Threads
+2026-04-03 18:07:16,610 | INFO | app | Threads Fetched Successfully
+2026-04-03 18:09:31,554 | INFO | app | Start Getting Threads
+2026-04-03 18:09:31,555 | INFO | app | Threads Fetched Successfully
+2026-04-03 18:09:31,560 | INFO | app | Start Getting Threads
+2026-04-03 18:09:31,568 | INFO | app | Threads Fetched Successfully
+2026-04-04 19:04:23,139 | INFO | app | Start Getting Threads
+2026-04-04 19:04:23,185 | INFO | app | Threads Fetched Successfully
+2026-04-04 19:04:23,196 | INFO | app | Start Getting Threads
+2026-04-04 19:04:23,201 | INFO | app | Threads Fetched Successfully
+2026-04-04 19:04:24,905 | INFO | app | Start Getting messages
+2026-04-04 19:04:24,910 | INFO | app | Messages Fetched Successfully
+2026-04-04 19:04:41,246 | INFO | app | Start Creating thread
+2026-04-04 19:04:41,254 | INFO | app | Thread created Successfully
+2026-04-04 19:04:41,385 | INFO | app | Start Getting messages
+2026-04-04 19:04:41,387 | INFO | app | Messages Fetched Successfully
+2026-04-04 19:05:07,573 | INFO | app | Query Answered Successfully:
+2026-04-04 19:06:23,125 | INFO | app | Start Creating message
+2026-04-04 19:06:23,187 | INFO | app | Message created Successfully
+2026-04-04 19:06:23,188 | INFO | app | Answer Generated Successfully
+2026-04-04 20:14:16,025 | INFO | app | Start Getting Threads
+2026-04-04 20:14:16,068 | INFO | app | Threads Fetched Successfully
+2026-04-04 20:14:16,075 | INFO | app | Start Getting Threads
+2026-04-04 20:14:16,079 | INFO | app | Threads Fetched Successfully
+2026-04-04 20:14:17,198 | INFO | app | Start Getting Threads
+2026-04-04 20:14:17,201 | INFO | app | Threads Fetched Successfully
+2026-04-04 20:14:17,203 | INFO | app | Start Getting Threads
+2026-04-04 20:14:17,203 | INFO | app | Threads Fetched Successfully
+2026-04-04 20:14:20,185 | INFO | app | Start Getting messages
+2026-04-04 20:14:20,191 | INFO | app | Messages Fetched Successfully
+2026-04-04 20:14:23,083 | INFO | app | Start Getting messages
+2026-04-04 20:14:23,086 | INFO | app | Messages Fetched Successfully
+2026-04-04 20:14:40,697 | INFO | app | Start Creating thread
+2026-04-04 20:14:40,708 | INFO | app | Thread created Successfully
+2026-04-04 20:14:40,789 | INFO | app | Start Getting messages
+2026-04-04 20:14:40,793 | INFO | app | Messages Fetched Successfully
+2026-04-04 20:15:48,841 | INFO | app | Query Answered Successfully:
+2026-04-04 20:16:13,314 | INFO | app | Start Creating message
+2026-04-04 20:16:13,374 | INFO | app | Message created Successfully
+2026-04-04 20:16:13,375 | INFO | app | Answer Generated Successfully

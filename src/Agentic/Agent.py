@@ -5,7 +5,7 @@ from fastapi import Depends
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from psycopg_pool import AsyncConnectionPool
 from pydantic import BaseModel, Field
-from ..Agentic.Tools import rag_retrival
+from ..Agentic.Tools import rag_retrival,read_emails
 from langchain_core.messages import HumanMessage, SystemMessage,RemoveMessage,ToolMessage
 from langgraph.graph import START,END,StateGraph,MessagesState
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver 
@@ -26,7 +26,7 @@ llm=ChatOllama(model="qwen3.5:397b-cloud",base_url="http://localhost:11434",verb
 embedding_function = OllamaEmbeddings(model="embeddinggemma:latest") 
 
 
-retrival_tools=[rag_retrival]
+retrival_tools=[rag_retrival,read_emails]
 llm_with_tools=llm.bind_tools(retrival_tools)
 DB_URI = config.DB_URI
 DB_URI1=config.DB_URI1
@@ -203,7 +203,7 @@ async def remember_node(state: chatmessage,config:RunnableConfig,*,store: BaseSt
             SystemMessage(content=MEMORY_PROMPT.format(user_details_content=existing_memories)),
             {"role": "user", "content": last_message},
         ]) # type: ignore
-    print("existing_memories:",existing_memories)
+    # print("existing_memories:",existing_memories)
     key=str(uuid.uuid4())
     if decision.should_write:
         for msg in decision.memories:
