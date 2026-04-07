@@ -1,4 +1,5 @@
 import asyncio
+import base64
 import traceback
 from fastapi import HTTPException
 from ..email.authenticate_gmail_api import authenticate_gmail_api
@@ -6,7 +7,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from html import unescape
 from bs4 import BeautifulSoup
-
+import re
 async def read_emails():
     email_list = {}
     creds=await authenticate_gmail_api()
@@ -18,7 +19,6 @@ async def read_emails():
             txt=service.users().messages().get(userId='me', id=msg['id']).execute()
             try:
                 payload=txt['payload']
-                debug_payload(payload)
                 headers=payload['headers']
                 subject=""
                 sender=""
@@ -30,11 +30,7 @@ async def read_emails():
                         sender=d['value']
                     if d['name']=='Date':
                         time=(d['value'])
-                body_text = await get_email_body(payload)
-                attachments = []           
-                print(f"Subject: {subject}")
-                print(f"From: {sender}")
-                print(f"Body: {body_text}")
+                body_text,attachments = await get_email_body(payload)          
                 email_list[time] = {
                     'subject': subject,
                     'sender': sender,
@@ -47,22 +43,11 @@ async def read_emails():
     except HttpError as error:
         print(f'An error occurred: {error}')
         return []
-def debug_payload(payload, depth=0):
-    indent = "  " * depth
-    mime = payload.get('mimeType', 'unknown')
-    body = payload.get('body', {})
-    data = body.get('data', '')
-    for part in payload.get('parts', []):
-        debug_payload(part, depth + 1)
-
 # Call this before get_email_body
 async def get_email_body(payload):
-
+    attachments = {}
     def decode_data(data):
-        import base64
-        # Fix URL-safe base64 chars
         data = data.replace("-", "+").replace("_", "/")
-        # Fix padding
         padding = 4 - len(data) % 4
         if padding != 4:
             data += "=" * padding
@@ -70,24 +55,24 @@ async def get_email_body(payload):
         return decoded
 
     def html_to_text(html):
-        import re
         soup = BeautifulSoup(html, 'html.parser')
         for tag in soup(['script', 'style', 'head']):
             tag.decompose()
         text = soup.get_text(separator='\n')
-        # Collapse excessive blank lines
         text = re.sub(r'\n{3,}', '\n\n', text)
         return text.strip()
 
     def extract_from_parts(parts):
         plain = None
         html = None
+        
         for part in parts:
             mime = part.get('mimeType', '')
             if mime.startswith('multipart'):
-                sub_plain, sub_html = extract_from_parts(part.get('parts', []))
+                sub_plain, sub_html, sub_attachments = extract_from_parts(part.get('parts', []))
                 plain = plain or sub_plain
                 html = html or sub_html
+                attachments.update(sub_attachments)
             elif mime == 'text/plain':
                 data = part.get('body', {}).get('data', '')
                 if data:
@@ -96,41 +81,44 @@ async def get_email_body(payload):
                 data = part.get('body', {}).get('data', '')
                 if data:
                     html = decode_data(data)
-        return plain, html
+            if "attachmentId" in part.get('body', {}):
+                attachments[part['body']['attachmentId']] = {
+                    'filename': part.get('filename', ''),
+                    'mimeType': part.get('mimeType', '')
+                }
+        return plain, html, attachments 
 
     parts = payload.get('parts', [])
     if parts:
-        plain, html = extract_from_parts(parts)
+        plain, html,attachments = extract_from_parts(parts)
         if plain:
-            return clean_body(plain)
+            return clean_body(plain),attachments
         if html:
-            return clean_body(html_to_text(html))
+            return clean_body(html_to_text(html)),attachments
 
     data = payload.get('body', {}).get('data', '')
+    if "attachmentId" in payload.get('body', {}):
+        attachments[payload['body']['attachmentId']] = {
+            'filename': payload.get('filename', ''),
+            'mimeType': payload.get('mimeType', '')
+        }
     
     if data:
         raw = decode_data(data)
         if payload.get('mimeType', '') == 'text/html' or raw.strip().startswith('<'):
-            return clean_body(html_to_text(raw))
-        return raw
+            return clean_body(html_to_text(raw)),attachments
+        return raw,attachments
 
-    return ""
-import re
+    return "",attachments
+
 
 def clean_body(text):
-    # Unescape HTML entities (&nbsp; &zwnj; etc)
     text = unescape(text)
-    # Remove zero-width and invisible unicode characters (includes &zwnj; after unescaping)
     text = re.sub(r'[\u034f\u2007\ufeff\u200b\u200c\u200d\u00ad\u200c]+', '', text)
-    # Remove zero-width non-joiner specifically (what &zwnj; becomes)
     text = text.replace('\u200c', '')
-    # Replace non-breaking spaces with regular spaces (what &nbsp; becomes)
     text = text.replace('\xa0', ' ')
-    # Normalize Windows line endings
     text = text.replace('\r\n', '\n').replace('\r', '\n')
-    # Collapse multiple spaces into one
     text = re.sub(r' {2,}', ' ', text)
-    # Collapse multiple newlines into max 2
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
     

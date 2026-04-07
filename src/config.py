@@ -1,5 +1,4 @@
 import os
-from pydantic import SecretStr
 from pydantic_settings import BaseSettings,SettingsConfigDict
 
 class Settings(BaseSettings):
@@ -9,4 +8,7 @@ class Settings(BaseSettings):
     DB_URI1 :str
     BetterStack:str
     URI: str
+    Linkdin_API:str
+    Linkdin_SECRET:str
+    Linkdin_ACCESS_TOKEN:str
 config=Settings() # type: ignore

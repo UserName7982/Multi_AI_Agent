@@ -5,7 +5,7 @@ from fastapi import Depends
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from psycopg_pool import AsyncConnectionPool
 from pydantic import BaseModel, Field
-from ..Agentic.Tools import rag_retrival,read_emails
+from ..Agentic.Tools import rag_retrival,read_emails,send_emails
 from langchain_core.messages import HumanMessage, SystemMessage,RemoveMessage,ToolMessage
 from langgraph.graph import START,END,StateGraph,MessagesState
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver 
@@ -26,7 +26,7 @@ llm=ChatOllama(model="qwen3.5:397b-cloud",base_url="http://localhost:11434",verb
 embedding_function = OllamaEmbeddings(model="embeddinggemma:latest") 
 
 
-retrival_tools=[rag_retrival,read_emails]
+retrival_tools=[rag_retrival,read_emails,send_emails]
 llm_with_tools=llm.bind_tools(retrival_tools)
 DB_URI = config.DB_URI
 DB_URI1=config.DB_URI1
@@ -114,6 +114,8 @@ TASK:
 """
 class chatmessage(MessagesState):
     summary:str
+    emails:dict|None
+    draft_email:dict|None
 
 async def get_checkpointer(pool:AsyncConnectionPool):
     checkpointer = AsyncPostgresSaver(conn=pool) # type: ignore
