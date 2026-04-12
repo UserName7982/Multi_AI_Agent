@@ -1,433 +1,341 @@
+2026-04-11 10:13:10,282 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:13:10,289 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 10:13:36,405 | ERROR | app | Error fetching emails: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'module'>
+2026-04-11 10:14:42,032 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:14:42,043 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 10:14:45,553 | ERROR | app | Error fetching emails: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'module'>
+2026-04-11 10:16:22,117 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 10:16:25,495 | ERROR | app | Error fetching emails: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'module'>
+2026-04-11 10:16:36,833 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:16:36,848 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 10:16:40,385 | ERROR | app | Error fetching emails: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'module'>
+2026-04-11 10:18:03,947 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:18:03,952 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 10:18:08,025 | ERROR | app | Error fetching emails: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'module'>
+2026-04-11 10:19:31,086 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:19:45,869 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:19:59,585 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:20:14,333 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:20:14,337 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 10:20:17,774 | ERROR | app | Error fetching emails: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'module'>
+2026-04-11 10:21:41,297 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:21:53,351 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:21:53,356 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 10:21:56,815 | ERROR | app | Error fetching emails: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'module'>
+2026-04-11 10:23:48,302 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 10:24:02,253 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:27:34,112 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:27:34,141 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:28:06,335 | INFO | app | LLM response: message='Processed LinkedIn job alerts email containing no actionable tasks. LinkedIn promotions and newsletters were filtered out.' payload=[]
+2026-04-11 18:28:06,335 | INFO | app | Task payloads: []
+2026-04-11 18:28:21,677 | ERROR | app | Error fetching emails1: Event loop is closed
+2026-04-11 18:30:21,432 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:30:21,438 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:32:01,525 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:32:42,203 | INFO | app | LLM response: message='Processed 5 emails received on 2026-04-11. All emails were identified as promotional job alerts or newsletters from no-reply senders (LinkedIn, Unstop) and were excluded based on task type rules.' payload=[]
+2026-04-11 18:32:42,205 | INFO | app | Task payloads: []
+2026-04-11 18:32:45,885 | ERROR | app | Error fetching emails1: Event loop is closed
+2026-04-11 18:39:28,602 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:39:28,615 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:40:13,447 | INFO | app | LLM response: message='Processed 5 emails; all identified as promotional newsletters, job alerts, or no-reply blasts with no actionable tasks.' payload=[]
+2026-04-11 18:40:13,449 | INFO | app | Task payloads: []
+2026-04-11 18:42:30,836 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:42:30,842 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:43:40,149 | INFO | app | LLM response: message='Processed 10 emails. All identified as promotional content, newsletters, or automated no-reply blasts; no actionable tasks extracted.' payload=[]
+2026-04-11 18:43:40,153 | INFO | app | Task payloads: []
+2026-04-11 18:44:10,908 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:44:16,981 | ERROR | app | Error fetching emails1: Event loop is closed
+2026-04-11 18:45:50,922 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:47:33,963 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:47:46,900 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:48:00,148 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:48:34,698 | INFO | app | LLM response: message='Processed 10 emails received between 2026-04-10 and 2026-04-11. All identified as automated notifications, job alerts, newsletters, or promotional content from no-reply addresses. No actionable tasks requiring user response or scheduling were extracted.' payload=[]
+2026-04-11 18:48:34,699 | INFO | app | Task payloads: []
+2026-04-11 18:51:20,185 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:51:20,269 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:51:20,274 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:51:20,274 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:51:26,162 | ERROR | app | Error fetching emails1: Event loop is closed
+2026-04-11 18:53:00,275 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:53:00,276 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:53:00,279 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:53:00,281 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:54:40,310 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:54:40,315 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:54:40,320 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:54:40,325 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:56:42,717 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 18:56:42,726 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:56:42,782 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:56:42,782 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:56:42,786 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:58:22,803 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:58:22,811 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:58:22,817 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 18:58:22,823 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:01:00,891 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:01:00,899 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:01:00,953 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:01:00,955 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:01:00,956 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:02:40,993 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:02:40,994 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:02:41,008 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:02:41,013 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:02:44,747 | INFO | app | LLM response: message='Processed 9 emails, extracted 1 actionable task for Codeforces contest registration.' payload=[task_payload(recipent_email='noreply@codeforces.com', subject='Codeforces Round 1092 (Div. 1, Div. 2, Based on THUPC 2026 — Finals)', body_summary='Register for Codeforces Round 1092 contest starting on April 12, 2026 at 05:35 UTC.', priority='high', received_date='2026-04-11T02:16:46Z', Deadline_date='2026-04-12T05:35:00Z', task_type='notify_user', schedule_type='one_time')]
+2026-04-11 19:02:44,753 | INFO | app | Task payloads: [task_payload(recipent_email='noreply@codeforces.com', subject='Codeforces Round 1092 (Div. 1, Div. 2, Based on THUPC 2026 — Finals)', body_summary='Register for Codeforces Round 1092 contest starting on April 12, 2026 at 05:35 UTC.', priority='high', received_date='2026-04-11T02:16:46Z', Deadline_date='2026-04-12T05:35:00Z', task_type='notify_user', schedule_type='one_time')]
+2026-04-11 19:02:44,753 | INFO | app | Inserting task with ID: 9ce967a4-2556-4223-b113-fbfc950414c6
+2026-04-11 19:02:44,841 | INFO | app | Task with ID 9ce967a4-2556-4223-b113-fbfc950414c6 inserted successfully.
+2026-04-11 19:02:51,732 | ERROR | app | Error fetching emails1: Event loop is closed
+2026-04-11 19:04:21,026 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:04:21,027 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:04:21,028 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:04:21,031 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:06:01,041 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:06:01,044 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:06:01,046 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:06:01,049 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:06:33,422 | INFO | app | LLM response: message='Processed 10 emails; extracted 2 actionable event registration tasks, skipped 8 promotional/newsletter emails.' payload=[task_payload(recipent_email='noreply@unstop.news', subject="Searching for the World's Best Student Trader – Are You In?", body_summary='Register for IMC Prosperity trading challenge starting April 14, 2026.', priority='medium', received_date='2026-04-11T08:49:05Z', Deadline_date='2026-04-14T00:00:00Z', task_type='notify_user', schedule_type='one_time'), task_payload(recipent_email='noreply@codeforces.com', subject='Codeforces Round 1092 (Div. 1, Div. 2, Based on THUPC 2026 — Finals) ', body_summary='Register for Codeforces Round 1092 contest starting April 12, 2026 at 05:35 UTC.', priority='high', received_date='2026-04-11T02:16:46Z', Deadline_date='2026-04-12T05:35:00Z', task_type='notify_user', schedule_type='one_time')]
+2026-04-11 19:06:33,423 | INFO | app | Task payloads: [task_payload(recipent_email='noreply@unstop.news', subject="Searching for the World's Best Student Trader – Are You In?", body_summary='Register for IMC Prosperity trading challenge starting April 14, 2026.', priority='medium', received_date='2026-04-11T08:49:05Z', Deadline_date='2026-04-14T00:00:00Z', task_type='notify_user', schedule_type='one_time'), task_payload(recipent_email='noreply@codeforces.com', subject='Codeforces Round 1092 (Div. 1, Div. 2, Based on THUPC 2026 — Finals) ', body_summary='Register for Codeforces Round 1092 contest starting April 12, 2026 at 05:35 UTC.', priority='high', received_date='2026-04-11T02:16:46Z', Deadline_date='2026-04-12T05:35:00Z', task_type='notify_user', schedule_type='one_time')]
+2026-04-11 19:06:33,423 | INFO | app | Inserting task with ID: d1d1c328-730a-45d4-8e2b-54a6f2e4d619
+2026-04-11 19:06:33,519 | INFO | app | Task with ID d1d1c328-730a-45d4-8e2b-54a6f2e4d619 inserted successfully.
+2026-04-11 19:06:33,519 | INFO | app | Inserting task with ID: f810e356-7db5-41ca-bf9b-74cc2a662639
+2026-04-11 19:06:33,548 | INFO | app | Task with ID f810e356-7db5-41ca-bf9b-74cc2a662639 inserted successfully.
+2026-04-11 19:07:22,980 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:07:35,835 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:07:47,515 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:07:59,877 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:07:59,883 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:07:59,988 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:07:59,990 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:07:59,991 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:08:19,682 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:08:32,756 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:08:44,011 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:08:55,450 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-11 19:08:55,458 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:08:55,520 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:08:55,526 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:08:55,531 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:10:35,560 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:10:35,560 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:10:35,560 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:10:35,565 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:12:15,586 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:12:15,586 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:12:15,586 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:12:15,586 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:13:55,594 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:13:55,594 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:13:55,594 | INFO | app | Fetched tasks for scheduling.
+2026-04-11 19:13:55,594 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,090 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 09:48:19,108 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,200 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,200 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,206 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,206 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,210 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,214 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 09:48:19,216 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,408 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:19:03,414 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,468 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,470 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,471 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,472 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,473 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,474 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:19:03,475 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:20:09,676 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:20:22,940 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:20:49,456 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:21:02,232 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:21:14,632 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:21:28,698 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:21:28,703 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:21:28,767 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:21:28,767 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:21:28,772 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:21:28,772 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:21:28,774 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:21:28,775 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:21:28,777 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:04,564 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:22:18,003 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:22:18,009 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:18,057 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:18,057 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:18,057 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:18,060 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:18,060 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:18,060 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:18,060 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:22:36,296 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:23:58,067 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:23:58,067 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:23:58,067 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:23:58,067 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:23:58,067 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:23:58,074 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:23:58,075 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:23:58,076 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:27:23,899 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:27:37,248 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:27:49,755 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:28:03,166 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:28:03,166 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:28:03,223 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:28:03,224 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:28:03,225 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:28:03,227 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:28:03,228 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:28:03,230 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:28:03,231 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,774 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:39:11,781 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,829 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,829 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,829 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,829 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,829 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,829 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:11,837 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:39:21,788 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:39:22,896 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:39:23,877 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:40:51,855 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:51,855 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:51,855 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:51,861 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:51,863 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:51,864 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:51,865 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:51,866 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:40:52,898 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:41:10,216 | INFO | app | Start Getting Threads
+2026-04-12 12:41:10,227 | INFO | app | Threads Fetched Successfully
+2026-04-12 12:41:10,237 | INFO | app | Start Getting Threads
+2026-04-12 12:41:10,241 | INFO | app | Threads Fetched Successfully
+2026-04-12 12:41:11,296 | INFO | app | Start Getting messages
+2026-04-12 12:41:11,303 | INFO | app | Messages Fetched Successfully
+2026-04-12 12:41:11,320 | INFO | app | Start Getting messages
+2026-04-12 12:41:11,323 | INFO | app | Messages Fetched Successfully
+2026-04-12 12:42:05,055 | INFO | app | Query Answered Successfully:
+2026-04-12 12:42:31,890 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:31,897 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:31,904 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:31,910 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:31,916 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:31,923 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:31,929 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:31,938 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:42:32,991 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:42:58,471 | ERROR | app | status_code:500 Error in Answer:
 
-2026-04-03 13:02:12,888 | INFO | app | Start Getting Threads
-2026-04-03 13:02:12,936 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:02:12,945 | INFO | app | Start Getting Threads
-2026-04-03 13:02:12,951 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:02:19,948 | INFO | app | Start Getting messages
-2026-04-03 13:02:19,953 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:02:20,196 | INFO | app | Start Getting messages
-2026-04-03 13:02:20,196 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:02:21,350 | INFO | app | Start Getting messages
-2026-04-03 13:02:21,351 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:02:22,540 | INFO | app | Start Getting messages
-2026-04-03 13:02:22,543 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:02:23,499 | INFO | app | Start Getting messages
-2026-04-03 13:02:23,502 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:02:24,248 | INFO | app | Start Getting messages
-2026-04-03 13:02:24,248 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:02:25,006 | INFO | app | Start Getting messages
-2026-04-03 13:02:25,010 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:02:39,392 | INFO | app | Start Getting messages
-2026-04-03 13:02:39,395 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:04:31,117 | INFO | app | Start Getting messages
-2026-04-03 13:04:31,124 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:04:31,908 | INFO | app | Start Getting messages
-2026-04-03 13:04:31,911 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:04:33,195 | INFO | app | Start Getting messages
-2026-04-03 13:04:33,199 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:05:44,506 | INFO | app | Start Getting Threads
-2026-04-03 13:05:44,516 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:05:44,521 | INFO | app | Start Getting Threads
-2026-04-03 13:05:44,529 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:05:57,756 | INFO | app | Start Creating thread
-2026-04-03 13:05:57,761 | INFO | app | Thread created Successfully
-2026-04-03 13:05:57,850 | INFO | app | Start Getting messages
-2026-04-03 13:05:57,852 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:05:57,860 | INFO | app | Start Getting messages
-2026-04-03 13:05:57,862 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:06:07,965 | INFO | app | Query Answered Successfully:
-2026-04-03 13:06:24,010 | ERROR | app | status_code:500 Error in create_message in DataBase:
-
-2026-04-03 13:06:24,010 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-03 13:06:24,010 | ERROR | app | status Code_500 Error in generator:
-2026-04-03 13:14:17,997 | INFO | app | Start Getting Threads
-2026-04-03 13:14:18,010 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:14:18,018 | INFO | app | Start Getting Threads
-2026-04-03 13:14:18,023 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:14:19,041 | INFO | app | Start Getting messages
-2026-04-03 13:14:19,044 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:14:19,059 | INFO | app | Start Getting messages
-2026-04-03 13:14:19,059 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:14:52,976 | INFO | app | Query Answered Successfully:
-2026-04-03 13:15:19,895 | ERROR | app | status_code:500 Error in create_message in DataBase:
-
-2026-04-03 13:15:19,895 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-03 13:15:19,904 | ERROR | app | status Code_500 Error in generator:
-2026-04-03 13:16:36,643 | INFO | app | Start Getting Threads
-2026-04-03 13:16:36,649 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:16:36,654 | INFO | app | Start Getting Threads
-2026-04-03 13:16:36,658 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:21:36,703 | INFO | app | Query Answered Successfully:
-2026-04-03 13:21:57,662 | ERROR | app | status_code:500 Error in create_message in DataBase:
-
-2026-04-03 13:21:57,665 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-03 13:21:57,670 | ERROR | app | status Code_500 Error in generator:
-2026-04-03 13:23:27,169 | INFO | app | Query Answered Successfully:
-2026-04-03 13:23:55,838 | INFO | app | Start Creating message
-2026-04-03 13:23:55,900 | INFO | app | Message created Successfully
-2026-04-03 13:23:55,901 | INFO | app | Answer Generated Successfully
-2026-04-03 13:26:08,977 | INFO | app | Start Getting Threads
-2026-04-03 13:26:08,987 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:26:08,996 | INFO | app | Start Getting Threads
-2026-04-03 13:26:09,000 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:26:09,656 | INFO | app | Start Getting messages
-2026-04-03 13:26:09,661 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:26:09,697 | INFO | app | Start Getting messages
-2026-04-03 13:26:09,697 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:29:03,283 | INFO | app | Start Getting Threads
-2026-04-03 13:29:03,286 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:29:03,288 | INFO | app | Start Getting Threads
-2026-04-03 13:29:03,290 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:29:14,820 | INFO | app | Start Creating thread
-2026-04-03 13:29:14,824 | INFO | app | Thread created Successfully
-2026-04-03 13:29:14,900 | INFO | app | Start Getting messages
-2026-04-03 13:29:14,903 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:29:14,920 | INFO | app | Start Getting messages
-2026-04-03 13:29:14,924 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:29:28,604 | INFO | app | Query Answered Successfully:
-2026-04-03 13:29:43,982 | INFO | app | Start Creating message
-2026-04-03 13:29:44,038 | INFO | app | Message created Successfully
-2026-04-03 13:29:44,039 | INFO | app | Answer Generated Successfully
-2026-04-03 13:30:52,522 | INFO | app | Start Getting Threads
-2026-04-03 13:30:52,529 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:30:52,537 | INFO | app | Start Getting Threads
-2026-04-03 13:30:52,541 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:31:12,575 | INFO | app | Start Getting messages
-2026-04-03 13:31:12,583 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:31:12,931 | INFO | app | Start Getting messages
-2026-04-03 13:31:12,933 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:36:25,829 | INFO | app | Start Getting Threads
-2026-04-03 13:36:25,833 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:36:25,844 | INFO | app | Start Getting Threads
-2026-04-03 13:36:25,847 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:36:33,777 | INFO | app | Start Getting Threads
-2026-04-03 13:36:33,778 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:36:34,087 | INFO | app | Start Getting Threads
-2026-04-03 13:36:34,091 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:38:34,171 | INFO | app | Start Getting Threads
-2026-04-03 13:38:34,182 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:38:34,188 | INFO | app | Start Getting Threads
-2026-04-03 13:38:34,194 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:38:35,460 | INFO | app | Start Getting messages
-2026-04-03 13:38:35,463 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:38:35,508 | INFO | app | Start Getting messages
-2026-04-03 13:38:35,513 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:41:48,897 | INFO | app | Start Getting Threads
-2026-04-03 13:41:48,908 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:41:48,914 | INFO | app | Start Getting Threads
-2026-04-03 13:41:48,921 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:41:49,604 | INFO | app | Start Getting messages
-2026-04-03 13:41:49,614 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:41:49,621 | ERROR | app | status_code:500 Error in getting messages in DataBase:
-
-2026-04-03 13:41:49,621 | ERROR | app | Error occurred while fetching thread messages
-2026-04-03 13:41:49,634 | INFO | app | Start Getting messages
-2026-04-03 13:41:49,638 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:41:49,643 | ERROR | app | status_code:500 Error in getting messages in DataBase:
-
-2026-04-03 13:41:49,644 | ERROR | app | Error occurred while fetching thread messages
-2026-04-03 13:48:28,053 | INFO | app | Start Getting Threads
-2026-04-03 13:48:28,066 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:48:28,073 | INFO | app | Start Getting Threads
-2026-04-03 13:48:28,081 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:48:28,840 | INFO | app | Start Getting messages
-2026-04-03 13:48:28,840 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:48:28,881 | ERROR | app | status_code:500 Error in getting messages in DataBase:
-
-2026-04-03 13:48:28,881 | ERROR | app | Error occurred while fetching thread messages
-2026-04-03 13:48:28,895 | INFO | app | Start Getting messages
-2026-04-03 13:48:28,898 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:48:28,903 | ERROR | app | status_code:500 Error in getting messages in DataBase:
-
-2026-04-03 13:48:28,903 | ERROR | app | Error occurred while fetching thread messages
-2026-04-03 13:53:03,549 | INFO | app | Start Getting Threads
-2026-04-03 13:53:03,561 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:53:03,566 | INFO | app | Start Getting Threads
-2026-04-03 13:53:03,574 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:53:04,434 | INFO | app | Start Getting messages
-2026-04-03 13:53:04,440 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:53:04,447 | ERROR | app | status_code:500 Error in getting messages in DataBase: Traceback (most recent call last):
-  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 124, in get_thread_messages
-    formatted = [
-                ^
-  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 126, in <listcomp>
-    "thread_id": str(row[0]),
-                  ~~~^^^
-KeyError: 0
-
-
-2026-04-03 13:53:04,448 | ERROR | app | Error occurred while fetching thread messages
-2026-04-03 13:53:04,463 | INFO | app | Start Getting messages
-2026-04-03 13:53:04,467 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:53:04,470 | ERROR | app | status_code:500 Error in getting messages in DataBase: Traceback (most recent call last):
-  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 124, in get_thread_messages
-    formatted = [
-                ^
-  File "C:\Users\Hello\Desktop\16022026fx\src\api\services.py", line 126, in <listcomp>
-    "thread_id": str(row[0]),
-                  ~~~^^^
-KeyError: 0
-
-
-2026-04-03 13:53:04,471 | ERROR | app | Error occurred while fetching thread messages
-2026-04-03 13:55:17,397 | INFO | app | Start Getting Threads
-2026-04-03 13:55:17,405 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:55:17,407 | INFO | app | Start Getting Threads
-2026-04-03 13:55:17,420 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:55:18,150 | INFO | app | Start Getting messages
-2026-04-03 13:55:18,155 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:55:18,173 | INFO | app | Start Getting messages
-2026-04-03 13:55:18,176 | INFO | app | Messages Fetched Successfully
-2026-04-03 13:57:08,304 | INFO | app | Query Answered Successfully:
-2026-04-03 13:57:26,263 | INFO | app | Start Creating message
-2026-04-03 13:57:26,325 | INFO | app | Message created Successfully
-2026-04-03 13:57:26,325 | INFO | app | Answer Generated Successfully
-2026-04-03 13:58:11,357 | INFO | app | Start Getting Threads
-2026-04-03 13:58:11,370 | INFO | app | Threads Fetched Successfully
-2026-04-03 13:58:11,610 | INFO | app | Start Getting Threads
-2026-04-03 13:58:11,614 | INFO | app | Threads Fetched Successfully
-2026-04-03 14:01:07,276 | INFO | app | Start Getting Threads
-2026-04-03 14:01:07,286 | INFO | app | Threads Fetched Successfully
-2026-04-03 14:01:07,294 | INFO | app | Start Getting Threads
-2026-04-03 14:01:07,300 | INFO | app | Threads Fetched Successfully
-2026-04-03 14:01:08,065 | INFO | app | Start Getting messages
-2026-04-03 14:01:08,067 | INFO | app | Messages Fetched Successfully
-2026-04-03 14:01:08,080 | INFO | app | Start Getting messages
-2026-04-03 14:01:08,084 | INFO | app | Messages Fetched Successfully
-2026-04-03 14:06:42,002 | INFO | app | Query Answered Successfully:
-2026-04-03 14:07:01,964 | INFO | app | Start Creating message
-2026-04-03 14:07:02,021 | INFO | app | Message created Successfully
-2026-04-03 14:07:02,022 | INFO | app | Answer Generated Successfully
-2026-04-03 14:07:27,440 | INFO | app | Start Getting Threads
-2026-04-03 14:07:27,450 | INFO | app | Threads Fetched Successfully
-2026-04-03 14:07:27,456 | INFO | app | Start Getting Threads
-2026-04-03 14:07:27,460 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:40:09,855 | INFO | app | Start Getting Threads
-2026-04-03 17:40:09,895 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:40:09,904 | INFO | app | Start Getting Threads
-2026-04-03 17:40:09,910 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:40:46,097 | INFO | app | Start Creating thread
-2026-04-03 17:40:46,107 | INFO | app | Thread created Successfully
-2026-04-03 17:40:46,214 | INFO | app | Start Getting messages
-2026-04-03 17:40:46,217 | INFO | app | Messages Fetched Successfully
-2026-04-03 17:41:01,184 | INFO | app | Query Answered Successfully:
-2026-04-03 17:41:20,743 | INFO | app | Start Creating message
-2026-04-03 17:41:20,790 | INFO | app | Message created Successfully
-2026-04-03 17:41:20,791 | INFO | app | Answer Generated Successfully
-2026-04-03 17:57:12,108 | INFO | app | Start Getting Threads
-2026-04-03 17:57:12,119 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:57:12,126 | INFO | app | Start Getting Threads
-2026-04-03 17:57:12,133 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:57:19,656 | INFO | app | Start Getting Threads
-2026-04-03 17:57:19,657 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:57:19,659 | INFO | app | Start Getting Threads
-2026-04-03 17:57:19,660 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:58:12,742 | INFO | app | Start Getting Threads
-2026-04-03 17:58:12,747 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:58:12,754 | INFO | app | Start Getting Threads
-2026-04-03 17:58:12,759 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:58:56,121 | INFO | app | Start Getting Threads
-2026-04-03 17:58:56,123 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:58:56,124 | INFO | app | Start Getting Threads
-2026-04-03 17:58:56,125 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:59:34,583 | INFO | app | Start Getting Threads
-2026-04-03 17:59:34,589 | INFO | app | Threads Fetched Successfully
-2026-04-03 17:59:34,593 | INFO | app | Start Getting Threads
-2026-04-03 17:59:34,600 | INFO | app | Threads Fetched Successfully
-2026-04-03 18:01:21,623 | INFO | app | Start Getting Threads
-2026-04-03 18:01:21,626 | INFO | app | Threads Fetched Successfully
-2026-04-03 18:01:21,632 | INFO | app | Start Getting Threads
-2026-04-03 18:01:21,637 | INFO | app | Threads Fetched Successfully
-2026-04-03 18:07:16,596 | INFO | app | Start Getting Threads
-2026-04-03 18:07:16,600 | INFO | app | Threads Fetched Successfully
-2026-04-03 18:07:16,606 | INFO | app | Start Getting Threads
-2026-04-03 18:07:16,610 | INFO | app | Threads Fetched Successfully
-2026-04-03 18:09:31,554 | INFO | app | Start Getting Threads
-2026-04-03 18:09:31,555 | INFO | app | Threads Fetched Successfully
-2026-04-03 18:09:31,560 | INFO | app | Start Getting Threads
-2026-04-03 18:09:31,568 | INFO | app | Threads Fetched Successfully
-2026-04-04 19:04:23,139 | INFO | app | Start Getting Threads
-2026-04-04 19:04:23,185 | INFO | app | Threads Fetched Successfully
-2026-04-04 19:04:23,196 | INFO | app | Start Getting Threads
-2026-04-04 19:04:23,201 | INFO | app | Threads Fetched Successfully
-2026-04-04 19:04:24,905 | INFO | app | Start Getting messages
-2026-04-04 19:04:24,910 | INFO | app | Messages Fetched Successfully
-2026-04-04 19:04:41,246 | INFO | app | Start Creating thread
-2026-04-04 19:04:41,254 | INFO | app | Thread created Successfully
-2026-04-04 19:04:41,385 | INFO | app | Start Getting messages
-2026-04-04 19:04:41,387 | INFO | app | Messages Fetched Successfully
-2026-04-04 19:05:07,573 | INFO | app | Query Answered Successfully:
-2026-04-04 19:06:23,125 | INFO | app | Start Creating message
-2026-04-04 19:06:23,187 | INFO | app | Message created Successfully
-2026-04-04 19:06:23,188 | INFO | app | Answer Generated Successfully
-2026-04-04 20:14:16,025 | INFO | app | Start Getting Threads
-2026-04-04 20:14:16,068 | INFO | app | Threads Fetched Successfully
-2026-04-04 20:14:16,075 | INFO | app | Start Getting Threads
-2026-04-04 20:14:16,079 | INFO | app | Threads Fetched Successfully
-2026-04-04 20:14:17,198 | INFO | app | Start Getting Threads
-2026-04-04 20:14:17,201 | INFO | app | Threads Fetched Successfully
-2026-04-04 20:14:17,203 | INFO | app | Start Getting Threads
-2026-04-04 20:14:17,203 | INFO | app | Threads Fetched Successfully
-2026-04-04 20:14:20,185 | INFO | app | Start Getting messages
-2026-04-04 20:14:20,191 | INFO | app | Messages Fetched Successfully
-2026-04-04 20:14:23,083 | INFO | app | Start Getting messages
-2026-04-04 20:14:23,086 | INFO | app | Messages Fetched Successfully
-2026-04-04 20:14:40,697 | INFO | app | Start Creating thread
-2026-04-04 20:14:40,708 | INFO | app | Thread created Successfully
-2026-04-04 20:14:40,789 | INFO | app | Start Getting messages
-2026-04-04 20:14:40,793 | INFO | app | Messages Fetched Successfully
-2026-04-04 20:15:48,841 | INFO | app | Query Answered Successfully:
-2026-04-04 20:16:13,314 | INFO | app | Start Creating message
-2026-04-04 20:16:13,374 | INFO | app | Message created Successfully
-2026-04-04 20:16:13,375 | INFO | app | Answer Generated Successfully
-2026-04-04 20:56:37,675 | INFO | app | Start Getting Threads
-2026-04-04 20:56:37,687 | INFO | app | Threads Fetched Successfully
-2026-04-04 20:56:37,696 | INFO | app | Start Getting Threads
-2026-04-04 20:56:37,704 | INFO | app | Threads Fetched Successfully
-2026-04-04 20:57:13,756 | INFO | app | Query Answered Successfully:
-2026-04-04 20:57:32,671 | INFO | app | Start Creating message
-2026-04-04 20:57:32,721 | INFO | app | Message created Successfully
-2026-04-04 20:57:32,721 | INFO | app | Answer Generated Successfully
-2026-04-04 20:58:15,944 | INFO | app | Query Answered Successfully:
-2026-04-04 20:59:03,478 | INFO | app | Start Creating message
-2026-04-04 20:59:03,537 | INFO | app | Message created Successfully
-2026-04-04 20:59:03,538 | INFO | app | Answer Generated Successfully
-2026-04-05 13:40:02,917 | INFO | app | Start Getting Threads
-2026-04-05 13:40:02,931 | INFO | app | Threads Fetched Successfully
-2026-04-05 13:40:02,934 | INFO | app | Start Getting Threads
-2026-04-05 13:40:02,936 | INFO | app | Threads Fetched Successfully
-2026-04-05 13:40:18,616 | INFO | app | Start Creating thread
-2026-04-05 13:40:18,620 | INFO | app | Thread created Successfully
-2026-04-05 13:40:18,750 | INFO | app | Start Getting messages
-2026-04-05 13:40:18,756 | INFO | app | Messages Fetched Successfully
-2026-04-05 13:40:18,773 | INFO | app | Start Getting messages
-2026-04-05 13:40:18,778 | INFO | app | Messages Fetched Successfully
-2026-04-05 13:46:06,308 | INFO | app | Query Answered Successfully:
-2026-04-05 13:46:41,763 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-05 13:46:41,765 | ERROR | app | status Code_500 Error in generator:
-2026-04-05 13:49:22,499 | INFO | app | Start Getting Threads
-2026-04-05 13:49:22,550 | INFO | app | Threads Fetched Successfully
-2026-04-05 13:49:22,557 | INFO | app | Start Getting Threads
-2026-04-05 13:49:22,564 | INFO | app | Threads Fetched Successfully
-2026-04-05 13:51:47,168 | INFO | app | Start Getting messages
-2026-04-05 13:51:47,168 | INFO | app | Messages Fetched Successfully
-2026-04-05 13:51:47,182 | INFO | app | Start Getting messages
-2026-04-05 13:51:47,182 | INFO | app | Messages Fetched Successfully
-2026-04-05 13:53:27,178 | INFO | app | Query Answered Successfully:
-2026-04-05 13:53:58,200 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-05 13:53:58,206 | ERROR | app | status Code_500 Error in generator:
-2026-04-05 14:05:05,580 | INFO | app | Query Answered Successfully:
-2026-04-05 14:05:25,681 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-05 14:05:25,690 | ERROR | app | status Code_500 Error in generator:
-2026-04-05 14:09:57,544 | INFO | app | Query Answered Successfully:
-2026-04-05 14:10:04,715 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-05 14:10:04,725 | ERROR | app | status Code_500 Error in generator:
-2026-04-05 14:36:31,004 | INFO | app | Start Getting Threads
-2026-04-05 14:36:31,011 | INFO | app | Threads Fetched Successfully
-2026-04-05 14:36:31,014 | INFO | app | Start Getting Threads
-2026-04-05 14:36:31,016 | INFO | app | Threads Fetched Successfully
-2026-04-05 14:37:16,140 | INFO | app | Start Getting messages
-2026-04-05 14:37:16,146 | INFO | app | Messages Fetched Successfully
-2026-04-05 14:37:16,164 | INFO | app | Start Getting messages
-2026-04-05 14:37:16,168 | INFO | app | Messages Fetched Successfully
-2026-04-05 14:39:59,589 | INFO | app | Query Answered Successfully:
-2026-04-05 14:40:48,060 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-05 14:40:48,066 | ERROR | app | status Code_500 Error in generator:
-2026-04-05 14:41:13,323 | INFO | app | Start Getting Threads
-2026-04-05 14:41:13,332 | INFO | app | Threads Fetched Successfully
-2026-04-05 14:41:13,337 | INFO | app | Start Getting Threads
-2026-04-05 14:41:13,346 | INFO | app | Threads Fetched Successfully
-2026-04-05 14:42:22,073 | INFO | app | Start Getting messages
-2026-04-05 14:42:22,077 | INFO | app | Messages Fetched Successfully
-2026-04-05 14:42:22,094 | INFO | app | Start Getting messages
-2026-04-05 14:42:22,098 | INFO | app | Messages Fetched Successfully
-2026-04-05 14:44:32,311 | INFO | app | Query Answered Successfully:
-2026-04-05 14:45:50,009 | INFO | app | Start Creating message
-2026-04-05 14:45:50,086 | INFO | app | Message created Successfully
-2026-04-05 14:45:50,086 | INFO | app | Answer Generated Successfully
-2026-04-05 14:47:02,191 | INFO | app | Query Answered Successfully:
-2026-04-05 14:47:22,476 | ERROR | app | status_code:500 Error in Answer:
-
-2026-04-05 14:47:22,482 | ERROR | app | status Code_500 Error in generator:
-2026-04-05 14:49:14,196 | INFO | app | Start Getting Threads
-2026-04-05 14:49:14,210 | INFO | app | Threads Fetched Successfully
-2026-04-05 14:49:14,217 | INFO | app | Start Getting Threads
-2026-04-05 14:49:14,223 | INFO | app | Threads Fetched Successfully
-2026-04-05 14:49:47,983 | INFO | app | Query Answered Successfully:
-2026-04-05 14:50:33,916 | INFO | app | Start Creating message
-2026-04-05 14:50:33,970 | INFO | app | Message created Successfully
-2026-04-05 14:50:33,970 | INFO | app | Answer Generated Successfully
-2026-04-05 14:55:18,156 | INFO | app | Start Creating thread
-2026-04-05 14:55:18,165 | INFO | app | Thread created Successfully
-2026-04-05 14:55:18,242 | INFO | app | Start Getting messages
-2026-04-05 14:55:18,242 | INFO | app | Messages Fetched Successfully
-2026-04-05 14:56:14,551 | INFO | app | Query Answered Successfully:
-2026-04-05 14:56:36,526 | INFO | app | Start Creating message
-2026-04-05 14:56:36,578 | INFO | app | Message created Successfully
-2026-04-05 14:56:36,578 | INFO | app | Answer Generated Successfully
-2026-04-05 15:02:34,215 | INFO | app | Query Answered Successfully:
-2026-04-05 15:03:19,461 | INFO | app | Start Creating message
-2026-04-05 15:03:19,523 | INFO | app | Message created Successfully
-2026-04-05 15:03:19,523 | INFO | app | Answer Generated Successfully
-2026-04-05 15:08:28,104 | INFO | app | Query Answered Successfully:
-2026-04-05 15:08:52,033 | INFO | app | Start Creating message
-2026-04-05 15:08:52,096 | INFO | app | Message created Successfully
-2026-04-05 15:08:52,096 | INFO | app | Answer Generated Successfully
-2026-04-05 15:14:48,634 | INFO | app | Query Answered Successfully:
-2026-04-05 15:15:49,571 | INFO | app | Start Creating message
-2026-04-05 15:15:49,624 | INFO | app | Message created Successfully
-2026-04-05 15:15:49,629 | INFO | app | Answer Generated Successfully
-2026-04-05 15:16:37,536 | INFO | app | Query Answered Successfully:
-2026-04-05 15:16:49,847 | INFO | app | Start Creating message
-2026-04-05 15:16:49,889 | INFO | app | Message created Successfully
-2026-04-05 15:16:49,890 | INFO | app | Answer Generated Successfully
-2026-04-05 15:27:19,943 | INFO | app | Start Getting Threads
-2026-04-05 15:27:19,959 | INFO | app | Threads Fetched Successfully
-2026-04-05 15:27:19,970 | INFO | app | Start Getting Threads
-2026-04-05 15:27:19,977 | INFO | app | Threads Fetched Successfully
-2026-04-06 16:11:16,820 | INFO | app | Start Getting Threads
-2026-04-06 16:11:16,841 | INFO | app | Threads Fetched Successfully
-2026-04-06 16:11:16,843 | INFO | app | Start Getting Threads
-2026-04-06 16:11:16,843 | INFO | app | Threads Fetched Successfully
-2026-04-06 16:11:22,084 | INFO | app | Start Getting messages
-2026-04-06 16:11:22,090 | INFO | app | Messages Fetched Successfully
-2026-04-06 16:13:18,788 | INFO | app | Query Answered Successfully:
-2026-04-06 16:14:40,775 | INFO | app | Start Creating message
-2026-04-06 16:14:40,835 | INFO | app | Message created Successfully
-2026-04-06 16:14:40,835 | INFO | app | Answer Generated Successfully
-2026-04-06 16:42:44,408 | INFO | app | Start Getting Threads
-2026-04-06 16:42:44,410 | INFO | app | Threads Fetched Successfully
-2026-04-06 16:42:44,410 | INFO | app | Start Getting Threads
-2026-04-06 16:42:44,410 | INFO | app | Threads Fetched Successfully
-2026-04-06 17:16:58,410 | INFO | app | Start Getting messages
-2026-04-06 17:16:58,422 | INFO | app | Messages Fetched Successfully
-2026-04-06 17:17:08,976 | INFO | app | Start Getting messages
-2026-04-06 17:17:08,976 | INFO | app | Messages Fetched Successfully
-2026-04-06 17:17:11,842 | INFO | app | Start Getting messages
-2026-04-06 17:17:11,847 | INFO | app | Messages Fetched Successfully
-2026-04-06 17:21:33,252 | INFO | app | Start Creating thread
-2026-04-06 17:21:33,260 | INFO | app | Thread created Successfully
-2026-04-06 17:21:33,390 | INFO | app | Start Getting messages
-2026-04-06 17:21:33,392 | INFO | app | Messages Fetched Successfully
-2026-04-06 17:22:07,796 | INFO | app | Query Answered Successfully:
-2026-04-06 17:23:14,387 | INFO | app | Start Creating message
-2026-04-06 17:23:14,450 | INFO | app | Message created Successfully
-2026-04-06 17:23:14,452 | INFO | app | Answer Generated Successfully
-2026-04-07 12:06:15,765 | INFO | app | Start Getting Threads
-2026-04-07 12:06:15,815 | INFO | app | Threads Fetched Successfully
-2026-04-07 12:06:15,820 | INFO | app | Start Getting Threads
-2026-04-07 12:06:15,831 | INFO | app | Threads Fetched Successfully
-2026-04-07 12:06:23,416 | INFO | app | Start Getting messages
-2026-04-07 12:06:23,417 | INFO | app | Messages Fetched Successfully
-2026-04-07 12:06:28,134 | INFO | app | Start Getting messages
-2026-04-07 12:06:28,140 | INFO | app | Messages Fetched Successfully
-2026-04-07 12:09:11,078 | INFO | app | Start Getting messages
-2026-04-07 12:09:11,082 | INFO | app | Messages Fetched Successfully
+2026-04-12 12:42:58,471 | ERROR | app | status Code_500 Error in generator:
+2026-04-12 12:44:11,963 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:11,971 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:11,977 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:11,977 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:11,987 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:11,994 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:12,002 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:12,010 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:44:12,943 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:45:24,112 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:45:38,580 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:45:38,585 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:38,718 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:38,723 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:38,730 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:38,736 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:38,742 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:38,750 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:38,756 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:45:39,858 | ERROR | app | Error fetching emails1: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-12 12:46:07,094 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:46:21,139 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:46:35,457 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:46:35,467 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:46:35,565 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:46:35,571 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:46:35,571 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:46:35,571 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:46:35,580 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:46:35,582 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:46:35,589 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,890 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:47:26,894 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,942 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,944 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,945 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,945 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,945 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,945 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:26,949 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:47:54,359 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:48:07,567 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:48:21,573 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:48:21,581 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:48:21,701 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:48:21,703 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:48:21,705 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:48:21,707 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:48:21,709 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:48:21,711 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:48:21,713 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:49:50,916 | INFO | app | LLM response: <coroutine object RunnableSequence.ainvoke at 0x0000013ED1DADFC0>
+2026-04-12 12:49:50,916 | ERROR | app | Error fetching emails1: 'coroutine' object has no attribute 'payload'
+2026-04-12 12:49:57,493 | INFO | app | LLM response: <coroutine object RunnableSequence.ainvoke at 0x0000013ED1DAE7A0>
+2026-04-12 12:49:57,493 | ERROR | app | Error fetching emails1: 'coroutine' object has no attribute 'payload'
+2026-04-12 12:50:01,725 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:01,727 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:01,727 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:01,727 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:01,727 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:01,732 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:01,733 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:01,734 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:50:04,590 | INFO | app | LLM response: <coroutine object RunnableSequence.ainvoke at 0x0000013ED1DAEF80>
+2026-04-12 12:50:04,590 | ERROR | app | Error fetching emails1: 'coroutine' object has no attribute 'payload'
+2026-04-12 12:50:11,047 | INFO | app | LLM response: <coroutine object RunnableSequence.ainvoke at 0x0000013ED1DAF370>
+2026-04-12 12:50:11,048 | ERROR | app | Error fetching emails1: 'coroutine' object has no attribute 'payload'
+2026-04-12 12:51:17,526 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:51:29,785 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-04-12 12:51:29,788 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:51:29,839 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:51:29,843 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:51:29,843 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:51:29,843 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:51:29,843 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:51:29,848 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:51:29,850 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:52:00,727 | INFO | app | LLM response: message='Processed emails for actionable tasks. LinkedIn notifications and Microsoft job advertisement were filtered out as non-actionable.' payload=[task_payload(recipent_email='Harsh Kumar (Pursuing Computer Science and Technology | full stack developer| java| java Spring Boot| React.js| JavaScript)', subject='People You May Know', body_summary='None (LinkedIn notification, no action required)', priority='low', received_date='2026-04-11T16:30:00Z', Deadline_date=None, task_type='None', schedule_type='one_time'), task_payload(recipent_email='Jia from Unstop <noreply@dare2compete.news>', subject='Microsoft is hiring - Apply now!', body_summary='None (advertisement, no action required)', priority='low', received_date='2026-04-11T12:51:43Z', Deadline_date=None, task_type='None', schedule_type='one_time')]
+2026-04-12 12:52:00,728 | INFO | app | Task payloads: [task_payload(recipent_email='Harsh Kumar (Pursuing Computer Science and Technology | full stack developer| java| java Spring Boot| React.js| JavaScript)', subject='People You May Know', body_summary='None (LinkedIn notification, no action required)', priority='low', received_date='2026-04-11T16:30:00Z', Deadline_date=None, task_type='None', schedule_type='one_time'), task_payload(recipent_email='Jia from Unstop <noreply@dare2compete.news>', subject='Microsoft is hiring - Apply now!', body_summary='None (advertisement, no action required)', priority='low', received_date='2026-04-11T12:51:43Z', Deadline_date=None, task_type='None', schedule_type='one_time')]
+2026-04-12 12:52:00,728 | INFO | app | Inserting task with ID: 1c5c0011-075b-4a14-a818-2d3ca3f99d17
+2026-04-12 12:52:00,742 | INFO | app | Task with ID 1c5c0011-075b-4a14-a818-2d3ca3f99d17 inserted successfully.
+2026-04-12 12:52:00,742 | INFO | app | Inserting task with ID: 11e6e5a1-5aa9-4e51-b8bf-912e982eff9d
+2026-04-12 12:52:00,749 | INFO | app | Task with ID 11e6e5a1-5aa9-4e51-b8bf-912e982eff9d inserted successfully.
+2026-04-12 12:53:09,880 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:09,894 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:09,901 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:09,906 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:09,913 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:09,916 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:09,925 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:09,931 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:53:30,359 | INFO | app | LLM response: message='Processed emails for actionable tasks. LinkedIn notifications and promotional emails were filtered out.' payload=[task_payload(recipent_email='Harsh Kumar (Pursuing Computer Science and Technology | full stack developer| java| java Spring Boot| React.js| JavaScript)', subject='People You May Know', body_summary='None (LinkedIn notification, no action required)', priority='low', received_date='2026-04-11T18:00:00Z', Deadline_date=None, task_type='None', schedule_type='one_time'), task_payload(recipent_email='Jia from Unstop <noreply@dare2compete.news>', subject='Microsoft is hiring - Apply now!', body_summary='Apply for Microsoft Internship role with INR 60,000/month stipend by following the provided application link (no explicit deadline mentioned).', priority='medium', received_date='2026-04-11T12:51:43Z', Deadline_date=None, task_type='None', schedule_type='one_time')]
+2026-04-12 12:53:30,359 | INFO | app | Task payloads: [task_payload(recipent_email='Harsh Kumar (Pursuing Computer Science and Technology | full stack developer| java| java Spring Boot| React.js| JavaScript)', subject='People You May Know', body_summary='None (LinkedIn notification, no action required)', priority='low', received_date='2026-04-11T18:00:00Z', Deadline_date=None, task_type='None', schedule_type='one_time'), task_payload(recipent_email='Jia from Unstop <noreply@dare2compete.news>', subject='Microsoft is hiring - Apply now!', body_summary='Apply for Microsoft Internship role with INR 60,000/month stipend by following the provided application link (no explicit deadline mentioned).', priority='medium', received_date='2026-04-11T12:51:43Z', Deadline_date=None, task_type='None', schedule_type='one_time')]
+2026-04-12 12:53:30,360 | INFO | app | Inserting task with ID: c8052d08-07ab-498f-bc9b-d7ed1f7edc8c
+2026-04-12 12:53:30,362 | INFO | app | Task with ID c8052d08-07ab-498f-bc9b-d7ed1f7edc8c inserted successfully.
+2026-04-12 12:53:30,362 | INFO | app | Inserting task with ID: 40cfb927-ce38-4b7a-ae3b-79938541c981
+2026-04-12 12:53:30,364 | INFO | app | Task with ID 40cfb927-ce38-4b7a-ae3b-79938541c981 inserted successfully.
+2026-04-12 12:54:49,951 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:54:49,960 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:54:49,964 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:54:49,969 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:54:49,975 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:54:49,979 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:54:49,980 | INFO | app | Fetched tasks for scheduling.
+2026-04-12 12:54:49,980 | INFO | app | Fetched tasks for scheduling.

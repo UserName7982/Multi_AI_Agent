@@ -7,4 +7,4 @@ __pycache__/
 *.pyc
 docker-compose.yml
 credentials.json
-token.pickle
+token.json

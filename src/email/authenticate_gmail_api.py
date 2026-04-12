@@ -10,9 +10,8 @@ from googleapiclient.errors import HttpError
 Scope = ['https://www.googleapis.com/auth/gmail.modify']
 async def authenticate_gmail_api():
     creds = None
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token:
-            creds = pickle.load(token)
+    if os.path.exists('token.json'):
+        creds = Credentials.from_authorized_user_file('token.json', Scope)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
@@ -20,6 +19,6 @@ async def authenticate_gmail_api():
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', Scope)
             creds = flow.run_local_server(port=0)
-        with open('token.pickle', 'wb') as token:
-            pickle.dump(creds, token)
+        with open('token.json', 'w') as token:
+            token.write(creds.to_json())
     return creds

@@ -10,10 +10,10 @@ from bs4 import BeautifulSoup
 import re
 async def read_emails():
     email_list = {}
-    creds=await authenticate_gmail_api()
+    creds=await authenticate_gmail_api() # type: ignore
     try:
         service = build('gmail', 'v1', credentials=creds)
-        result= service.users().messages().list(userId='me', maxResults=5).execute()
+        result= service.users().messages().list(userId='me', maxResults=10).execute()
         messages=result.get('messages', [])
         for msg in messages:
             txt=service.users().messages().get(userId='me', id=msg['id']).execute()

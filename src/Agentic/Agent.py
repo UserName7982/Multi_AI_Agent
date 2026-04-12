@@ -1,7 +1,6 @@
 import asyncio
 from typing import List
 import uuid
-from fastapi import Depends
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from psycopg_pool import AsyncConnectionPool
 from pydantic import BaseModel, Field
