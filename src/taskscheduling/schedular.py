@@ -1,6 +1,8 @@
 import asyncio
+from datetime import datetime, timedelta
+from src.taskscheduling.services import update_tasks_feild
 from ..config import config
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from .tasks import execute_task
 from Logger import logger
 
@@ -11,32 +13,37 @@ async def schedule_loop(delay, app: FastAPI):
         try:
             async with pool.connection() as connection:
                 result = await connection.execute("""
-                    UPDATE tasks
-                    SET status = 'queued'
-                    WHERE task_id IN (
-                        SELECT task_id FROM tasks
-                        WHERE status IN ('pending', 'queued')
-                        AND scheduled_time <= NOW()
-                        ORDER BY 
-                            CASE priority 
-                                WHEN 'high'   THEN 1 
-                                WHEN 'medium' THEN 2 
-                                ELSE 3 
-                            END ASC,
-                            created_at ASC
-                        LIMIT 50
-                        FOR UPDATE SKIP LOCKED
-                    )
-                    RETURNING task_id;
-                """)
+                WITH selected AS (
+                    SELECT task_id FROM tasks
+                    WHERE status IN ('pending','queued')
+                    AND scheduled_time <= NOW()
+                    ORDER BY
+                        CASE priority
+                            WHEN 'high'   THEN 1
+                            WHEN 'medium' THEN 2
+                            ELSE 3
+                        END ASC,
+                        created_at ASC
+                    LIMIT 10
+                    FOR UPDATE SKIP LOCKED
+                )
+                UPDATE tasks
+                SET status = 'queued'
+                FROM selected
+                WHERE tasks.task_id = selected.task_id
+                RETURNING tasks.task_id, tasks.task_type
+            """)
 
                 rows =await result.fetchall()
             
         except Exception as e:
             logger.error(f"Error fetching tasks for scheduling: {e}")
-            continue
+            raise HTTPException(status_code=500, detail={"message": "Error fetching tasks for scheduling", "error": str(e)})
         for row in rows:
-            logger.info(f"Fetched tasks for scheduling.")
+            task_type = row["task_type"]
+            logger.info(f"Fetched tasks for scheduling task type: {task_type}.")
             execute_task.delay(str(row["task_id"])) # type: ignore
+            if(task_type=="email_fetch"):
+                update_tasks_feild(str(row["task_id"]),status="pending",scheduled_time=datetime.now()+timedelta(hours=4),next_run_time=datetime.now()+timedelta(hours=4))
         await asyncio.sleep(delay)
     

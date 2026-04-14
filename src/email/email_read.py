@@ -6,9 +6,10 @@ from ..email.authenticate_gmail_api import authenticate_gmail_api
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from html import unescape
+from Logger import logger
 from bs4 import BeautifulSoup
 import re
-async def read_emails():
+async def read_emails()->dict:
     email_list = {}
     creds=await authenticate_gmail_api() # type: ignore
     try:
@@ -16,13 +17,13 @@ async def read_emails():
         result= service.users().messages().list(userId='me', maxResults=10).execute()
         messages=result.get('messages', [])
         for msg in messages:
+            msg_id=msg['id']
             txt=service.users().messages().get(userId='me', id=msg['id']).execute()
             try:
                 payload=txt['payload']
                 headers=payload['headers']
                 subject=""
                 sender=""
-                time=""
                 for d in headers:
                     if d['name']=='Subject':
                         subject=d['value']
@@ -31,18 +32,19 @@ async def read_emails():
                     if d['name']=='Date':
                         time=(d['value'])
                 body_text,attachments = await get_email_body(payload)          
-                email_list[time] = {
+                email_list[msg_id] = {
                     'subject': subject,
                     'sender': sender,
                     'body': body_text,
                     'attachments': attachments
                 }
             except Exception as e:
+                logger.error(f"Error processing email ID {msg['id']}: error:{e} traceback:{traceback.format_exc()}")
                 raise HTTPException(status_code=500, detail={"message": f"Error processing email ID {msg['id']}, traceback: {traceback.format_exc()}", "error": str(e)})
         return email_list
     except HttpError as error:
-        print(f'An error occurred: {error}')
-        return []
+        logger.error(f'An error occurred: {error}')
+        return {}
 # Call this before get_email_body
 async def get_email_body(payload):
     attachments = {}

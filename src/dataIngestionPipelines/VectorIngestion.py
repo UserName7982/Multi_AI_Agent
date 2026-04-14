@@ -11,7 +11,7 @@ from langchain_community.document_loaders import TextLoader, PyPDFLoader
 from ..DB.VectorDataBase import embedding_function
 from ..DB.VectorDataBase import tbl
 from ..dataIngestionPipelines.SparseIngestion import ingest_chunk_into_db
-from ..dataIngestionPipelines.Images_Ingestion import Ingest_images_from_pdf
+# from ..dataIngestionPipelines.Images_Ingestion import Ingest_images_from_pdf
 
 # rank_bm25 = RankBM25Store("bm25")
 
@@ -80,7 +80,7 @@ def add_to_db(Docs_Path: List[dict]):
             file_path=Path["path"]
             if file_path.endswith(".pdf"):
                 docs=load_pdf(file_path)
-                Ingest_images_from_pdf(file_path)
+                # Ingest_images_from_pdf(file_path)
             elif file_path.endswith(".txt"):
                 docs=load_text(file_path)
             chunks = split_and_enrich(docs)
