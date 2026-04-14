@@ -10,7 +10,7 @@ def get_task(task_id):
     try:
         with conn.connection() as connection:
             dict_row=connection.execute("SELECT * FROM tasks WHERE task_id = %s", (task_id,))
-        result=dict_row.fetchall()
+        result=dict_row.fetchone()
         if not result:
             logger.error(f"Task with ID {task_id} not found.")
             return None

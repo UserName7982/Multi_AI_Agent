@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field
 from ..taskscheduling.schema import Response
 from ..taskscheduling.services import update_tasks_feild
 from ..DB.postgres import PoolManager
+from asgiref.sync import async_to_sync
 
 class task_payload(BaseModel):
     recipent_email: str = Field(..., description="The email address of the recipient.")
@@ -114,7 +115,7 @@ def email_fetch():
         started_at = datetime.now()
         scheduled_time = datetime.now()
 
-        emails = asyncio.run(read_emails())
+        emails = async_to_sync(read_emails)()
         if not emails:
             logger.info("No new emails.")
             return

@@ -1,5 +1,5 @@
 import asyncio
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from src.taskscheduling.services import update_tasks_feild
 from ..config import config
 from fastapi import FastAPI, HTTPException
@@ -15,7 +15,7 @@ async def schedule_loop(delay, app: FastAPI):
                 result = await connection.execute("""
                 WITH selected AS (
                     SELECT task_id FROM tasks
-                    WHERE status IN ('pending','queued')
+                    WHERE status IN ('pending')
                     AND scheduled_time <= NOW()
                     ORDER BY
                         CASE priority
@@ -43,7 +43,5 @@ async def schedule_loop(delay, app: FastAPI):
             task_type = row["task_type"]
             logger.info(f"Fetched tasks for scheduling task type: {task_type}.")
             execute_task.delay(str(row["task_id"])) # type: ignore
-            if(task_type=="email_fetch"):
-                update_tasks_feild(str(row["task_id"]),status="pending",scheduled_time=datetime.now()+timedelta(hours=4),next_run_time=datetime.now()+timedelta(hours=4))
         await asyncio.sleep(delay)
     
