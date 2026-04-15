@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from ..taskscheduling.handle_task import handle_task
 from ..taskscheduling.services import update_tasks_feild
 from celery import shared_task
@@ -11,14 +11,10 @@ def execute_task(self,task_id):
     now=datetime.now(timezone.utc)
     try:
         handle_task(task_id)
-        logger.info(f"FULL DATA: {data}")
-        logger.info(f"TASK TYPE RAW: {data.get('task_type')}")
-        logger.info(f"TASK TYPE NORMALIZED: {str(data.get('task_type')).strip().lower()}")
-        if data is not None and data["task_type"]=="email_fetch":
-
-            update_tasks_feild(task_id,status="pending",completed_at=now)
+        if data is not None and data["task_type"]=="email_fetch": # type: ignore
+            update_tasks_feild(task_id,status="pending",completed_at=now,scheduled_time=now+timedelta(hours=4),next_run_time=now+timedelta(hours=4))
         else:
-            update_tasks_feild(task_id,status="completed",completed_at=now)
+            update_tasks_feild(task_id,status="completed")
     except Exception as e:
         retries=self.request.retries
         if retries > 3:

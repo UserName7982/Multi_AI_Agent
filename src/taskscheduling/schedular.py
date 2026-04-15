@@ -15,7 +15,7 @@ async def schedule_loop(delay, app: FastAPI):
                 result = await connection.execute("""
                 WITH selected AS (
                     SELECT task_id FROM tasks
-                    WHERE status IN ('pending')
+                    WHERE status IN ('pending','running', 'retrying','queued','waiting')
                     AND scheduled_time <= NOW()
                     ORDER BY
                         CASE priority

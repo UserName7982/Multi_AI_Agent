@@ -1,5 +1,5 @@
 import asyncio
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Literal, Optional
 import uuid
 from Logger import logger
@@ -112,8 +112,8 @@ def email_fetch():
     llm = ChatOllama(model="ministral-3:8b", temperature=0, verbose=False)
     model = llm.with_structured_output(llm_response)
     try:
-        started_at = datetime.now()
-        scheduled_time = datetime.now()
+        started_at = datetime.now(timezone.utc)
+        scheduled_time = datetime.now(timezone.utc)
 
         emails = async_to_sync(read_emails)()
         if not emails:
