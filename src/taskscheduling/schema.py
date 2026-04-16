@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Optional
 import uuid
 from pydantic import BaseModel
 
@@ -16,4 +17,4 @@ class Response(BaseModel):
     next_run_time : datetime                  
     started_at :datetime 
     completed_at :datetime 
-    retry_count :int
+    retry_count :Optional[int]=0

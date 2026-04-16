@@ -7,7 +7,7 @@ from email.message import EmailMessage
 from src.email.authenticate_gmail_api import authenticate_gmail_api
 
 async def send_email(to, subject, body, attachments=None):
-    cred=await authenticate_gmail_api()
+    cred=await authenticate_gmail_api() # type: ignore
     mimemessage = EmailMessage()
     try:
         service=build('gmail', 'v1', credentials=cred)

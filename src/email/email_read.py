@@ -45,7 +45,7 @@ async def read_emails()->dict:
     except HttpError as error:
         logger.error(f'An error occurred: {error}')
         return {}
-# Call this before get_email_body
+
 async def get_email_body(payload):
     attachments = {}
     def decode_data(data):
