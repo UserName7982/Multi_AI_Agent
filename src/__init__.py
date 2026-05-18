@@ -7,6 +7,8 @@ from src.api.services import Services
 from src.DB.postgres import PoolManager
 from src.config import config
 from src.taskscheduling.schedular import schedule_loop
+from src.notification.routes import notify_router
+from src.notification.send_notification import send_notifications
 
 
 services = Services()
@@ -21,10 +23,11 @@ async def lifespan(app: FastAPI):
     app.state.pools[config.DB_URI1]=await PoolManager.get_async_pool(config.DB_URI1)
     app.state.pools[config.URI]=await PoolManager.get_async_pool(config.URI)
     await services.initialize(app.state.pools)
+    notify_task=asyncio.create_task(send_notifications())
     scheduler_task = asyncio.create_task(schedule_loop(100, app))
-    print("scheduler started")
     yield
     scheduler_task.cancel()
+    notify_task.cancel()
     await PoolManager.close_async()
     PoolManager.close_sync()
     print("Agent closed:","Connection closed")
@@ -39,3 +42,4 @@ app.add_middleware(
 )
 
 app.include_router(api)
+app.include_router(notify_router)

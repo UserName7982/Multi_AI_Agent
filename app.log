@@ -1,0 +1,691 @@
+2026-05-06 13:35:49,747 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 13:35:49,754 | INFO | app | Task with ID a8e1afb4-d875-4d3a-92e4-73d3d616f3bf updated its feilds: {'status': 'running'}
+2026-05-06 13:35:49,754 | INFO | app | Fetching task with ID: a8e1afb4-d875-4d3a-92e4-73d3d616f3bf
+2026-05-06 13:35:49,757 | INFO | app | Fetching task with ID: a8e1afb4-d875-4d3a-92e4-73d3d616f3bf
+2026-05-06 13:35:49,764 | INFO | app | Task with ID a8e1afb4-d875-4d3a-92e4-73d3d616f3bf updated its feilds: {'status': 'completed'}
+2026-05-06 13:37:29,763 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 13:37:29,782 | INFO | app | Task with ID 798b65f2-e2a5-4087-ae63-13874b2262a1 updated its feilds: {'status': 'running'}
+2026-05-06 13:37:29,783 | INFO | app | Fetching task with ID: 798b65f2-e2a5-4087-ae63-13874b2262a1
+2026-05-06 13:37:29,794 | INFO | app | Fetching task with ID: 798b65f2-e2a5-4087-ae63-13874b2262a1
+2026-05-06 13:37:29,815 | INFO | app | Task with ID 798b65f2-e2a5-4087-ae63-13874b2262a1 updated its feilds: {'status': 'completed'}
+2026-05-06 13:39:09,789 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 13:39:09,808 | INFO | app | Task with ID e576cd15-4ee0-4873-b576-9206940050dd updated its feilds: {'status': 'running'}
+2026-05-06 13:39:09,808 | INFO | app | Fetching task with ID: e576cd15-4ee0-4873-b576-9206940050dd
+2026-05-06 13:39:09,821 | INFO | app | Fetching task with ID: e576cd15-4ee0-4873-b576-9206940050dd
+2026-05-06 13:39:09,845 | INFO | app | Task with ID e576cd15-4ee0-4873-b576-9206940050dd updated its feilds: {'status': 'completed'}
+2026-05-06 13:39:23,716 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-06 13:39:23,719 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-06 13:39:23,721 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-06 13:46:41,869 | INFO | app | Started notification Service...
+2026-05-06 13:46:41,871 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-06 13:46:41,876 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 13:46:43,492 | INFO | app | Task with ID c0e6e863-c2a9-4060-94be-7b3ef09f5cb5 updated its feilds: {'status': 'running'}
+2026-05-06 13:46:43,493 | INFO | app | Fetching task with ID: c0e6e863-c2a9-4060-94be-7b3ef09f5cb5
+2026-05-06 13:46:43,501 | INFO | app | Fetching task with ID: c0e6e863-c2a9-4060-94be-7b3ef09f5cb5
+2026-05-06 13:46:43,511 | INFO | app | Task with ID c0e6e863-c2a9-4060-94be-7b3ef09f5cb5 updated its feilds: {'status': 'completed'}
+2026-05-06 13:48:22,044 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 13:48:22,060 | INFO | app | Task with ID ac48952e-a0a8-44b6-93b4-6fc1a155b58b updated its feilds: {'status': 'running'}
+2026-05-06 13:48:22,061 | INFO | app | Fetching task with ID: ac48952e-a0a8-44b6-93b4-6fc1a155b58b
+2026-05-06 13:48:22,073 | INFO | app | Fetching task with ID: ac48952e-a0a8-44b6-93b4-6fc1a155b58b
+2026-05-06 13:48:22,100 | INFO | app | Task with ID ac48952e-a0a8-44b6-93b4-6fc1a155b58b updated its feilds: {'status': 'completed'}
+2026-05-06 13:48:39,171 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-06 16:25:16,835 | INFO | app | Started notification Service...
+2026-05-06 16:25:16,841 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-06 16:28:36,961 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 16:28:37,206 | INFO | app | Task with ID f2c82692-0224-45d7-bcb5-f49006e6d72e updated its feilds: {'status': 'running'}
+2026-05-06 16:28:37,206 | INFO | app | Fetching task with ID: f2c82692-0224-45d7-bcb5-f49006e6d72e
+2026-05-06 16:28:37,212 | INFO | app | Fetching task with ID: f2c82692-0224-45d7-bcb5-f49006e6d72e
+2026-05-06 16:28:37,225 | INFO | app | Task with ID f2c82692-0224-45d7-bcb5-f49006e6d72e updated its feilds: {'status': 'completed'}
+2026-05-06 16:30:17,175 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 16:30:17,177 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-06 16:30:17,180 | INFO | app | Task with ID d73f2758-0297-48c5-a4dc-006015d61468 updated its feilds: {'status': 'running'}
+2026-05-06 16:30:17,180 | INFO | app | Fetching task with ID: d73f2758-0297-48c5-a4dc-006015d61468
+2026-05-06 16:30:17,183 | INFO | app | Fetching task with ID: d73f2758-0297-48c5-a4dc-006015d61468
+2026-05-06 16:30:17,189 | INFO | app | Task with ID d73f2758-0297-48c5-a4dc-006015d61468 updated its feilds: {'status': 'completed'}
+2026-05-06 16:30:17,193 | INFO | app | Task with ID 13d177a7-cfd6-49ba-b6dd-9f658eaea0dc updated its feilds: {'status': 'running'}
+2026-05-06 16:30:17,194 | INFO | app | Fetching task with ID: 13d177a7-cfd6-49ba-b6dd-9f658eaea0dc
+2026-05-06 16:30:17,196 | INFO | app | Fetching task with ID: 13d177a7-cfd6-49ba-b6dd-9f658eaea0dc
+2026-05-06 16:30:17,203 | INFO | app | Task with ID 13d177a7-cfd6-49ba-b6dd-9f658eaea0dc updated its feilds: {'status': 'completed'}
+2026-05-06 16:30:55,777 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-06 16:30:55,779 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-06 16:30:55,783 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 12:47:28,450 | INFO | app | Started notification Service...
+2026-05-07 12:47:28,452 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-07 12:47:28,481 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 12:47:28,700 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 12:47:40,671 | INFO | app | Task with ID 121695c3-fb7b-43da-9bef-3544d689a55b updated its feilds: {'status': 'running'}
+2026-05-07 12:47:40,672 | INFO | app | Fetching task with ID: 121695c3-fb7b-43da-9bef-3544d689a55b
+2026-05-07 12:47:40,685 | INFO | app | Fetching task with ID: 121695c3-fb7b-43da-9bef-3544d689a55b
+2026-05-07 12:47:40,703 | INFO | app | Task with ID 121695c3-fb7b-43da-9bef-3544d689a55b updated its feilds: {'status': 'completed'}
+2026-05-07 12:47:40,739 | INFO | app | Task with ID 5773b99e-c63b-4c91-8e5c-d2af43308ece updated its feilds: {'status': 'running'}
+2026-05-07 12:47:40,740 | INFO | app | Fetching task with ID: 5773b99e-c63b-4c91-8e5c-d2af43308ece
+2026-05-07 12:47:40,746 | INFO | app | Fetching task with ID: 5773b99e-c63b-4c91-8e5c-d2af43308ece
+2026-05-07 12:47:40,778 | INFO | app | Task with ID 5773b99e-c63b-4c91-8e5c-d2af43308ece updated its feilds: {'status': 'completed'}
+2026-05-07 12:50:48,745 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 12:50:48,761 | INFO | app | Task with ID a2bab30e-7eab-4d62-a01b-efba4e1e07bb updated its feilds: {'status': 'running'}
+2026-05-07 12:50:48,762 | INFO | app | Fetching task with ID: a2bab30e-7eab-4d62-a01b-efba4e1e07bb
+2026-05-07 12:50:48,774 | INFO | app | Fetching task with ID: a2bab30e-7eab-4d62-a01b-efba4e1e07bb
+2026-05-07 12:50:48,795 | INFO | app | Task with ID a2bab30e-7eab-4d62-a01b-efba4e1e07bb updated its feilds: {'status': 'completed'}
+2026-05-07 12:54:08,800 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 12:54:08,818 | INFO | app | Task with ID c91e7848-7d18-4249-8fca-a2d8a6fe0e6e updated its feilds: {'status': 'running'}
+2026-05-07 12:54:08,819 | INFO | app | Fetching task with ID: c91e7848-7d18-4249-8fca-a2d8a6fe0e6e
+2026-05-07 12:54:08,833 | INFO | app | Fetching task with ID: c91e7848-7d18-4249-8fca-a2d8a6fe0e6e
+2026-05-07 12:54:08,856 | INFO | app | Task with ID c91e7848-7d18-4249-8fca-a2d8a6fe0e6e updated its feilds: {'status': 'completed'}
+2026-05-07 12:55:12,559 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 12:55:12,562 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 12:55:12,564 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 13:30:20,506 | INFO | app | Started notification Service...
+2026-05-07 13:30:20,507 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-07 13:30:20,514 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:30:25,581 | INFO | app | Task with ID ec31ab65-a88d-44a2-bf86-b5f1392ba1eb updated its feilds: {'status': 'running'}
+2026-05-07 13:30:25,581 | INFO | app | Fetching task with ID: ec31ab65-a88d-44a2-bf86-b5f1392ba1eb
+2026-05-07 13:30:25,590 | INFO | app | Fetching task with ID: ec31ab65-a88d-44a2-bf86-b5f1392ba1eb
+2026-05-07 13:30:25,606 | INFO | app | Task with ID ec31ab65-a88d-44a2-bf86-b5f1392ba1eb updated its feilds: {'status': 'completed'}
+2026-05-07 13:32:00,670 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:32:00,691 | INFO | app | Task with ID f8b07584-cdc3-4c41-9a82-ee73bc1deeb7 updated its feilds: {'status': 'running'}
+2026-05-07 13:32:00,691 | INFO | app | Fetching task with ID: f8b07584-cdc3-4c41-9a82-ee73bc1deeb7
+2026-05-07 13:32:00,704 | INFO | app | Fetching task with ID: f8b07584-cdc3-4c41-9a82-ee73bc1deeb7
+2026-05-07 13:32:00,722 | INFO | app | Task with ID f8b07584-cdc3-4c41-9a82-ee73bc1deeb7 updated its feilds: {'status': 'completed'}
+2026-05-07 13:40:20,770 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:40:20,776 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:40:20,785 | INFO | app | Task with ID 4e6171d7-8fed-4e54-8365-ce7a95401301 updated its feilds: {'status': 'running'}
+2026-05-07 13:40:20,786 | INFO | app | Fetching task with ID: 4e6171d7-8fed-4e54-8365-ce7a95401301
+2026-05-07 13:40:20,795 | INFO | app | Fetching task with ID: 4e6171d7-8fed-4e54-8365-ce7a95401301
+2026-05-07 13:40:20,811 | INFO | app | Task with ID 4e6171d7-8fed-4e54-8365-ce7a95401301 updated its feilds: {'status': 'completed'}
+2026-05-07 13:40:20,825 | INFO | app | Task with ID 4b3c5f71-ec6d-4f6c-aa0f-74556ccf3794 updated its feilds: {'status': 'running'}
+2026-05-07 13:40:20,826 | INFO | app | Fetching task with ID: 4b3c5f71-ec6d-4f6c-aa0f-74556ccf3794
+2026-05-07 13:40:20,832 | INFO | app | Fetching task with ID: 4b3c5f71-ec6d-4f6c-aa0f-74556ccf3794
+2026-05-07 13:40:20,840 | INFO | app | Task with ID 4b3c5f71-ec6d-4f6c-aa0f-74556ccf3794 updated its feilds: {'status': 'completed'}
+2026-05-07 13:43:40,796 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:43:40,802 | INFO | app | Task with ID 6f034f0a-83e9-4a8d-8db2-23adb4472bdf updated its feilds: {'status': 'running'}
+2026-05-07 13:43:40,802 | INFO | app | Fetching task with ID: 6f034f0a-83e9-4a8d-8db2-23adb4472bdf
+2026-05-07 13:43:40,808 | INFO | app | Fetching task with ID: 6f034f0a-83e9-4a8d-8db2-23adb4472bdf
+2026-05-07 13:43:40,818 | INFO | app | Task with ID 6f034f0a-83e9-4a8d-8db2-23adb4472bdf updated its feilds: {'status': 'completed'}
+2026-05-07 13:45:20,810 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:45:20,825 | INFO | app | Task with ID d643b900-a312-4f22-bb65-9adceae4837b updated its feilds: {'status': 'running'}
+2026-05-07 13:45:20,826 | INFO | app | Fetching task with ID: d643b900-a312-4f22-bb65-9adceae4837b
+2026-05-07 13:45:20,836 | INFO | app | Fetching task with ID: d643b900-a312-4f22-bb65-9adceae4837b
+2026-05-07 13:45:20,865 | INFO | app | Task with ID d643b900-a312-4f22-bb65-9adceae4837b updated its feilds: {'status': 'completed'}
+2026-05-07 13:47:00,853 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:47:00,866 | INFO | app | Task with ID 9cb8d81d-59f2-4188-8caf-9c161ee7f8f4 updated its feilds: {'status': 'running'}
+2026-05-07 13:47:00,867 | INFO | app | Fetching task with ID: 9cb8d81d-59f2-4188-8caf-9c161ee7f8f4
+2026-05-07 13:47:00,878 | INFO | app | Fetching task with ID: 9cb8d81d-59f2-4188-8caf-9c161ee7f8f4
+2026-05-07 13:47:00,907 | INFO | app | Task with ID 9cb8d81d-59f2-4188-8caf-9c161ee7f8f4 updated its feilds: {'status': 'completed'}
+2026-05-07 13:48:40,860 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:48:40,865 | INFO | app | Task with ID a68bd5d0-11e3-44e7-b398-f09def3d6586 updated its feilds: {'status': 'running'}
+2026-05-07 13:48:40,865 | INFO | app | Fetching task with ID: a68bd5d0-11e3-44e7-b398-f09def3d6586
+2026-05-07 13:48:40,868 | INFO | app | Fetching task with ID: a68bd5d0-11e3-44e7-b398-f09def3d6586
+2026-05-07 13:48:40,875 | INFO | app | Task with ID a68bd5d0-11e3-44e7-b398-f09def3d6586 updated its feilds: {'status': 'completed'}
+2026-05-07 13:57:00,884 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:57:00,904 | INFO | app | Task with ID 710abe13-227e-4a04-93f5-7e5457c6f5b5 updated its feilds: {'status': 'running'}
+2026-05-07 13:57:00,905 | INFO | app | Fetching task with ID: 710abe13-227e-4a04-93f5-7e5457c6f5b5
+2026-05-07 13:57:00,921 | INFO | app | Fetching task with ID: 710abe13-227e-4a04-93f5-7e5457c6f5b5
+2026-05-07 13:57:00,943 | INFO | app | Task with ID 710abe13-227e-4a04-93f5-7e5457c6f5b5 updated its feilds: {'status': 'completed'}
+2026-05-07 13:58:40,878 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 13:58:40,894 | INFO | app | Task with ID 1c0a1a90-4b47-4610-897c-ca4ff6f9aba9 updated its feilds: {'status': 'running'}
+2026-05-07 13:58:40,895 | INFO | app | Fetching task with ID: 1c0a1a90-4b47-4610-897c-ca4ff6f9aba9
+2026-05-07 13:58:40,907 | INFO | app | Fetching task with ID: 1c0a1a90-4b47-4610-897c-ca4ff6f9aba9
+2026-05-07 13:58:40,932 | INFO | app | Task with ID 1c0a1a90-4b47-4610-897c-ca4ff6f9aba9 updated its feilds: {'status': 'completed'}
+2026-05-07 14:07:00,979 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 14:07:00,999 | INFO | app | Task with ID ee4c8408-705a-4652-ba2c-8e164e0c96fd updated its feilds: {'status': 'running'}
+2026-05-07 14:07:01,000 | INFO | app | Fetching task with ID: ee4c8408-705a-4652-ba2c-8e164e0c96fd
+2026-05-07 14:07:01,012 | INFO | app | Fetching task with ID: ee4c8408-705a-4652-ba2c-8e164e0c96fd
+2026-05-07 14:07:01,040 | INFO | app | Task with ID ee4c8408-705a-4652-ba2c-8e164e0c96fd updated its feilds: {'status': 'completed'}
+2026-05-07 14:08:41,020 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 14:08:41,033 | INFO | app | Task with ID 46c89c42-ecdc-4d4b-ad24-bd5b142e805b updated its feilds: {'status': 'running'}
+2026-05-07 14:08:41,033 | INFO | app | Fetching task with ID: 46c89c42-ecdc-4d4b-ad24-bd5b142e805b
+2026-05-07 14:08:41,040 | INFO | app | Fetching task with ID: 46c89c42-ecdc-4d4b-ad24-bd5b142e805b
+2026-05-07 14:08:41,063 | INFO | app | Task with ID 46c89c42-ecdc-4d4b-ad24-bd5b142e805b updated its feilds: {'status': 'completed'}
+2026-05-07 14:09:07,020 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 14:09:07,023 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 14:09:07,026 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 14:09:07,029 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 14:09:07,031 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 14:09:07,034 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 14:39:13,866 | INFO | app | Started notification Service...
+2026-05-07 14:39:13,868 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-07 14:40:53,888 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 14:40:54,095 | INFO | app | Task with ID 8274acad-d7a6-448a-83a0-32b79ca7f864 updated its feilds: {'status': 'running'}
+2026-05-07 14:40:54,095 | INFO | app | Fetching task with ID: 8274acad-d7a6-448a-83a0-32b79ca7f864
+2026-05-07 14:40:54,100 | INFO | app | Fetching task with ID: 8274acad-d7a6-448a-83a0-32b79ca7f864
+2026-05-07 14:40:54,104 | INFO | app | Task with ID 8274acad-d7a6-448a-83a0-32b79ca7f864 updated its feilds: {'status': 'completed'}
+2026-05-07 14:42:34,104 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 14:42:34,120 | INFO | app | Task with ID 103834dc-405b-4a43-8607-8280b9ee637b updated its feilds: {'status': 'running'}
+2026-05-07 14:42:34,121 | INFO | app | Fetching task with ID: 103834dc-405b-4a43-8607-8280b9ee637b
+2026-05-07 14:42:34,135 | INFO | app | Fetching task with ID: 103834dc-405b-4a43-8607-8280b9ee637b
+2026-05-07 14:42:34,158 | INFO | app | Task with ID 103834dc-405b-4a43-8607-8280b9ee637b updated its feilds: {'status': 'completed'}
+2026-05-07 14:44:04,826 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 18:53:32,931 | INFO | app | Started notification Service...
+2026-05-07 18:53:32,937 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-07 18:55:12,987 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 18:55:13,183 | INFO | app | Task with ID 0ae86612-5f6a-4da8-865b-fd7870b31931 updated its feilds: {'status': 'running'}
+2026-05-07 18:55:13,183 | INFO | app | Fetching task with ID: 0ae86612-5f6a-4da8-865b-fd7870b31931
+2026-05-07 18:55:13,186 | INFO | app | Fetching task with ID: 0ae86612-5f6a-4da8-865b-fd7870b31931
+2026-05-07 18:55:13,192 | INFO | app | Task with ID 0ae86612-5f6a-4da8-865b-fd7870b31931 updated its feilds: {'status': 'completed'}
+2026-05-07 18:58:33,211 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 18:58:33,236 | INFO | app | Task with ID dcc75770-bede-4fe5-ac1b-4f425177a896 updated its feilds: {'status': 'running'}
+2026-05-07 18:58:33,237 | INFO | app | Fetching task with ID: dcc75770-bede-4fe5-ac1b-4f425177a896
+2026-05-07 18:58:33,250 | INFO | app | Fetching task with ID: dcc75770-bede-4fe5-ac1b-4f425177a896
+2026-05-07 18:58:33,278 | INFO | app | Task with ID dcc75770-bede-4fe5-ac1b-4f425177a896 updated its feilds: {'status': 'completed'}
+2026-05-07 19:33:33,490 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:33:33,517 | INFO | app | Task with ID dbde7df5-de78-4f5b-85d8-b73b90039676 updated its feilds: {'status': 'running'}
+2026-05-07 19:33:33,518 | INFO | app | Fetching task with ID: dbde7df5-de78-4f5b-85d8-b73b90039676
+2026-05-07 19:33:33,550 | INFO | app | Fetching task with ID: dbde7df5-de78-4f5b-85d8-b73b90039676
+2026-05-07 19:33:33,588 | INFO | app | Task with ID dbde7df5-de78-4f5b-85d8-b73b90039676 updated its feilds: {'status': 'completed'}
+2026-05-07 19:35:13,522 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:35:13,537 | INFO | app | Task with ID 1fe2d006-7102-4055-a378-a00b834123b4 updated its feilds: {'status': 'running'}
+2026-05-07 19:35:13,538 | INFO | app | Fetching task with ID: 1fe2d006-7102-4055-a378-a00b834123b4
+2026-05-07 19:35:13,549 | INFO | app | Fetching task with ID: 1fe2d006-7102-4055-a378-a00b834123b4
+2026-05-07 19:35:13,574 | INFO | app | Task with ID 1fe2d006-7102-4055-a378-a00b834123b4 updated its feilds: {'status': 'completed'}
+2026-05-07 19:38:33,540 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:38:33,543 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:38:33,551 | INFO | app | Task with ID 40226822-b78f-4c4b-acb4-fd32987c92f4 updated its feilds: {'status': 'running'}
+2026-05-07 19:38:33,553 | INFO | app | Fetching task with ID: 40226822-b78f-4c4b-acb4-fd32987c92f4
+2026-05-07 19:38:33,560 | INFO | app | Fetching task with ID: 40226822-b78f-4c4b-acb4-fd32987c92f4
+2026-05-07 19:38:33,577 | INFO | app | Task with ID 40226822-b78f-4c4b-acb4-fd32987c92f4 updated its feilds: {'status': 'completed'}
+2026-05-07 19:38:33,594 | INFO | app | Task with ID fa84686e-edf8-4900-9387-740d008aadf6 updated its feilds: {'status': 'running'}
+2026-05-07 19:38:33,595 | INFO | app | Fetching task with ID: fa84686e-edf8-4900-9387-740d008aadf6
+2026-05-07 19:38:33,602 | INFO | app | Fetching task with ID: fa84686e-edf8-4900-9387-740d008aadf6
+2026-05-07 19:38:33,617 | INFO | app | Task with ID fa84686e-edf8-4900-9387-740d008aadf6 updated its feilds: {'status': 'completed'}
+2026-05-07 19:40:13,571 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:40:13,578 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:40:13,587 | INFO | app | Task with ID c8adf319-ac99-4b57-8555-9f576824f277 updated its feilds: {'status': 'running'}
+2026-05-07 19:40:13,588 | INFO | app | Fetching task with ID: c8adf319-ac99-4b57-8555-9f576824f277
+2026-05-07 19:40:13,596 | INFO | app | Fetching task with ID: c8adf319-ac99-4b57-8555-9f576824f277
+2026-05-07 19:40:13,615 | INFO | app | Task with ID c8adf319-ac99-4b57-8555-9f576824f277 updated its feilds: {'status': 'completed'}
+2026-05-07 19:40:13,651 | INFO | app | Task with ID 70cbcf31-36d8-40eb-aa7c-c6a908d70ef7 updated its feilds: {'status': 'running'}
+2026-05-07 19:40:13,652 | INFO | app | Fetching task with ID: 70cbcf31-36d8-40eb-aa7c-c6a908d70ef7
+2026-05-07 19:40:13,666 | INFO | app | Fetching task with ID: 70cbcf31-36d8-40eb-aa7c-c6a908d70ef7
+2026-05-07 19:40:13,688 | INFO | app | Task with ID 70cbcf31-36d8-40eb-aa7c-c6a908d70ef7 updated its feilds: {'status': 'completed'}
+2026-05-07 19:41:53,609 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:41:53,616 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:41:53,626 | INFO | app | Task with ID 16ef264e-9aca-4fdf-b23e-066ddba4369b updated its feilds: {'status': 'running'}
+2026-05-07 19:41:53,627 | INFO | app | Fetching task with ID: 16ef264e-9aca-4fdf-b23e-066ddba4369b
+2026-05-07 19:41:53,638 | INFO | app | Fetching task with ID: 16ef264e-9aca-4fdf-b23e-066ddba4369b
+2026-05-07 19:41:53,664 | INFO | app | Task with ID 16ef264e-9aca-4fdf-b23e-066ddba4369b updated its feilds: {'status': 'completed'}
+2026-05-07 19:41:53,699 | INFO | app | Task with ID f1011354-410f-4136-b015-95c7b8e9f884 updated its feilds: {'status': 'running'}
+2026-05-07 19:41:53,700 | INFO | app | Fetching task with ID: f1011354-410f-4136-b015-95c7b8e9f884
+2026-05-07 19:41:53,710 | INFO | app | Fetching task with ID: f1011354-410f-4136-b015-95c7b8e9f884
+2026-05-07 19:41:53,730 | INFO | app | Task with ID f1011354-410f-4136-b015-95c7b8e9f884 updated its feilds: {'status': 'completed'}
+2026-05-07 19:43:33,639 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:43:33,657 | INFO | app | Task with ID e2b8bc52-262b-4b4c-835d-c35f8fea7bcc updated its feilds: {'status': 'running'}
+2026-05-07 19:43:33,657 | INFO | app | Fetching task with ID: e2b8bc52-262b-4b4c-835d-c35f8fea7bcc
+2026-05-07 19:43:33,673 | INFO | app | Fetching task with ID: e2b8bc52-262b-4b4c-835d-c35f8fea7bcc
+2026-05-07 19:43:33,698 | INFO | app | Task with ID e2b8bc52-262b-4b4c-835d-c35f8fea7bcc updated its feilds: {'status': 'completed'}
+2026-05-07 19:55:13,746 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 19:55:13,751 | INFO | app | Task with ID 48a31d99-f1f4-4340-9ce4-0cf048efb112 updated its feilds: {'status': 'running'}
+2026-05-07 19:55:13,751 | INFO | app | Fetching task with ID: 48a31d99-f1f4-4340-9ce4-0cf048efb112
+2026-05-07 19:55:13,768 | INFO | app | Fetching task with ID: 48a31d99-f1f4-4340-9ce4-0cf048efb112
+2026-05-07 19:55:13,776 | INFO | app | Task with ID 48a31d99-f1f4-4340-9ce4-0cf048efb112 updated its feilds: {'status': 'completed'}
+2026-05-07 20:00:13,803 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:00:13,822 | INFO | app | Task with ID ed096aa2-68da-461c-91c5-4523d66427fe updated its feilds: {'status': 'running'}
+2026-05-07 20:00:13,822 | INFO | app | Fetching task with ID: ed096aa2-68da-461c-91c5-4523d66427fe
+2026-05-07 20:00:13,833 | INFO | app | Fetching task with ID: ed096aa2-68da-461c-91c5-4523d66427fe
+2026-05-07 20:00:13,857 | INFO | app | Task with ID ed096aa2-68da-461c-91c5-4523d66427fe updated its feilds: {'status': 'completed'}
+2026-05-07 20:11:53,837 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:11:53,839 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:11:53,842 | INFO | app | Task with ID e9289b02-aeac-4d18-a951-c7ad5586463e updated its feilds: {'status': 'running'}
+2026-05-07 20:11:53,843 | INFO | app | Fetching task with ID: e9289b02-aeac-4d18-a951-c7ad5586463e
+2026-05-07 20:11:53,846 | INFO | app | Fetching task with ID: e9289b02-aeac-4d18-a951-c7ad5586463e
+2026-05-07 20:11:53,863 | INFO | app | Task with ID e9289b02-aeac-4d18-a951-c7ad5586463e updated its feilds: {'status': 'completed'}
+2026-05-07 20:11:53,878 | INFO | app | Task with ID d0c67b3c-5204-47aa-b626-2a89bafd73f8 updated its feilds: {'status': 'running'}
+2026-05-07 20:11:53,879 | INFO | app | Fetching task with ID: d0c67b3c-5204-47aa-b626-2a89bafd73f8
+2026-05-07 20:11:53,884 | INFO | app | Fetching task with ID: d0c67b3c-5204-47aa-b626-2a89bafd73f8
+2026-05-07 20:11:54,022 | INFO | app | Task with ID d0c67b3c-5204-47aa-b626-2a89bafd73f8 updated its feilds: {'status': 'completed'}
+2026-05-07 20:16:53,841 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:16:53,845 | INFO | app | Task with ID 231f8e9c-5c17-48ee-9bba-3a93c7358e0e updated its feilds: {'status': 'running'}
+2026-05-07 20:16:53,845 | INFO | app | Fetching task with ID: 231f8e9c-5c17-48ee-9bba-3a93c7358e0e
+2026-05-07 20:16:53,848 | INFO | app | Fetching task with ID: 231f8e9c-5c17-48ee-9bba-3a93c7358e0e
+2026-05-07 20:16:53,855 | INFO | app | Task with ID 231f8e9c-5c17-48ee-9bba-3a93c7358e0e updated its feilds: {'status': 'completed'}
+2026-05-07 20:18:33,848 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:18:33,854 | INFO | app | Task with ID 4cc5b6e7-af32-414c-b857-6bbb0c60652e updated its feilds: {'status': 'running'}
+2026-05-07 20:18:33,854 | INFO | app | Fetching task with ID: 4cc5b6e7-af32-414c-b857-6bbb0c60652e
+2026-05-07 20:18:33,857 | INFO | app | Fetching task with ID: 4cc5b6e7-af32-414c-b857-6bbb0c60652e
+2026-05-07 20:18:33,865 | INFO | app | Task with ID 4cc5b6e7-af32-414c-b857-6bbb0c60652e updated its feilds: {'status': 'completed'}
+2026-05-07 20:20:13,877 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:20:13,882 | INFO | app | Task with ID 07823dda-0392-4060-bc15-4eda2b49efdd updated its feilds: {'status': 'running'}
+2026-05-07 20:20:13,882 | INFO | app | Fetching task with ID: 07823dda-0392-4060-bc15-4eda2b49efdd
+2026-05-07 20:20:13,886 | INFO | app | Fetching task with ID: 07823dda-0392-4060-bc15-4eda2b49efdd
+2026-05-07 20:20:13,902 | INFO | app | Task with ID 07823dda-0392-4060-bc15-4eda2b49efdd updated its feilds: {'status': 'completed'}
+2026-05-07 20:25:13,902 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:25:13,906 | INFO | app | Task with ID 3a0258f8-6b8e-4e46-af7a-54eaa89f01b6 updated its feilds: {'status': 'running'}
+2026-05-07 20:25:13,906 | INFO | app | Fetching task with ID: 3a0258f8-6b8e-4e46-af7a-54eaa89f01b6
+2026-05-07 20:25:13,908 | INFO | app | Fetching task with ID: 3a0258f8-6b8e-4e46-af7a-54eaa89f01b6
+2026-05-07 20:25:13,915 | INFO | app | Task with ID 3a0258f8-6b8e-4e46-af7a-54eaa89f01b6 updated its feilds: {'status': 'completed'}
+2026-05-07 20:30:13,949 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:30:13,953 | INFO | app | Task with ID 78594158-63cd-4a2d-b508-85b57d01c931 updated its feilds: {'status': 'running'}
+2026-05-07 20:30:13,953 | INFO | app | Fetching task with ID: 78594158-63cd-4a2d-b508-85b57d01c931
+2026-05-07 20:30:13,955 | INFO | app | Fetching task with ID: 78594158-63cd-4a2d-b508-85b57d01c931
+2026-05-07 20:30:13,973 | INFO | app | Task with ID 78594158-63cd-4a2d-b508-85b57d01c931 updated its feilds: {'status': 'completed'}
+2026-05-07 20:31:20,279 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:31:22,221 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:29,993 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:33,321 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:34,946 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:36,714 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:38,148 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:42,628 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:45,911 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:49,218 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:51,506 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:53,355 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:55,717 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:32:57,715 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:35:13,988 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:35:14,008 | INFO | app | Task with ID 80bf25c9-e47f-407b-aa40-5e67eb6d7223 updated its feilds: {'status': 'running'}
+2026-05-07 20:35:14,008 | INFO | app | Fetching task with ID: 80bf25c9-e47f-407b-aa40-5e67eb6d7223
+2026-05-07 20:35:14,020 | INFO | app | Fetching task with ID: 80bf25c9-e47f-407b-aa40-5e67eb6d7223
+2026-05-07 20:35:14,043 | ERROR | app | Error in sending notification: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-05-07 20:35:14,046 | INFO | app | Task with ID 80bf25c9-e47f-407b-aa40-5e67eb6d7223 updated its feilds: {'status': 'completed'}
+2026-05-07 20:37:02,277 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:37:02,279 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:37:14,223 | INFO | app | Started notification Service...
+2026-05-07 20:37:14,229 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-07 20:37:14,252 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:37:14,399 | INFO | app | Task with ID 428d1793-3f71-482a-bda2-b024cad67189 updated its feilds: {'status': 'running'}
+2026-05-07 20:37:14,399 | INFO | app | Fetching task with ID: 428d1793-3f71-482a-bda2-b024cad67189
+2026-05-07 20:37:14,402 | INFO | app | Fetching task with ID: 428d1793-3f71-482a-bda2-b024cad67189
+2026-05-07 20:37:14,411 | INFO | app | Task with ID 428d1793-3f71-482a-bda2-b024cad67189 updated its feilds: {'status': 'completed'}
+2026-05-07 20:38:54,431 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-07 20:38:54,441 | INFO | app | Task with ID 4a4257df-afa5-4787-9f80-f124c2a8d0e8 updated its feilds: {'status': 'running'}
+2026-05-07 20:38:54,442 | INFO | app | Fetching task with ID: 4a4257df-afa5-4787-9f80-f124c2a8d0e8
+2026-05-07 20:38:54,451 | INFO | app | Fetching task with ID: 4a4257df-afa5-4787-9f80-f124c2a8d0e8
+2026-05-07 20:38:54,465 | INFO | app | Task with ID 4a4257df-afa5-4787-9f80-f124c2a8d0e8 updated its feilds: {'status': 'completed'}
+2026-05-07 20:39:32,217 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-07 20:39:32,220 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 11:33:21,742 | INFO | app | Started notification Service...
+2026-05-09 11:33:21,752 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 11:35:01,825 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 11:35:02,154 | INFO | app | Task with ID 09e22311-c5c7-476e-bc8c-d2ff1263a987 updated its feilds: {'status': 'running'}
+2026-05-09 11:35:02,155 | INFO | app | Fetching task with ID: 09e22311-c5c7-476e-bc8c-d2ff1263a987
+2026-05-09 11:35:02,168 | INFO | app | Fetching task with ID: 09e22311-c5c7-476e-bc8c-d2ff1263a987
+2026-05-09 11:35:02,184 | INFO | app | Task with ID 09e22311-c5c7-476e-bc8c-d2ff1263a987 updated its feilds: {'status': 'completed'}
+2026-05-09 11:36:42,077 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 11:36:42,087 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 11:36:42,095 | INFO | app | Task with ID 06ae0961-5f4d-4e0c-b0e4-3d1702c9319c updated its feilds: {'status': 'running'}
+2026-05-09 11:36:42,095 | INFO | app | Fetching task with ID: 06ae0961-5f4d-4e0c-b0e4-3d1702c9319c
+2026-05-09 11:36:42,106 | INFO | app | Fetching task with ID: 06ae0961-5f4d-4e0c-b0e4-3d1702c9319c
+2026-05-09 11:36:42,126 | INFO | app | Task with ID 06ae0961-5f4d-4e0c-b0e4-3d1702c9319c updated its feilds: {'status': 'completed'}
+2026-05-09 11:36:42,141 | INFO | app | Task with ID 44d2d343-3cc8-4502-bbc1-09d45d9f1bf0 updated its feilds: {'status': 'running'}
+2026-05-09 11:36:42,141 | INFO | app | Fetching task with ID: 44d2d343-3cc8-4502-bbc1-09d45d9f1bf0
+2026-05-09 11:36:42,151 | INFO | app | Fetching task with ID: 44d2d343-3cc8-4502-bbc1-09d45d9f1bf0
+2026-05-09 11:36:42,168 | INFO | app | Task with ID 44d2d343-3cc8-4502-bbc1-09d45d9f1bf0 updated its feilds: {'status': 'completed'}
+2026-05-09 11:40:02,113 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 11:40:02,132 | INFO | app | Task with ID 2b3d7041-df88-4f48-b8d3-fe38517e19df updated its feilds: {'status': 'running'}
+2026-05-09 11:40:02,132 | INFO | app | Fetching task with ID: 2b3d7041-df88-4f48-b8d3-fe38517e19df
+2026-05-09 11:40:02,146 | INFO | app | Fetching task with ID: 2b3d7041-df88-4f48-b8d3-fe38517e19df
+2026-05-09 11:40:02,168 | INFO | app | Task with ID 2b3d7041-df88-4f48-b8d3-fe38517e19df updated its feilds: {'status': 'completed'}
+2026-05-09 11:41:34,620 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 11:41:34,623 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 13:23:55,152 | INFO | app | Started notification Service...
+2026-05-09 13:23:55,155 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 13:23:55,176 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 13:23:56,155 | INFO | app | Task with ID 9b3617bb-35aa-4758-b9ad-a81c90e16a59 updated its feilds: {'status': 'running'}
+2026-05-09 13:23:56,155 | INFO | app | Fetching task with ID: 9b3617bb-35aa-4758-b9ad-a81c90e16a59
+2026-05-09 13:23:56,162 | INFO | app | Fetching task with ID: 9b3617bb-35aa-4758-b9ad-a81c90e16a59
+2026-05-09 13:23:56,178 | INFO | app | Task with ID 9b3617bb-35aa-4758-b9ad-a81c90e16a59 updated its feilds: {'status': 'completed'}
+2026-05-09 13:25:35,300 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 13:25:35,317 | INFO | app | Task with ID a4e4f283-9112-4d99-9f27-1e1abe990e54 updated its feilds: {'status': 'running'}
+2026-05-09 13:25:35,317 | INFO | app | Fetching task with ID: a4e4f283-9112-4d99-9f27-1e1abe990e54
+2026-05-09 13:25:35,331 | INFO | app | Fetching task with ID: a4e4f283-9112-4d99-9f27-1e1abe990e54
+2026-05-09 13:25:35,358 | INFO | app | Task with ID a4e4f283-9112-4d99-9f27-1e1abe990e54 updated its feilds: {'status': 'completed'}
+2026-05-09 13:27:15,310 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 13:27:15,315 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 13:27:15,327 | INFO | app | Task with ID 6719a0f8-63a7-4df0-a602-24bfbec0de37 updated its feilds: {'status': 'running'}
+2026-05-09 13:27:15,327 | INFO | app | Fetching task with ID: 6719a0f8-63a7-4df0-a602-24bfbec0de37
+2026-05-09 13:27:15,337 | INFO | app | Fetching task with ID: 6719a0f8-63a7-4df0-a602-24bfbec0de37
+2026-05-09 13:27:15,359 | INFO | app | Task with ID 6719a0f8-63a7-4df0-a602-24bfbec0de37 updated its feilds: {'status': 'completed'}
+2026-05-09 13:27:15,378 | INFO | app | Task with ID 37f53798-94f8-47ac-a2f7-376f8e36abaa updated its feilds: {'status': 'running'}
+2026-05-09 13:27:15,379 | INFO | app | Fetching task with ID: 37f53798-94f8-47ac-a2f7-376f8e36abaa
+2026-05-09 13:27:15,391 | INFO | app | Fetching task with ID: 37f53798-94f8-47ac-a2f7-376f8e36abaa
+2026-05-09 13:27:15,410 | INFO | app | Task with ID 37f53798-94f8-47ac-a2f7-376f8e36abaa updated its feilds: {'status': 'completed'}
+2026-05-09 13:42:40,809 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 13:56:34,252 | INFO | app | Started notification Service...
+2026-05-09 13:56:34,256 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 13:59:54,322 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 13:59:54,433 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 13:59:54,461 | INFO | app | Task with ID 72b2d1eb-170d-40ed-afd0-5d0dc27b4668 updated its feilds: {'status': 'running'}
+2026-05-09 13:59:54,461 | INFO | app | Fetching task with ID: 72b2d1eb-170d-40ed-afd0-5d0dc27b4668
+2026-05-09 13:59:54,466 | INFO | app | Fetching task with ID: 72b2d1eb-170d-40ed-afd0-5d0dc27b4668
+2026-05-09 13:59:54,472 | INFO | app | Task with ID 72b2d1eb-170d-40ed-afd0-5d0dc27b4668 updated its feilds: {'status': 'completed'}
+2026-05-09 13:59:54,503 | INFO | app | Task with ID 45d8fd3a-45ed-4c3f-bd9c-7fa75eefed7b updated its feilds: {'status': 'running'}
+2026-05-09 13:59:54,503 | INFO | app | Fetching task with ID: 45d8fd3a-45ed-4c3f-bd9c-7fa75eefed7b
+2026-05-09 13:59:54,516 | INFO | app | Fetching task with ID: 45d8fd3a-45ed-4c3f-bd9c-7fa75eefed7b
+2026-05-09 13:59:54,527 | INFO | app | Task with ID 45d8fd3a-45ed-4c3f-bd9c-7fa75eefed7b updated its feilds: {'status': 'completed'}
+2026-05-09 14:02:20,214 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:02:22,333 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:03:14,460 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:03:14,477 | INFO | app | Task with ID 4dc7747e-3722-4751-928d-3f6d556dbba1 updated its feilds: {'status': 'running'}
+2026-05-09 14:03:14,477 | INFO | app | Fetching task with ID: 4dc7747e-3722-4751-928d-3f6d556dbba1
+2026-05-09 14:03:14,487 | INFO | app | Fetching task with ID: 4dc7747e-3722-4751-928d-3f6d556dbba1
+2026-05-09 14:03:14,506 | ERROR | app | Error in sending notification: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-05-09 14:03:14,509 | INFO | app | Task with ID 4dc7747e-3722-4751-928d-3f6d556dbba1 updated its feilds: {'status': 'completed'}
+2026-05-09 14:04:54,469 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:04:54,484 | INFO | app | Task with ID c4bf5b04-b463-46a7-8592-8e82d4518b77 updated its feilds: {'status': 'running'}
+2026-05-09 14:04:54,484 | INFO | app | Fetching task with ID: c4bf5b04-b463-46a7-8592-8e82d4518b77
+2026-05-09 14:04:54,498 | INFO | app | Fetching task with ID: c4bf5b04-b463-46a7-8592-8e82d4518b77
+2026-05-09 14:04:54,521 | INFO | app | Task with ID c4bf5b04-b463-46a7-8592-8e82d4518b77 updated its feilds: {'status': 'completed'}
+2026-05-09 14:06:34,484 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:06:34,499 | INFO | app | Task with ID 2feb4cb7-ad4c-4b4c-ab54-c16959afa804 updated its feilds: {'status': 'running'}
+2026-05-09 14:06:34,499 | INFO | app | Fetching task with ID: 2feb4cb7-ad4c-4b4c-ab54-c16959afa804
+2026-05-09 14:06:34,510 | INFO | app | Fetching task with ID: 2feb4cb7-ad4c-4b4c-ab54-c16959afa804
+2026-05-09 14:06:34,536 | INFO | app | Task with ID 2feb4cb7-ad4c-4b4c-ab54-c16959afa804 updated its feilds: {'status': 'completed'}
+2026-05-09 14:08:36,208 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:08:37,826 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:09:38,907 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:11:34,528 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:11:34,547 | INFO | app | Task with ID 757861a4-1595-4ea8-a88c-036256642f59 updated its feilds: {'status': 'running'}
+2026-05-09 14:11:34,548 | INFO | app | Fetching task with ID: 757861a4-1595-4ea8-a88c-036256642f59
+2026-05-09 14:11:34,562 | INFO | app | Fetching task with ID: 757861a4-1595-4ea8-a88c-036256642f59
+2026-05-09 14:11:34,591 | INFO | app | Task with ID 757861a4-1595-4ea8-a88c-036256642f59 updated its feilds: {'status': 'completed'}
+2026-05-09 14:12:06,580 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:12:55,608 | INFO | app | Started notification Service...
+2026-05-09 14:12:55,610 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 14:12:55,615 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:12:57,663 | INFO | app | Task with ID a6a3acb4-653a-4a3e-b6a3-434504d1bc2b updated its feilds: {'status': 'running'}
+2026-05-09 14:12:57,664 | INFO | app | Fetching task with ID: a6a3acb4-653a-4a3e-b6a3-434504d1bc2b
+2026-05-09 14:12:57,680 | INFO | app | Fetching task with ID: a6a3acb4-653a-4a3e-b6a3-434504d1bc2b
+2026-05-09 14:12:57,702 | INFO | app | Task with ID a6a3acb4-653a-4a3e-b6a3-434504d1bc2b updated its feilds: {'status': 'completed'}
+2026-05-09 14:14:35,766 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:14:35,785 | INFO | app | Task with ID 7f91c795-559c-4827-88c1-a1c8b23b6e16 updated its feilds: {'status': 'running'}
+2026-05-09 14:14:35,785 | INFO | app | Fetching task with ID: 7f91c795-559c-4827-88c1-a1c8b23b6e16
+2026-05-09 14:14:35,801 | INFO | app | Fetching task with ID: 7f91c795-559c-4827-88c1-a1c8b23b6e16
+2026-05-09 14:14:35,824 | INFO | app | Task with ID 7f91c795-559c-4827-88c1-a1c8b23b6e16 updated its feilds: {'status': 'completed'}
+2026-05-09 14:15:04,018 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:17:55,797 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:17:55,802 | INFO | app | Task with ID 16f08e9d-7b41-4bb9-8e7e-31517ad097df updated its feilds: {'status': 'running'}
+2026-05-09 14:17:55,802 | INFO | app | Fetching task with ID: 16f08e9d-7b41-4bb9-8e7e-31517ad097df
+2026-05-09 14:17:55,804 | INFO | app | Fetching task with ID: 16f08e9d-7b41-4bb9-8e7e-31517ad097df
+2026-05-09 14:17:55,809 | ERROR | app | Error in sending notification: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-05-09 14:17:55,810 | INFO | app | Task with ID 16f08e9d-7b41-4bb9-8e7e-31517ad097df updated its feilds: {'status': 'completed'}
+2026-05-09 14:18:11,556 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:18:11,559 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 14:18:44,693 | INFO | app | Started notification Service...
+2026-05-09 14:18:44,695 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 14:20:24,710 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 14:20:24,951 | INFO | app | Task with ID 9d9b19c6-6448-44df-a5a3-6366f4abc9a7 updated its feilds: {'status': 'running'}
+2026-05-09 14:20:24,951 | INFO | app | Fetching task with ID: 9d9b19c6-6448-44df-a5a3-6366f4abc9a7
+2026-05-09 14:20:24,962 | INFO | app | Fetching task with ID: 9d9b19c6-6448-44df-a5a3-6366f4abc9a7
+2026-05-09 14:20:24,978 | INFO | app | Task with ID 9d9b19c6-6448-44df-a5a3-6366f4abc9a7 updated its feilds: {'status': 'completed'}
+2026-05-09 15:04:47,881 | INFO | app | Started notification Service...
+2026-05-09 15:04:47,889 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 15:06:27,957 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:06:28,174 | INFO | app | Task with ID abec4bc5-d09e-4f90-8710-8043d673da52 updated its feilds: {'status': 'running'}
+2026-05-09 15:06:28,174 | INFO | app | Fetching task with ID: abec4bc5-d09e-4f90-8710-8043d673da52
+2026-05-09 15:06:28,181 | INFO | app | Fetching task with ID: abec4bc5-d09e-4f90-8710-8043d673da52
+2026-05-09 15:06:28,191 | INFO | app | Task with ID abec4bc5-d09e-4f90-8710-8043d673da52 updated its feilds: {'status': 'completed'}
+2026-05-09 15:08:08,158 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:08:08,177 | INFO | app | Task with ID ffd09334-a0a3-4d17-a68f-7db14b7225ce updated its feilds: {'status': 'running'}
+2026-05-09 15:08:08,178 | INFO | app | Fetching task with ID: ffd09334-a0a3-4d17-a68f-7db14b7225ce
+2026-05-09 15:08:08,188 | INFO | app | Fetching task with ID: ffd09334-a0a3-4d17-a68f-7db14b7225ce
+2026-05-09 15:08:08,211 | INFO | app | Task with ID ffd09334-a0a3-4d17-a68f-7db14b7225ce updated its feilds: {'status': 'completed'}
+2026-05-09 15:09:26,319 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:09:29,821 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:11:28,195 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:11:28,214 | INFO | app | Task with ID e81f3530-62c9-40d7-a10f-6928b05704d4 updated its feilds: {'status': 'running'}
+2026-05-09 15:11:28,215 | INFO | app | Fetching task with ID: e81f3530-62c9-40d7-a10f-6928b05704d4
+2026-05-09 15:11:28,226 | INFO | app | Fetching task with ID: e81f3530-62c9-40d7-a10f-6928b05704d4
+2026-05-09 15:11:28,247 | INFO | app | Task with ID e81f3530-62c9-40d7-a10f-6928b05704d4 updated its feilds: {'status': 'completed'}
+2026-05-09 15:16:28,254 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:16:28,274 | INFO | app | Task with ID 82166299-2cc7-406d-83b5-fd67429331c6 updated its feilds: {'status': 'running'}
+2026-05-09 15:16:28,274 | INFO | app | Fetching task with ID: 82166299-2cc7-406d-83b5-fd67429331c6
+2026-05-09 15:16:28,289 | INFO | app | Fetching task with ID: 82166299-2cc7-406d-83b5-fd67429331c6
+2026-05-09 15:16:28,315 | INFO | app | Task with ID 82166299-2cc7-406d-83b5-fd67429331c6 updated its feilds: {'status': 'completed'}
+2026-05-09 15:18:08,261 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:18:08,279 | INFO | app | Task with ID 45679ea2-de4c-44de-a2df-dcea7e891277 updated its feilds: {'status': 'running'}
+2026-05-09 15:18:08,279 | INFO | app | Fetching task with ID: 45679ea2-de4c-44de-a2df-dcea7e891277
+2026-05-09 15:18:08,290 | INFO | app | Fetching task with ID: 45679ea2-de4c-44de-a2df-dcea7e891277
+2026-05-09 15:18:08,314 | INFO | app | Task with ID 45679ea2-de4c-44de-a2df-dcea7e891277 updated its feilds: {'status': 'completed'}
+2026-05-09 15:24:10,142 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:24:13,883 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:25:34,252 | INFO | app | Started notification Service...
+2026-05-09 15:25:34,252 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 15:28:54,297 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:28:54,421 | INFO | app | Task with ID 066b4802-77f6-4350-8d67-701806335040 updated its feilds: {'status': 'running'}
+2026-05-09 15:28:54,421 | INFO | app | Fetching task with ID: 066b4802-77f6-4350-8d67-701806335040
+2026-05-09 15:28:54,424 | INFO | app | Fetching task with ID: 066b4802-77f6-4350-8d67-701806335040
+2026-05-09 15:28:54,429 | INFO | app | Task with ID 066b4802-77f6-4350-8d67-701806335040 updated its feilds: {'status': 'completed'}
+2026-05-09 15:30:34,423 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:30:34,425 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:30:34,428 | INFO | app | Task with ID b8356b5b-14b4-488c-aad3-091427942cd1 updated its feilds: {'status': 'running'}
+2026-05-09 15:30:34,428 | INFO | app | Fetching task with ID: b8356b5b-14b4-488c-aad3-091427942cd1
+2026-05-09 15:30:34,430 | INFO | app | Fetching task with ID: b8356b5b-14b4-488c-aad3-091427942cd1
+2026-05-09 15:30:34,435 | INFO | app | Task with ID b8356b5b-14b4-488c-aad3-091427942cd1 updated its feilds: {'status': 'completed'}
+2026-05-09 15:30:34,445 | INFO | app | Task with ID c86b618e-055f-4906-a1d9-eb8ceb87dcda updated its feilds: {'status': 'running'}
+2026-05-09 15:30:34,445 | INFO | app | Fetching task with ID: c86b618e-055f-4906-a1d9-eb8ceb87dcda
+2026-05-09 15:30:34,453 | INFO | app | Fetching task with ID: c86b618e-055f-4906-a1d9-eb8ceb87dcda
+2026-05-09 15:30:34,466 | INFO | app | Task with ID c86b618e-055f-4906-a1d9-eb8ceb87dcda updated its feilds: {'status': 'completed'}
+2026-05-09 15:35:24,943 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:35:27,655 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:37:14,489 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:37:14,511 | INFO | app | Task with ID 0c269a22-8b06-48a2-835b-05a8ccc0710d updated its feilds: {'status': 'running'}
+2026-05-09 15:37:14,511 | INFO | app | Fetching task with ID: 0c269a22-8b06-48a2-835b-05a8ccc0710d
+2026-05-09 15:37:14,522 | INFO | app | Fetching task with ID: 0c269a22-8b06-48a2-835b-05a8ccc0710d
+2026-05-09 15:37:14,546 | INFO | app | Task with ID 0c269a22-8b06-48a2-835b-05a8ccc0710d updated its feilds: {'status': 'completed'}
+2026-05-09 15:37:56,548 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:38:00,055 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 15:43:54,523 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 15:43:54,547 | INFO | app | Task with ID 4faa3104-c4eb-4ce6-8d67-4fcc67d346da updated its feilds: {'status': 'running'}
+2026-05-09 15:43:54,547 | INFO | app | Fetching task with ID: 4faa3104-c4eb-4ce6-8d67-4fcc67d346da
+2026-05-09 15:43:54,560 | INFO | app | Fetching task with ID: 4faa3104-c4eb-4ce6-8d67-4fcc67d346da
+2026-05-09 15:43:54,592 | INFO | app | Task with ID 4faa3104-c4eb-4ce6-8d67-4fcc67d346da updated its feilds: {'status': 'completed'}
+2026-05-09 16:07:24,351 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:07:27,047 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:07:29,581 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:08:54,694 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 16:08:54,716 | INFO | app | Task with ID a3a7e9a8-ca45-4ee5-9680-b865c1f57f71 updated its feilds: {'status': 'running'}
+2026-05-09 16:08:54,717 | INFO | app | Fetching task with ID: a3a7e9a8-ca45-4ee5-9680-b865c1f57f71
+2026-05-09 16:08:54,779 | INFO | app | Fetching task with ID: a3a7e9a8-ca45-4ee5-9680-b865c1f57f71
+2026-05-09 16:08:54,797 | INFO | app | Task with ID a3a7e9a8-ca45-4ee5-9680-b865c1f57f71 updated its feilds: {'status': 'completed'}
+2026-05-09 16:10:30,752 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:10:35,170 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:12:29,514 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:12:31,585 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:12:35,100 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:37:16,961 | INFO | app | Started notification Service...
+2026-05-09 16:37:16,964 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 16:37:58,207 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:38:54,546 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:42:08,623 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:48:17,805 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:55:07,995 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:55:10,873 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:55:15,782 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 16:58:18,937 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 17:02:17,121 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:02:17,340 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:02:17,341 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:02:17,380 | INFO | app | Task with ID b32cb34b-035f-4aca-b32e-6d6ea72e2ba2 updated its feilds: {'status': 'running'}
+2026-05-09 17:02:17,380 | INFO | app | Fetching task with ID: b32cb34b-035f-4aca-b32e-6d6ea72e2ba2
+2026-05-09 17:02:17,390 | INFO | app | Fetching task with ID: b32cb34b-035f-4aca-b32e-6d6ea72e2ba2
+2026-05-09 17:02:17,414 | INFO | app | Task with ID b32cb34b-035f-4aca-b32e-6d6ea72e2ba2 updated its feilds: {'status': 'completed'}
+2026-05-09 17:02:17,452 | INFO | app | Task with ID e6df378c-dff8-4772-a33b-9dc8aaa9d5ff updated its feilds: {'status': 'running'}
+2026-05-09 17:02:17,453 | INFO | app | Fetching task with ID: e6df378c-dff8-4772-a33b-9dc8aaa9d5ff
+2026-05-09 17:02:17,464 | INFO | app | Fetching task with ID: e6df378c-dff8-4772-a33b-9dc8aaa9d5ff
+2026-05-09 17:02:17,477 | INFO | app | Task with ID e6df378c-dff8-4772-a33b-9dc8aaa9d5ff updated its feilds: {'status': 'completed'}
+2026-05-09 17:02:17,484 | INFO | app | Task with ID 166ee46c-bdb7-4a55-bd5e-6dc8b2ebbe00 updated its feilds: {'status': 'running'}
+2026-05-09 17:02:17,484 | INFO | app | Fetching task with ID: 166ee46c-bdb7-4a55-bd5e-6dc8b2ebbe00
+2026-05-09 17:02:17,489 | INFO | app | Fetching task with ID: 166ee46c-bdb7-4a55-bd5e-6dc8b2ebbe00
+2026-05-09 17:02:17,495 | INFO | app | Task with ID 166ee46c-bdb7-4a55-bd5e-6dc8b2ebbe00 updated its feilds: {'status': 'completed'}
+2026-05-09 17:02:23,017 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 17:07:17,377 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:07:17,395 | INFO | app | Task with ID 2f3f9e0d-660d-459c-ba36-1c47d5e141d6 updated its feilds: {'status': 'running'}
+2026-05-09 17:07:17,395 | INFO | app | Fetching task with ID: 2f3f9e0d-660d-459c-ba36-1c47d5e141d6
+2026-05-09 17:07:17,410 | INFO | app | Fetching task with ID: 2f3f9e0d-660d-459c-ba36-1c47d5e141d6
+2026-05-09 17:07:17,438 | INFO | app | Task with ID 2f3f9e0d-660d-459c-ba36-1c47d5e141d6 updated its feilds: {'status': 'completed'}
+2026-05-09 17:08:57,409 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:08:57,416 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:08:57,423 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:08:57,430 | INFO | app | Task with ID 53ddacd3-76db-41ba-beaf-21765988461c updated its feilds: {'status': 'running'}
+2026-05-09 17:08:57,430 | INFO | app | Fetching task with ID: 53ddacd3-76db-41ba-beaf-21765988461c
+2026-05-09 17:08:57,447 | INFO | app | Fetching task with ID: 53ddacd3-76db-41ba-beaf-21765988461c
+2026-05-09 17:08:57,478 | INFO | app | Task with ID 53ddacd3-76db-41ba-beaf-21765988461c updated its feilds: {'status': 'completed'}
+2026-05-09 17:08:57,500 | INFO | app | Task with ID e5b7f44c-1f6a-4fb8-8f4b-a738c45b9276 updated its feilds: {'status': 'running'}
+2026-05-09 17:08:57,500 | INFO | app | Fetching task with ID: e5b7f44c-1f6a-4fb8-8f4b-a738c45b9276
+2026-05-09 17:08:57,507 | INFO | app | Fetching task with ID: e5b7f44c-1f6a-4fb8-8f4b-a738c45b9276
+2026-05-09 17:08:57,519 | INFO | app | Task with ID e5b7f44c-1f6a-4fb8-8f4b-a738c45b9276 updated its feilds: {'status': 'completed'}
+2026-05-09 17:08:57,526 | INFO | app | Task with ID d0317a64-dc8a-4d4d-95b7-d9a6232c8dcc updated its feilds: {'status': 'running'}
+2026-05-09 17:08:57,526 | INFO | app | Fetching task with ID: d0317a64-dc8a-4d4d-95b7-d9a6232c8dcc
+2026-05-09 17:08:57,529 | INFO | app | Fetching task with ID: d0317a64-dc8a-4d4d-95b7-d9a6232c8dcc
+2026-05-09 17:08:57,535 | INFO | app | Task with ID d0317a64-dc8a-4d4d-95b7-d9a6232c8dcc updated its feilds: {'status': 'completed'}
+2026-05-09 17:10:27,809 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 17:11:31,583 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 17:11:58,262 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 17:15:00,695 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 17:15:37,429 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 17:15:37,435 | INFO | app | Task with ID 38ff57fb-b1f0-484f-b03f-2eb1d38bf27b updated its feilds: {'status': 'running'}
+2026-05-09 17:15:37,435 | INFO | app | Fetching task with ID: 38ff57fb-b1f0-484f-b03f-2eb1d38bf27b
+2026-05-09 17:15:37,443 | INFO | app | Fetching task with ID: 38ff57fb-b1f0-484f-b03f-2eb1d38bf27b
+2026-05-09 17:15:37,464 | INFO | app | Task with ID 38ff57fb-b1f0-484f-b03f-2eb1d38bf27b updated its feilds: {'status': 'completed'}
+2026-05-09 17:16:26,113 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 20:30:25,278 | INFO | app | Started notification Service...
+2026-05-09 20:30:25,280 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-09 20:33:45,333 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 20:33:45,613 | INFO | app | Task with ID 9b776b6c-c65d-487d-b54a-5a1c13b1a30c updated its feilds: {'status': 'running'}
+2026-05-09 20:33:45,614 | INFO | app | Fetching task with ID: 9b776b6c-c65d-487d-b54a-5a1c13b1a30c
+2026-05-09 20:33:45,621 | INFO | app | Fetching task with ID: 9b776b6c-c65d-487d-b54a-5a1c13b1a30c
+2026-05-09 20:33:45,628 | INFO | app | Task with ID 9b776b6c-c65d-487d-b54a-5a1c13b1a30c updated its feilds: {'status': 'completed'}
+2026-05-09 20:34:04,256 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 20:37:05,529 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 20:37:05,547 | INFO | app | Task with ID 9fb0af48-a951-4ca9-8c23-c0e31b2266ba updated its feilds: {'status': 'running'}
+2026-05-09 20:37:05,548 | INFO | app | Fetching task with ID: 9fb0af48-a951-4ca9-8c23-c0e31b2266ba
+2026-05-09 20:37:05,559 | INFO | app | Fetching task with ID: 9fb0af48-a951-4ca9-8c23-c0e31b2266ba
+2026-05-09 20:37:05,580 | INFO | app | Task with ID 9fb0af48-a951-4ca9-8c23-c0e31b2266ba updated its feilds: {'status': 'completed'}
+2026-05-09 20:39:21,750 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 20:43:45,566 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 20:43:45,585 | INFO | app | Task with ID b9051326-c7d0-4802-a02f-65e47c73f839 updated its feilds: {'status': 'running'}
+2026-05-09 20:43:45,586 | INFO | app | Fetching task with ID: b9051326-c7d0-4802-a02f-65e47c73f839
+2026-05-09 20:43:45,631 | INFO | app | Fetching task with ID: b9051326-c7d0-4802-a02f-65e47c73f839
+2026-05-09 20:43:45,641 | INFO | app | Task with ID b9051326-c7d0-4802-a02f-65e47c73f839 updated its feilds: {'status': 'completed'}
+2026-05-09 20:44:18,390 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-09 20:48:45,616 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-09 20:48:45,635 | INFO | app | Task with ID 58b67c20-f90e-48eb-a03f-eee042f42e50 updated its feilds: {'status': 'running'}
+2026-05-09 20:48:45,636 | INFO | app | Fetching task with ID: 58b67c20-f90e-48eb-a03f-eee042f42e50
+2026-05-09 20:48:45,648 | INFO | app | Fetching task with ID: 58b67c20-f90e-48eb-a03f-eee042f42e50
+2026-05-09 20:48:45,674 | INFO | app | Task with ID 58b67c20-f90e-48eb-a03f-eee042f42e50 updated its feilds: {'status': 'completed'}
+2026-05-09 20:49:03,286 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-10 10:05:31,102 | INFO | app | Started notification Service...
+2026-05-10 10:05:31,106 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-10 10:07:11,151 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-10 10:07:11,444 | INFO | app | Task with ID e4a4d01c-238a-497c-a310-e01f44704db1 updated its feilds: {'status': 'running'}
+2026-05-10 10:07:11,444 | INFO | app | Fetching task with ID: e4a4d01c-238a-497c-a310-e01f44704db1
+2026-05-10 10:07:11,456 | INFO | app | Fetching task with ID: e4a4d01c-238a-497c-a310-e01f44704db1
+2026-05-10 10:07:11,472 | INFO | app | Task with ID e4a4d01c-238a-497c-a310-e01f44704db1 updated its feilds: {'status': 'completed'}
+2026-05-10 10:09:25,982 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-10 10:11:02,134 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-10 10:12:56,679 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-10 10:15:09,328 | ERROR | app | Error in web_socket_endpoint:
+
+2026-05-18 12:59:50,334 | INFO | app | Started notification Service...
+2026-05-18 12:59:50,343 | INFO | app | Scheduler loop started with delay: 100 seconds
+2026-05-18 13:01:30,385 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-18 13:01:30,563 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-18 13:01:30,642 | INFO | app | Task with ID 4471d86e-d746-4866-9c42-7172ec628e5f updated its feilds: {'status': 'running'}
+2026-05-18 13:01:30,642 | INFO | app | Fetching task with ID: 4471d86e-d746-4866-9c42-7172ec628e5f
+2026-05-18 13:01:30,657 | INFO | app | Fetching task with ID: 4471d86e-d746-4866-9c42-7172ec628e5f
+2026-05-18 13:01:30,673 | INFO | app | Task with ID 4471d86e-d746-4866-9c42-7172ec628e5f updated its feilds: {'status': 'completed'}
+2026-05-18 13:01:30,704 | INFO | app | Task with ID 25e0acba-8e92-4f83-ad97-a8b6d4a06c9d updated its feilds: {'status': 'running'}
+2026-05-18 13:01:30,705 | INFO | app | Fetching task with ID: 25e0acba-8e92-4f83-ad97-a8b6d4a06c9d
+2026-05-18 13:01:30,712 | INFO | app | Fetching task with ID: 25e0acba-8e92-4f83-ad97-a8b6d4a06c9d
+2026-05-18 13:01:30,722 | INFO | app | Task with ID 25e0acba-8e92-4f83-ad97-a8b6d4a06c9d updated its feilds: {'status': 'completed'}
+2026-05-18 13:03:10,585 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-18 13:03:10,592 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-18 13:03:10,603 | INFO | app | Task with ID 991b12ac-b3bc-4490-bdc9-380e5e6da80a updated its feilds: {'status': 'running'}
+2026-05-18 13:03:10,603 | INFO | app | Fetching task with ID: 991b12ac-b3bc-4490-bdc9-380e5e6da80a
+2026-05-18 13:03:10,616 | INFO | app | Fetching task with ID: 991b12ac-b3bc-4490-bdc9-380e5e6da80a
+2026-05-18 13:03:10,637 | INFO | app | Task with ID 991b12ac-b3bc-4490-bdc9-380e5e6da80a updated its feilds: {'status': 'completed'}
+2026-05-18 13:03:10,660 | INFO | app | Task with ID 0e052660-e7bc-40d3-bdad-3501d7328ef1 updated its feilds: {'status': 'running'}
+2026-05-18 13:03:10,661 | INFO | app | Fetching task with ID: 0e052660-e7bc-40d3-bdad-3501d7328ef1
+2026-05-18 13:03:10,678 | INFO | app | Fetching task with ID: 0e052660-e7bc-40d3-bdad-3501d7328ef1
+2026-05-18 13:03:10,695 | INFO | app | Task with ID 0e052660-e7bc-40d3-bdad-3501d7328ef1 updated its feilds: {'status': 'completed'}
+2026-05-18 13:06:30,638 | INFO | app | Fetched tasks for scheduling task type: notify_user.
+2026-05-18 13:06:30,657 | INFO | app | Task with ID 3223258a-1636-4de8-bd90-0ee54c9c48bf updated its feilds: {'status': 'running'}
+2026-05-18 13:06:30,658 | INFO | app | Fetching task with ID: 3223258a-1636-4de8-bd90-0ee54c9c48bf
+2026-05-18 13:06:30,670 | INFO | app | Fetching task with ID: 3223258a-1636-4de8-bd90-0ee54c9c48bf
+2026-05-18 13:06:30,693 | INFO | app | Task with ID 3223258a-1636-4de8-bd90-0ee54c9c48bf updated its feilds: {'status': 'completed'}
+2026-05-18 13:06:53,890 | ERROR | app | Error in web_socket_endpoint:
+

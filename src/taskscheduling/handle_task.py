@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta, timezone
+import json
 from typing import Literal, Optional
 import uuid
 from Logger import logger
@@ -14,6 +15,8 @@ from ..taskscheduling.schema import Response
 from ..DB.postgres import PoolManager
 from asgiref.sync import async_to_sync
 from ..taskscheduling.services import get_task
+from ..notification.send_notification import send_notifications
+import redis
 
 class task_payload(BaseModel):
     recipent_email: str = Field(..., description="The email address of the recipient.")
@@ -106,7 +109,7 @@ def handle_task(task_id):
         if task_type=="email_send":
             email_send(task_id)
         if task_type=="notify_user":
-            pass
+            notify_user(task_id)
      
 def email_fetch():
     llm = ChatOllama(model="ministral-3:8b", temperature=0, verbose=False)
@@ -186,11 +189,11 @@ def email_send(task_id):
         logger.error(f"Task with ID {task_id} not found.")
         return
     try:
-        if task["stauts"]=="approved": # type: ignore
+        if task["status"]=="approved": # type: ignore
             to=task["result"]["recipent_email"] # type: ignore
-            subject=task["result"]["subject"] # type: ignore
+            subject=task["result"]["subject"]  # type: ignore
             body=task["result"]["body"] # type: ignore
-            async_to_sync(send_email)(to, subject ,body)
+            async_to_sync(send_email)(to, subject ,body) # type: ignore
             logger.info(f"Email sent to {to} with subject: {subject} successfully.")
             return
         try:
@@ -198,7 +201,7 @@ def email_send(task_id):
             response = chain.invoke({
                 "input_text": task["payload"], # type: ignore
             })
-            logger.info(f"LLM response for {task_id}: {response}")
+            logger.info(f"Email response for {task_id}: {response}")
         except Exception as e:
             logger.exception(f"Error processing email {task_id}: {e}")
             raise e
@@ -226,4 +229,14 @@ def email_send(task_id):
         putting_task(response=task_response)  
     except Exception as e:
         logger.error(f"Error in sending email {task_id}")
+        raise e
+
+def notify_user(task_id):
+    r=redis.Redis(host='localhost', port=6379, db=0)
+    try:
+        data=get_task(task_id=task_id)
+        result=data["payload"] # type: ignore
+        r.publish("notification",json.dumps(result))
+    except Exception as e:
+        logger.error(f"Error in sending notification {task_id}")
         raise e

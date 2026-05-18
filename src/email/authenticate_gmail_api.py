@@ -8,17 +8,25 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.errors import HttpError
 
 Scope = ['https://www.googleapis.com/auth/gmail.modify']
-async def authenticate_gmail_api():
+def authenticate_gmail_api():
     creds = None
+
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', Scope)
+
     if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
+        try:
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
+            else:
+                raise Exception("Need re-auth")
+        except Exception:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', Scope)
+                'credentials.json', Scope
+            )
             creds = flow.run_local_server(port=0)
+
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
+
     return creds

@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import re
 async def read_emails()->dict:
     email_list = {}
-    creds=await authenticate_gmail_api() # type: ignore
+    creds=authenticate_gmail_api() # type: ignore
     try:
         service = build('gmail', 'v1', credentials=creds)
         result= service.users().messages().list(userId='me', maxResults=10).execute()
