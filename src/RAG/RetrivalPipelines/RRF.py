@@ -1,5 +1,5 @@
 import asyncio
-from ..RetrivalPipelines.vectorRetrival import query_result
+from .vectorRetrival import query_result
 from collections import defaultdict
 from .System_Prompt_Generation import System_query
 from ..dataIngestionPipelines.SparseIngestion import search_text,get_chunks

@@ -1,6 +1,6 @@
 import asyncio
 from fastapi import HTTPException
-from ..DB.VectorDataBase import tbl,embedding_function
+from ...DB.VectorDataBase import tbl,embedding_function
 
 def query_result(text:str,k:int=7):
     try:

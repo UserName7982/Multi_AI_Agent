@@ -8,9 +8,9 @@ from langchain_community.document_loaders import TextLoader, PyPDFLoader
 # from .BM25Store import RankBM25Store
 # from src.dataIngestionPipelines.refine_data import refine_data,create_token
 # from rank_bm25 import BM25Okapi
-from ..DB.VectorDataBase import embedding_function
-from ..DB.VectorDataBase import tbl
-from ..dataIngestionPipelines.SparseIngestion import ingest_chunk_into_db
+from ...DB.VectorDataBase import embedding_function
+from ...DB.VectorDataBase import tbl
+from .SparseIngestion import ingest_chunk_into_db
 # from ..dataIngestionPipelines.Images_Ingestion import Ingest_images_from_pdf
 
 # rank_bm25 = RankBM25Store("bm25")

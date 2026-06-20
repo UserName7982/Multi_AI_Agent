@@ -16,7 +16,9 @@ async def web_socket_endpoint(websocket: WebSocket):
     print("connected to web socket")
     try:
         while True:
-            await websocket.receive_text()
+            data = await websocket.receive_text()
+            # Process the received data
+            print(f"Received data: {data}")
     except WebSocketDisconnect as e:
         await servers.disconnect(websocket=websocket)
         logger.error(f"Error in web_socket_endpoint:\n",extra={"error":traceback.format_exc()})

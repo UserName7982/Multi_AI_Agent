@@ -1,6 +1,6 @@
 import re
 
-from ..Help.refine_data import refine_data
+from ...Help.refine_data import refine_data
 # from langchain_core.output_parsers import JsonOutputParser
 # from fastapi import HTTPException
 from langchain_ollama import ChatOllama
@@ -10,8 +10,8 @@ from langchain_core.output_parsers import StrOutputParser
 # from .ImageRetriver import convert_images_to_base64
 # from langchain_core.runnables import RunnableParallel
 # from langchain_google_genai import GoogleGenerativeAI
-from ..config import config
-from ..Agentic.Retrival_State import RetrivalState
+from ...config import config
+from ...Agentic.Retrival_State import RetrivalState
 # parser2 = JsonOutputParser()
 
 # model1=GoogleGenerativeAI(model="gemini-3-flash-preview",temperature=0.7,api_key=config.Gemini_API_KEY,verbose=True)

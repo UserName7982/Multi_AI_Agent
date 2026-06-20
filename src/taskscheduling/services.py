@@ -1,9 +1,9 @@
 import json
-from fastapi import FastAPI, HTTPException
 from src.config import config
 from Logger import logger
 from ..taskscheduling.schema import Response
 from ..DB.postgres import PoolManager
+
 def get_task(task_id):
     logger.info(f"Fetching task with ID: {task_id}")
     conn=PoolManager.get_sync_pool(config.URI)

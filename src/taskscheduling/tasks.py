@@ -4,6 +4,7 @@ from ..taskscheduling.services import update_tasks_feild
 from celery import shared_task
 from Logger import logger
 from ..taskscheduling.services import get_task
+
 @shared_task(max_retries=3,name="task.execute_task",bind=True)
 def execute_task(self,task_id):
     update_tasks_feild(task_id,status="running")

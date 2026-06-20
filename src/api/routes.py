@@ -3,7 +3,7 @@ import json
 from typing import AsyncGenerator, List
 from fastapi import File, Request, UploadFile,APIRouter,HTTPException,status
 from fastapi.responses import JSONResponse, StreamingResponse
-from src.dataIngestionPipelines.VectorIngestion import add_to_db
+from src.RAG.dataIngestionPipelines.VectorIngestion import add_to_db
 from ..api.schema import ChatRequest,ChatResponse, Thread,Messages,Message_Response, Thread_Response
 from Logger import logger
 import json

@@ -8,3 +8,4 @@ __pycache__/
 docker-compose.yml
 credentials.json
 token.json
+file.txt

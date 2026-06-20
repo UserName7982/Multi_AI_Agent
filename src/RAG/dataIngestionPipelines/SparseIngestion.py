@@ -1,6 +1,6 @@
 from fastapi import HTTPException
 from typing import List
-from ..DB.SparseDataBase import table
+from ...DB.SparseDataBase import table
 
 conn=table.connection
 def ingest_chunk_into_db(chunk_id,chunk_index,chunk,source):

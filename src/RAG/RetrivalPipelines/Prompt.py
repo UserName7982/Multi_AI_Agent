@@ -1,6 +1,6 @@
 from src.Agentic.Retrival_State import RetrivalState
 
-from ..RetrivalPipelines.System_Prompt_Generation import System_query
+from .System_Prompt_Generation import System_query
 
 #System_Query NODE
 async def System_Query(state: RetrivalState):
